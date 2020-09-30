@@ -1,5 +1,6 @@
 #include "signupwidget.h"
 
+
 signupwidget::signupwidget(QWidget *parent) : QWidget(parent)
 {
     firstname_label = new QLabel("First Name");
@@ -15,11 +16,11 @@ signupwidget::signupwidget(QWidget *parent) : QWidget(parent)
     lastname_line = new QLineEdit();
     username_line = new QLineEdit();
     password_line = new QLineEdit();
-    //password_line->setEchoMode(QLineEdit::Password);
+    password_line->setEchoMode(QLineEdit::Password);
     comfirmpassword_line = new QLineEdit();
-    //comfirmpassword_line->setEchoMode(QLineEdit::Password);
-
+    comfirmpassword_line->setEchoMode(QLineEdit::Password);
     messageBox = new QMessageBox();
+
 
     password_RegEx = new QRegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
     password_RegEx->setPatternSyntax(QRegExp::RegExp);
@@ -63,6 +64,7 @@ signupwidget::signupwidget(QWidget *parent) : QWidget(parent)
     setLayout(VBox);
 
     QObject::connect(PB0, SIGNAL(clicked(bool)), this, SLOT(signup()));
+    QObject::connect(PB1, SIGNAL(clicked(bool)), this, SLOT(image()));
 
 }
 
@@ -78,6 +80,42 @@ void signupwidget::signup()
         messageBox->critical(0,"Error","The password should consist of at least 8 characters and contain at least one number, upper and lowercase letters!");
         messageBox->setFixedSize(500,200);
     }
+    else{
+        QFile file("/home/eece435l/Desktop/repos/game-platform-group-5/project gui/accounts.txt");
+        QCryptographicHash *hash = new QCryptographicHash(QCryptographicHash::Sha1);
+            hash->addData(password_line->text().toUtf8());
+            QString pass;
+           pass = hash->result();
+        QString gender;
+        QString dob;
+        C->selectedDate().toString(dob);
+        if(RB0->isChecked()){
+            gender="male";
+        }
+        else if(RB1->isChecked()){
+            gender="female";
+        }
+        if (file.open(QIODevice::ReadWrite | QIODevice::Append)) {
+               QTextStream stream(&file);
+               stream << firstname_line->text()<<" "<<lastname_line->text()<<" "<<username_line->text()<<" "<< pass<< " " << gender << " "<< dob<<" "<< imageName<< endl;
+           stream.flush();
+        }
+
+        this->close();
+    }
+
 
 }
 
+void signupwidget::image()
+{
+    QString filename = QFileDialog::getOpenFileName(this,tr("Choose"),"",tr("images(*.png *.jpg *.jpeg *.bmp)"));
+    if(QString::compare(filename,QString())!=0){
+        QImage image;
+        bool valid = image.load(filename);
+        if(valid)
+        {
+            imageName=filename;
+        }
+    }
+}

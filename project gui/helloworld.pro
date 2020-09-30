@@ -12,3 +12,6 @@ HEADERS += \
     mainwidget.h \
     signinwidget.h \
     signupwidget.h
+
+DISTFILES += \
+    accounts.txt

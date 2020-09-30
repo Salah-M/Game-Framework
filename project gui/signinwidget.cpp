@@ -1,6 +1,6 @@
 #include "signinwidget.h"
 
-signinwidget::signinwidget()
+signinwidget::signinwidget(QWidget *parent) : QWidget(parent)
 {
 
 }

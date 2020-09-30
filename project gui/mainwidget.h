@@ -20,7 +20,6 @@ public:
     QPushButton *PB1;
     QPushButton *PB2;
     QVBoxLayout *VBox;
-
     signupwidget *s;
 
     public slots:

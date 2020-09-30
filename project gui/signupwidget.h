@@ -7,6 +7,10 @@
 #include <QString>
 #include <QCalendarWidget>
 #include <QRegExp>
+#include <QFileDialog>
+#include <QFile>
+#include <QTextStream>
+#include <QCryptographicHash>
 
 class signupwidget : public QWidget
 {
@@ -37,10 +41,11 @@ public:
     QGroupBox *G;
     QMessageBox *messageBox;
     QRegExp *password_RegEx;
+    QString imageName="";
 
     public slots:
     void signup();
-
+    void image();
 
 
 

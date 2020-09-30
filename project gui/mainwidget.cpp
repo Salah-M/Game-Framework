@@ -37,8 +37,9 @@ void mainWidget::signin()
 
 void mainWidget::signup()
 {
-    this->close();
+
     s->show();
+
 }
 
 void mainWidget::playAsGuest()
