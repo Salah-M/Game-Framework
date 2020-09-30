@@ -6,7 +6,7 @@
 #include <QtWidgets>
 #include <QString>
 #include "signupwidget.h"
-
+#include <QCryptographicHash>
 class mainWidget : public QWidget
 {
     Q_OBJECT

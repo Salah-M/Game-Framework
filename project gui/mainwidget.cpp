@@ -32,7 +32,35 @@ mainWidget::mainWidget(QWidget *parent) : QWidget(parent)
 
 void mainWidget::signin()
 {
-   return;
+    QFile file("/home/eece435l/Desktop/repos/game-platform-group-5/project gui/accounts.txt");
+    QString temp;
+    file.open(QIODevice::ReadOnly);
+    QTextStream in(&file);
+    in >> temp;
+    qDebug() << temp<<endl;
+    QString line = in.readLine();
+    qDebug() << line<<endl;
+    while (!line.isNull())
+
+    {
+        if(temp==line0->text()){
+            QCryptographicHash *hash = new QCryptographicHash(QCryptographicHash::Sha1);
+                hash->addData(line1->text().toUtf8());
+                QString pass;
+               pass = hash->result();
+             in>>temp;
+           if(pass==temp){
+               // we show the widget
+               //create account to store the info from text file and then display on signinwidget
+           }
+        }
+        in>>temp;
+
+        line = in.readLine();
+        qDebug() << line<<endl;
+
+    }
+    file.close();
 }
 
 void mainWidget::signup()

@@ -82,10 +82,29 @@ void signupwidget::signup()
     }
     else{
         QFile file("/home/eece435l/Desktop/repos/game-platform-group-5/project gui/accounts.txt");
-        QCryptographicHash *hash = new QCryptographicHash(QCryptographicHash::Sha1);
-            hash->addData(password_line->text().toUtf8());
-            QString pass;
-           pass = hash->result();
+        QString temp;
+        file.open(QIODevice::ReadOnly);
+        QTextStream in(&file);
+        in >> temp;
+        qDebug() << temp<<endl;
+        QString line = in.readLine();
+        qDebug() << line<<endl;
+        while (!line.isNull())
+
+        {
+            if(temp==username_line->text()){
+                messageBox->critical(0,"Error","User already exists!");
+                messageBox->setFixedSize(500,200);
+                return;
+            }
+            in>>temp;
+
+            line = in.readLine();
+            qDebug() << line<<endl;
+
+        }
+        file.close();
+
         QString gender;
         QString dob;
         C->selectedDate().toString(dob);
@@ -95,9 +114,15 @@ void signupwidget::signup()
         else if(RB1->isChecked()){
             gender="female";
         }
+
+        QCryptographicHash *hash = new QCryptographicHash(QCryptographicHash::Sha1);
+            hash->addData(password_line->text().toUtf8());
+            QString pass;
+           pass = hash->result();
         if (file.open(QIODevice::ReadWrite | QIODevice::Append)) {
                QTextStream stream(&file);
-               stream << firstname_line->text()<<" "<<lastname_line->text()<<" "<<username_line->text()<<" "<< pass<< " " << gender << " "<< dob<<" "<< imageName<< endl;
+
+               stream << username_line->text()<<" "<<firstname_line->text()<<" "<<lastname_line->text()<<" "<< pass<< " " << gender << " "<< dob<<" "<< imageName<< endl;
            stream.flush();
         }
 
