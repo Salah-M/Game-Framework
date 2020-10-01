@@ -99,7 +99,7 @@ void mainWidget::signin()
         }
         line = in.readLine();
         in >> temp;
-        a->username=temp;
+        sin->a->username=temp;
     }
     if (akal == false)
     {
