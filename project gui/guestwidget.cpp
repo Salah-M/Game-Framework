@@ -9,21 +9,17 @@ guestwidget::guestwidget(QWidget *parent) : QWidget(parent)
     play = new QPushButton("Play");
     VBox = new QVBoxLayout();
 
-    QString loc = "/home/eece435l/lab2/images/garbage.png";
+    history->setStyleSheet("background-color:black; color:white;");
+    play->setStyleSheet("background-color:black; color:white;");
+   pic->setPixmap((QPixmap(":/images/image.jpeg")).scaled(150,150));
+this->setStyleSheet("background-color:grey;");
 
-    bool valid = image->load("/home/eece435l/lab2/images/garbage.png");
-    if (valid)
-    {
-        pic->setPixmap(loc);
-    }
-    else
-    {
+   VBox->addWidget(pic);
+   VBox->addWidget(name);
+   VBox->addWidget(history);
+   VBox->addWidget(play);
 
-    }
-
-    VBox->addWidget(pic);
-    VBox->addWidget(name);
-    VBox->addWidget(history);
-    VBox->addWidget(play);
     setLayout(VBox);
+
+
 }

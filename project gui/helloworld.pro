@@ -15,5 +15,7 @@ HEADERS += \
     signinwidget.h \
     signupwidget.h
 
-DISTFILES += \
-    accounts.txt
+DISTFILES +=
+
+RESOURCES += \
+    images.qrc

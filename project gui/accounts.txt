@@ -1,7 +1,0 @@
-jef07 Mokomoko123 Jad Farah male Sun Oct 01 2020 /home/eece435l/lab2/images/background.jpg
-smr20 Mokomoko123 salah Mneimneh male Sun Oct 18 2020 /home/eece435l/lab2/images/garbage.png
-mar87 Mokomoko123 marwan gamlouch male Sun Oct 18 2020 /home/eece435l/lab2/images/garbageman.jpeg
-cmk14 Mokomoko123 celine kanj female Sun Oct 18 2020 /home/eece435l/lab2/images/rubbish.jpg
-abd12 Mokomoko123 abd dand male Sun Oct 18 2020 /home/eece435l/lab2/images/garbageman.jpeg
-imd28 Mokomoko123 imad saabi male Sun Oct 18 2020 /home/eece435l/lab2/images/rubbish.jpg
-omj40 Mokomoko123 omar jaroudi male Sun Oct 18 2020 /home/eece435l/lab2/images/background.jpg

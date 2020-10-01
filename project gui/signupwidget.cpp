@@ -24,8 +24,7 @@ signupwidget::signupwidget(QWidget *parent) : QWidget(parent)
 
     password_RegEx = new QRegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
     password_RegEx->setPatternSyntax(QRegExp::RegExp);
-
-
+    sw= new signinwidget;
 
     RB0 = new QRadioButton("male");
     RB1 = new QRadioButton("female");
@@ -62,6 +61,8 @@ signupwidget::signupwidget(QWidget *parent) : QWidget(parent)
     VBox->addWidget(C);
     VBox->addWidget(PB0);
     setLayout(VBox);
+
+
 
     QObject::connect(PB0, SIGNAL(clicked(bool)), this, SLOT(signup()));
     QObject::connect(PB1, SIGNAL(clicked(bool)), this, SLOT(image()));
@@ -106,8 +107,8 @@ void signupwidget::signup()
         messageBox->setFixedSize(500,200);
     }
     else
-    {
-        QFile file("/home/eece435l/lab3/repo/project repo/game-platform-group-5/game-platform-group-5/project gui/accounts.txt");
+    {   QString path ="./accounts.txt";
+        QFile file(path);
         QString temp;
         file.open(QIODevice::ReadOnly);
         QTextStream in(&file);
@@ -126,7 +127,7 @@ void signupwidget::signup()
             }
             in >> temp;
             line = in.readLine();
-            qDebug() << line<<endl;
+
 
         }
         file.close();
@@ -143,18 +144,22 @@ void signupwidget::signup()
             gender="female";
         }
 
-        QCryptographicHash *hash = new QCryptographicHash(QCryptographicHash::Md5);         // MIGHT BE PROBLEMATIC NEEDS FURTHER TESTING
-        hash->addData(password_line->text().toUtf8());
-        QString pass;
-        pass = hash->result();
+
         if (file.open(QIODevice::ReadWrite | QIODevice::Append))
         {
             QTextStream stream(&file);
-            stream << username_line->text()<<" "<< pass << " " <<firstname_line->text()<<" "<<lastname_line->text()<< " " << gender << " "<< dob <<" "<< imageName<< endl;
+            stream << username_line->text()<<" "<< password_line->text() << " " <<firstname_line->text()<<" "<<lastname_line->text()<< " " << gender << " "<< dob <<" "<< imageName<< endl;
+            qDebug()<<"printing to file"<<endl;
             stream.flush();
         }
 
         this->close();
+        sw->a->firstName=firstname_line->text();
+        sw->a->lastName=lastname_line->text();
+        sw->a->imageloc=imageName;
+        sw->getName();
+        sw->show();
+
     }
 
 
@@ -165,11 +170,12 @@ void signupwidget::image()
     QString filename = QFileDialog::getOpenFileName(this,tr("Choose"),"",tr("images(*.png *.jpg *.jpeg *.bmp)"));
     if(QString::compare(filename,QString())!=0)
     {
-        QImage image;
-        bool valid = image.load(filename);
+        QImage Image;
+        bool valid = Image.load(filename);
         if(valid)
         {
             imageName=filename;
+
         }
     }
 }

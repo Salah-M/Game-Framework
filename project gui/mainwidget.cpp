@@ -6,8 +6,10 @@ mainWidget::mainWidget(QWidget *parent) : QWidget(parent)
 {
     label0 = new QLabel("Username");
     label1 = new QLabel("Password");
+
     line0 = new QLineEdit();
     line1 = new QLineEdit();
+    line1->setEchoMode(QLineEdit::Password);
     PB0 = new QPushButton("Sign in");
     PB1 = new QPushButton("Sign up");
     PB2 = new QPushButton("Play as guest");
@@ -15,7 +17,9 @@ mainWidget::mainWidget(QWidget *parent) : QWidget(parent)
     guest = new guestwidget();
     a = new account();
     messageBox = new QMessageBox();
-
+    PB0->setStyleSheet("background-color:orange;");
+    PB1->setStyleSheet("background-color:yellow;");
+    PB2->setStyleSheet("background-color:brown;");
     VBox = new QVBoxLayout();
     VBox->addWidget(label0);
     VBox->addWidget(line0);
@@ -25,7 +29,7 @@ mainWidget::mainWidget(QWidget *parent) : QWidget(parent)
     VBox->addWidget(PB1);
     VBox->addWidget(PB2);
     setLayout(VBox);
-
+    this->setStyleSheet("background-color:lightgreen;");
     QObject::connect(PB0, SIGNAL(clicked(bool)), this, SLOT(signin()));
     QObject::connect(PB1, SIGNAL(clicked(bool)), this, SLOT(signup()));
     QObject::connect(PB2, SIGNAL(clicked(bool)), this, SLOT(playAsGuest()));
@@ -36,11 +40,16 @@ mainWidget::mainWidget(QWidget *parent) : QWidget(parent)
 void mainWidget::signin()
 {
     bool akal = false;
-    QFile file("/home/eece435l/lab3/repo/project repo/game-platform-group-5/game-platform-group-5/project gui/accounts.txt");
+    QFile file("./accounts.txt");
     QString temp;
     file.open(QIODevice::ReadOnly);
     QTextStream in(&file);
     in >> temp;
+    if(line0->text()==NULL||line1->text()==NULL ){
+        messageBox->critical(0,"Error","Username or Password empty!");
+        messageBox->setFixedSize(500,200);
+        return;
+    }
     sin = new signinwidget();
     sin->a->username = temp;
     QString line = temp;
@@ -48,8 +57,7 @@ void mainWidget::signin()
     {
         if(temp==line0->text())
         {
-            //QCryptographicHash *hash = new QCryptographicHash(QCryptographicHash::Sha1);
-            //hash->addData(line1->text().toUtf8());
+
             QString pass;
             pass = line1->text();
             in >> temp;
@@ -99,11 +107,12 @@ void mainWidget::signin()
         messageBox->setFixedSize(500,200);
     }
     file.close();
+    this->close();
 }
 
 void mainWidget::signup()
 {
-
+    this->close();
     sup->show();
 
 }
@@ -111,5 +120,6 @@ void mainWidget::signup()
 void mainWidget::playAsGuest()
 {
     guest->show();
+    this->close();
 }
 

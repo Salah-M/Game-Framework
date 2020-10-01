@@ -11,6 +11,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QCryptographicHash>
+#include "signinwidget.h"
 
 class signupwidget : public QWidget
 {
@@ -42,6 +43,8 @@ public:
     QMessageBox *messageBox;
     QRegExp *password_RegEx;
     QString imageName="";
+    signinwidget *sw;
+
 
     public slots:
     void signup();

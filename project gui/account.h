@@ -24,7 +24,7 @@ public:
     QString month;
     QString year;
     QString imageloc;
-    account(QString f,QString l,QString user,QString pass,QString dob,QString imag);
+    account(QString f,QString l,QString user,QString pass,QString imag);
     account();
 
     void print();

@@ -1,6 +1,6 @@
 #include "account.h"
 
-account::account(QString f,QString l,QString user,QString pass,QString dob,QString imag)
+account::account(QString f,QString l,QString user,QString pass,QString imag)
 {
     firstName=f;
     lastName=l;

@@ -7,6 +7,9 @@ signinwidget::signinwidget(QWidget *parent) : QWidget(parent)
     messageBox = new QMessageBox();
     history = new QPushButton("Score History");
     play = new QPushButton("Play");
+    this->setStyleSheet("background-color:grey;");
+    history->setStyleSheet("background-color:black; color:white;");
+    play->setStyleSheet("background-color:black; color:white;");
 
 }
 
@@ -21,11 +24,8 @@ void signinwidget::getName()
     bool valid = image->load(a->imageloc);
     if (valid)
     {
-        pic->setPixmap(a->imageloc);
-    }
-    else
-    {
-
+        qDebug()<<"image is loaded"<<endl;
+        pic->setPixmap((QPixmap(a->imageloc)).scaled(150,150));
     }
     VBox = new QVBoxLayout();
     VBox->addWidget(pic);
