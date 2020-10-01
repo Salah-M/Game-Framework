@@ -6,7 +6,11 @@
 #include <QtWidgets>
 #include <QString>
 #include "signupwidget.h"
+#include "signinwidget.h"
+#include "guestwidget.h"
+#include "account.h"
 #include <QCryptographicHash>
+
 class mainWidget : public QWidget
 {
     Q_OBJECT
@@ -20,7 +24,11 @@ public:
     QPushButton *PB1;
     QPushButton *PB2;
     QVBoxLayout *VBox;
-    signupwidget *s;
+    signupwidget *sup;
+    account *a;
+    signinwidget *sin;
+    guestwidget *guest;
+    QMessageBox *messageBox;
 
     public slots:
     void signin();

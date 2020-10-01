@@ -80,8 +80,34 @@ void signupwidget::signup()
         messageBox->critical(0,"Error","The password should consist of at least 8 characters and contain at least one number, upper and lowercase letters!");
         messageBox->setFixedSize(500,200);
     }
-    else{
-        QFile file("/home/eece435l/Desktop/repos/game-platform-group-5/project gui/accounts.txt");
+    else if (firstname_line == NULL)
+    {
+        messageBox->critical(0,"Error","One of the fields is missing!");
+        messageBox->setFixedSize(500,200);
+    }
+    else if (username_line == NULL)
+    {
+        messageBox->critical(0,"Error","One of the fields is missing!");
+        messageBox->setFixedSize(500,200);
+    }
+    else if (lastname_line == NULL)
+    {
+        messageBox->critical(0,"Error","One of the fields is missing!");
+        messageBox->setFixedSize(500,200);
+    }
+    else if(imageName == NULL)
+    {
+        messageBox->critical(0,"Error","One of the fields is missing!");
+        messageBox->setFixedSize(500,200);
+    }
+    else if (!RB0->isChecked() && !RB1->isChecked())
+    {
+        messageBox->critical(0,"Error","One of the fields is missing!");
+        messageBox->setFixedSize(500,200);
+    }
+    else
+    {
+        QFile file("/home/eece435l/lab3/repo/project repo/game-platform-group-5/game-platform-group-5/project gui/accounts.txt");
         QString temp;
         file.open(QIODevice::ReadOnly);
         QTextStream in(&file);
@@ -92,13 +118,13 @@ void signupwidget::signup()
         while (!line.isNull())
 
         {
-            if(temp==username_line->text()){
+            if(temp==username_line->text())
+            {
                 messageBox->critical(0,"Error","User already exists!");
                 messageBox->setFixedSize(500,200);
                 return;
             }
-            in>>temp;
-
+            in >> temp;
             line = in.readLine();
             qDebug() << line<<endl;
 
@@ -107,23 +133,25 @@ void signupwidget::signup()
 
         QString gender;
         QString dob;
-        C->selectedDate().toString(dob);
-        if(RB0->isChecked()){
+        dob = C->selectedDate().toString();
+        if(RB0->isChecked())
+        {
             gender="male";
         }
-        else if(RB1->isChecked()){
+        else if(RB1->isChecked())
+        {
             gender="female";
         }
 
-        QCryptographicHash *hash = new QCryptographicHash(QCryptographicHash::Sha1);
-            hash->addData(password_line->text().toUtf8());
-            QString pass;
-           pass = hash->result();
-        if (file.open(QIODevice::ReadWrite | QIODevice::Append)) {
-               QTextStream stream(&file);
-
-               stream << username_line->text()<<" "<<firstname_line->text()<<" "<<lastname_line->text()<<" "<< pass<< " " << gender << " "<< dob<<" "<< imageName<< endl;
-           stream.flush();
+        QCryptographicHash *hash = new QCryptographicHash(QCryptographicHash::Md5);         // MIGHT BE PROBLEMATIC NEEDS FURTHER TESTING
+        hash->addData(password_line->text().toUtf8());
+        QString pass;
+        pass = hash->result();
+        if (file.open(QIODevice::ReadWrite | QIODevice::Append))
+        {
+            QTextStream stream(&file);
+            stream << username_line->text()<<" "<< pass << " " <<firstname_line->text()<<" "<<lastname_line->text()<< " " << gender << " "<< dob <<" "<< imageName<< endl;
+            stream.flush();
         }
 
         this->close();
@@ -135,7 +163,8 @@ void signupwidget::signup()
 void signupwidget::image()
 {
     QString filename = QFileDialog::getOpenFileName(this,tr("Choose"),"",tr("images(*.png *.jpg *.jpeg *.bmp)"));
-    if(QString::compare(filename,QString())!=0){
+    if(QString::compare(filename,QString())!=0)
+    {
         QImage image;
         bool valid = image.load(filename);
         if(valid)

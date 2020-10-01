@@ -11,7 +11,10 @@ mainWidget::mainWidget(QWidget *parent) : QWidget(parent)
     PB0 = new QPushButton("Sign in");
     PB1 = new QPushButton("Sign up");
     PB2 = new QPushButton("Play as guest");
-    s = new signupwidget();
+    sup = new signupwidget();
+    guest = new guestwidget();
+    a = new account();
+    messageBox = new QMessageBox();
 
     VBox = new QVBoxLayout();
     VBox->addWidget(label0);
@@ -32,33 +35,68 @@ mainWidget::mainWidget(QWidget *parent) : QWidget(parent)
 
 void mainWidget::signin()
 {
-    QFile file("/home/eece435l/Desktop/repos/game-platform-group-5/project gui/accounts.txt");
+    bool akal = false;
+    QFile file("/home/eece435l/lab3/repo/project repo/game-platform-group-5/game-platform-group-5/project gui/accounts.txt");
     QString temp;
     file.open(QIODevice::ReadOnly);
     QTextStream in(&file);
     in >> temp;
-    qDebug() << temp<<endl;
-    QString line = in.readLine();
-    qDebug() << line<<endl;
+    sin = new signinwidget();
+    sin->a->username = temp;
+    QString line = temp;
     while (!line.isNull())
-
     {
-        if(temp==line0->text()){
-            QCryptographicHash *hash = new QCryptographicHash(QCryptographicHash::Sha1);
-                hash->addData(line1->text().toUtf8());
-                QString pass;
-               pass = hash->result();
-             in>>temp;
-           if(pass==temp){
-               // we show the widget
-               //create account to store the info from text file and then display on signinwidget
-           }
+        if(temp==line0->text())
+        {
+            //QCryptographicHash *hash = new QCryptographicHash(QCryptographicHash::Sha1);
+            //hash->addData(line1->text().toUtf8());
+            QString pass;
+            pass = line1->text();
+            in >> temp;
+            qDebug() << temp <<endl;
+            sin->a->password=temp;
+            if(pass==temp)
+            {
+                in >> temp;
+                sin->a->firstName = temp;
+                in >> temp;
+                sin->a->lastName = temp;
+                in >> temp;
+                sin->a->gender = temp;
+                in >> temp;
+                in >> temp;
+                sin->a->month = temp;
+                in >> temp;
+                sin->a->day = temp;
+                in >> temp;
+                sin->a->year = temp;
+                in >> temp;
+                sin->a->imageloc = temp;
+
+                sin->a->print();
+                sin->getName();
+                akal = true;
+                sin->show();
+                sin->checkBirthday();
+
+                // we show the widget
+                //create account to store the info from text file and then display on signinwidget
+            }
+            else
+            {
+                messageBox->critical(0,"Error","Incorrect Password!");
+                messageBox->setFixedSize(500,200);
+                return;
+            }
         }
-        in>>temp;
-
         line = in.readLine();
-        qDebug() << line<<endl;
-
+        in >> temp;
+        a->username=temp;
+    }
+    if (akal == false)
+    {
+        messageBox->critical(0,"Error","Incorrect Username!");
+        messageBox->setFixedSize(500,200);
     }
     file.close();
 }
@@ -66,12 +104,12 @@ void mainWidget::signin()
 void mainWidget::signup()
 {
 
-    s->show();
+    sup->show();
 
 }
 
 void mainWidget::playAsGuest()
 {
-    return;
+    guest->show();
 }
 

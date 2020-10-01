@@ -1,5 +1,5 @@
-#ifndef SIGNINWIDGET_H
-#define SIGNINWIDGET_H
+#ifndef GUESTWIDGET_H
+#define GUESTWIDGET_H
 
 #include <QObject>
 #include <QWidget>
@@ -10,25 +10,17 @@
 #include "account.h"
 #include <QPixmap>
 
-
-class signinwidget : public QWidget
+class guestwidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit signinwidget(QWidget *parent = nullptr);
-    account *a;
+    explicit guestwidget(QWidget *parent = nullptr);
     QLabel *pic;
     QLabel *name;
-    QMessageBox *messageBox;
     QPushButton *history;
     QPushButton *play;
     QVBoxLayout *VBox;
     QImage *image;
-
-    void getName();
-    void checkBirthday();
-
-
 };
 
-#endif // SIGNINWIDGET_H
+#endif // GUESTWIDGET_H
