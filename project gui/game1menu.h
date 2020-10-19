@@ -7,7 +7,9 @@
 #include <QString>
 #include <QCalendarWidget>
 #include <QRegExp>
+#include <QGraphicsView>
 #include "account.h"
+#include "game1scene.h"
 #include <QPixmap>
 
 
@@ -18,7 +20,14 @@ public:
     explicit game1menu(QWidget *parent = nullptr);
     QLabel *title;
     QPushButton *play;
+    game1scene *scene1;
     QVBoxLayout *Vbox;
+    QGraphicsView *view;
+
+public slots:
+    void playb();
+
+
 };
 
 #endif // GAME1MENU_H
