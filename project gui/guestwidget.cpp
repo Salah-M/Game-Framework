@@ -11,8 +11,8 @@ guestwidget::guestwidget(QWidget *parent) : QWidget(parent)
 
     history->setStyleSheet("background-color:black; color:white;");
     play->setStyleSheet("background-color:black; color:white;");
-   pic->setPixmap((QPixmap(":/images/image.jpeg")).scaled(150,150));
-this->setStyleSheet("background-color:grey;");
+    pic->setPixmap((QPixmap(":/images/image.jpeg")).scaled(150,150));
+    this->setStyleSheet("background-color:grey;");
 
    VBox->addWidget(pic);
    VBox->addWidget(name);
@@ -20,6 +20,4 @@ this->setStyleSheet("background-color:grey;");
    VBox->addWidget(play);
 
     setLayout(VBox);
-
-
 }

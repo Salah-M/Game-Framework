@@ -3,6 +3,7 @@
 signinwidget::signinwidget(QWidget *parent) : QWidget(parent)
 {
     a = new account();
+    game = new game1menu();
     pic = new QLabel();
     messageBox = new QMessageBox();
     history = new QPushButton("Score History");
@@ -10,6 +11,9 @@ signinwidget::signinwidget(QWidget *parent) : QWidget(parent)
     this->setStyleSheet("background-color:grey;");
     history->setStyleSheet("background-color:black; color:white;");
     play->setStyleSheet("background-color:black; color:white;");
+
+    QObject::connect(play, SIGNAL(clicked(bool)), this, SLOT(playGame()));
+
 
 }
 
@@ -38,11 +42,19 @@ void signinwidget::getName()
 void signinwidget::checkBirthday()
 {
     QString date_month = QDate::currentDate().toString("MMM");
-    QString date_day = QDate::currentDate().toString("dd");
+    QString date_day = QDate::currentDate().toString("d");
+    qDebug()<<date_day<<endl;
+    qDebug()<<date_month<<endl;
 
     if (date_month == a->month && date_day == a->day)
     {
         messageBox->information(0,"Congratz","Happy Birthday!!");
         messageBox->setFixedSize(500,200);
     }
+}
+
+void signinwidget::playGame()
+{
+    this->close();
+    game->show();
 }

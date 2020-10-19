@@ -8,6 +8,7 @@
 #include <QCalendarWidget>
 #include <QRegExp>
 #include "account.h"
+#include "game1menu.h"
 #include <QPixmap>
 
 
@@ -17,6 +18,7 @@ class signinwidget : public QWidget
 public:
     explicit signinwidget(QWidget *parent = nullptr);
     account *a;
+    game1menu *game;
     QLabel *pic;
     QLabel *name;
     QMessageBox *messageBox;
@@ -27,6 +29,9 @@ public:
 
     void getName();
     void checkBirthday();
+
+    public slots:
+    void playGame();
 
 
 };

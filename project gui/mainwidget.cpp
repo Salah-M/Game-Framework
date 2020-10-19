@@ -45,7 +45,8 @@ void mainWidget::signin()
     file.open(QIODevice::ReadOnly);
     QTextStream in(&file);
     in >> temp;
-    if(line0->text()==NULL||line1->text()==NULL ){
+    if(line0->text()==NULL||line1->text()==NULL )
+    {
         messageBox->critical(0,"Error","Username or Password empty!");
         messageBox->setFixedSize(500,200);
         return;
@@ -78,8 +79,15 @@ void mainWidget::signin()
                 sin->a->day = temp;
                 in >> temp;
                 sin->a->year = temp;
-                in >> temp;
-                sin->a->imageloc = temp;
+                temp = in.readLine();
+                int i = 0;
+                QString temp1;
+                while (i < temp.size()-1)
+                {
+                    temp1[i] = temp[i+1];
+                    i++;
+                }
+                sin->a->imageloc = temp1;
 
                 sin->a->print();
                 sin->getName();

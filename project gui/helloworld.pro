@@ -2,6 +2,7 @@ QT       += widgets
 
 SOURCES += \
     account.cpp \
+    game1menu.cpp \
     guestwidget.cpp \
     main.cpp \
     mainwidget.cpp \
@@ -10,6 +11,7 @@ SOURCES += \
 
 HEADERS += \
     account.h \
+    game1menu.h \
     guestwidget.h \
     mainwidget.h \
     signinwidget.h \

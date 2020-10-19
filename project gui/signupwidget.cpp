@@ -132,6 +132,25 @@ void signupwidget::signup()
         }
         file.close();
 
+        QFileInfo imgInfo(imageName);
+        QString pathh = QDir::currentPath();
+        pathh.append("/userPictures");
+        if (!QDir(pathh).exists())
+        {
+            QDir().mkdir(pathh);
+        }
+        pathh.append("/" + username_line->text() + "." + imgInfo.suffix());
+        qDebug() << pathh << endl;
+        if (QFile::exists(pathh))
+        {
+            QFile::remove(pathh);
+        }
+        bool status = QFile::copy(imageName, pathh);
+        if (status == false)
+        {
+            return;
+        }
+
         QString gender;
         QString dob;
         dob = C->selectedDate().toString();
@@ -148,7 +167,7 @@ void signupwidget::signup()
         if (file.open(QIODevice::ReadWrite | QIODevice::Append))
         {
             QTextStream stream(&file);
-            stream << username_line->text()<<" "<< password_line->text() << " " <<firstname_line->text()<<" "<<lastname_line->text()<< " " << gender << " "<< dob <<" "<< imageName<< endl;
+            stream << username_line->text()<<" "<< password_line->text() << " " <<firstname_line->text()<<" "<<lastname_line->text()<< " " << gender << " "<< dob <<" "<< pathh << endl;
             qDebug()<<"printing to file"<<endl;
             stream.flush();
         }
@@ -159,6 +178,12 @@ void signupwidget::signup()
         sw->a->imageloc=imageName;
         sw->getName();
         sw->show();
+
+        if (dob == QDate::currentDate().toString())
+        {
+            messageBox->information(0,"Congratz","Happy Birthday!!");
+            messageBox->setFixedSize(500,200);
+        }
 
     }
 
