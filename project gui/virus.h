@@ -14,10 +14,11 @@ public:
     explicit virus(QObject *parent=nullptr);
     void setSize(sizz s);
     QTimer *timer;
-    void MPressEvent(QGraphicsSceneMouseEvent *event);
+    QTimer *timer2;
 
 public slots:
    void update();
+   void kill();
 };
 
 #endif // VIRUS_H
