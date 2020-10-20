@@ -11,7 +11,7 @@
 #include "account.h"
 #include "game1scene.h"
 #include <QPixmap>
-
+#include <QCursor>
 
 class game1menu : public QWidget
 {
@@ -23,6 +23,7 @@ public:
     game1scene *scene1;
     QVBoxLayout *Vbox;
     QGraphicsView *view;
+    QCursor *c;
 
 public slots:
     void playb();

@@ -16,11 +16,15 @@ game1menu::game1menu(QWidget *parent) : QWidget(parent)
 }
 void game1menu::playb()
 {   scene1 = new game1scene;
+    QPixmap cpixmap=QPixmap(":/images/needle.png").scaled(40,40);
+    QCursor cursor = QCursor(cpixmap,0,0);
     view = new QGraphicsView();
-    view->setFixedSize(910,512);
+    view->setCursor(cursor);
+    view->setFixedSize(988,412);
     view->setHorizontalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
     view->setVerticalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
     view->setScene(scene1);
     view->show();
+    this->close();
 
 }

@@ -8,7 +8,8 @@ SOURCES += \
     main.cpp \
     mainwidget.cpp \
     signinwidget.cpp \
-    signupwidget.cpp
+    signupwidget.cpp \
+    virus.cpp
 
 HEADERS += \
     account.h \
@@ -17,7 +18,8 @@ HEADERS += \
     guestwidget.h \
     mainwidget.h \
     signinwidget.h \
-    signupwidget.h
+    signupwidget.h \
+    virus.h
 
 DISTFILES +=
 
