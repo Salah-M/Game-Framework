@@ -16,6 +16,15 @@ game1scene::game1scene()
 void game1scene::create_instance()
 {
     virus *vi = new virus;
+    int r = rand()%3;
+    if(r==1){
+    vi->setSize(virus::small);
+    }
+    if(r==2){
+    vi->setSize(virus::medium);
+    }
+    if(r==1){
     vi->setSize(virus::big);
+    }
     this->addItem(vi);
 }
