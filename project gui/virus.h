@@ -11,6 +11,8 @@ class virus : public QObject, public QGraphicsPixmapItem
 public:
     enum sizz{small,medium,big};
     sizz size;
+    bool alive;
+    int speed;
     explicit virus(QObject *parent=nullptr);
     void setSize(sizz s);
     QTimer *timer;

@@ -5,15 +5,38 @@
 #include <QWidget>
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
+#include <QFileDialog>
+#include <QFile>
+#include <QTextStream>
 #include <QTimer>
+#include <qdebug.h>
 class game1scene : public QGraphicsScene
 {
     Q_OBJECT
 public:
     game1scene();
-    virus *v;
+    int i;
+
+    int speed;
+
+    int scount;
+    int mcount;
+    int bcount;
+
+    int score;
+    int scoreToWin;
+    int loss;
+    QString text;
+
+    QFile *file;
+    QTextStream *in;
+
+
+    QGraphicsTextItem * io;
+    virus *v[40];
 public slots:
     void create_instance();
+    void update_counters();
 
 };
 

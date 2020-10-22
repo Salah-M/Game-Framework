@@ -17,5 +17,6 @@
         <file>images/mediumb.png</file>
         <file>images/bigb.png</file>
         <file>images/needle.png</file>
+        <file>level1.txt</file>
     </qresource>
 </RCC>

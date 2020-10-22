@@ -21,7 +21,8 @@ HEADERS += \
     signupwidget.h \
     virus.h
 
-DISTFILES +=
+DISTFILES += \
+    level1.txt
 
 RESOURCES += \
     images.qrc
