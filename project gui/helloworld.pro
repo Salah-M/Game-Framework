@@ -9,6 +9,7 @@ SOURCES += \
     mainwidget.cpp \
     signinwidget.cpp \
     signupwidget.cpp \
+    vdeath.cpp \
     virus.cpp
 
 HEADERS += \
@@ -19,6 +20,7 @@ HEADERS += \
     mainwidget.h \
     signinwidget.h \
     signupwidget.h \
+    vdeath.h \
     virus.h
 
 DISTFILES += \

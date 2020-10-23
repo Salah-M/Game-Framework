@@ -1,10 +1,13 @@
 #ifndef VIRUS_H
 #define VIRUS_H
+
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
 #include <QTimer>
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
+#include "vdeath.h"
+
 class virus : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT

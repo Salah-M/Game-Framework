@@ -42,8 +42,9 @@ void virus::kill()
     if(this->isSelected())
     {
         alive = false;
-        this->setFlag(QGraphicsItem::ItemIsSelectable,false);
-        this->setPixmap((QPixmap(":/images/ripan.png")).scaled(100,100));
+        vdeath *v = new vdeath();
+        v->setPos(this->x(),this->y());
+        scene()->addItem(v);
         scene()->removeItem(this);
         this->hide();
     }
