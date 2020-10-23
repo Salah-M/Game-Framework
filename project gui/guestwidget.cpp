@@ -8,7 +8,7 @@ guestwidget::guestwidget(QWidget *parent) : QWidget(parent)
     image = new QImage();
     play = new QPushButton("Play");
     VBox = new QVBoxLayout();
-
+    game = new game1menu;
     history->setStyleSheet("background-color:black; color:white;");
     play->setStyleSheet("background-color:black; color:white;");
     pic->setPixmap((QPixmap(":/images/image.jpeg")).scaled(150,150));
@@ -20,4 +20,10 @@ guestwidget::guestwidget(QWidget *parent) : QWidget(parent)
    VBox->addWidget(play);
 
     setLayout(VBox);
+    QObject::connect(play, SIGNAL(clicked(bool)), this, SLOT(playGame()));
+}
+void guestwidget::playGame()
+{
+    this->close();
+    game->show();
 }

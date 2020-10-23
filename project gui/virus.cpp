@@ -2,7 +2,8 @@
 
 virus::virus(QObject *parent):QObject(parent)
 {
-
+    deathsound = new QMediaPlayer;
+    deathsound->setMedia(QUrl("qrc:/music/neck_snap-Vladimir-719669812.wav"));
 
 }
 void virus::setSize(sizz s)
@@ -14,10 +15,10 @@ void virus::setSize(sizz s)
         this->setPixmap((QPixmap(":/images/smallb.png")).scaled(100,100));
     }
     if(s==medium){
-        this->setPixmap((QPixmap(":/images/mediumb.png")).scaled(120,120));
+        this->setPixmap((QPixmap(":/images/ClipartKey_346282.png")).scaled(120,120));
      }
     if(s==big){
-       this->setPixmap((QPixmap(":/images/bigb.png")).scaled(150,150));
+       this->setPixmap((QPixmap(":/images/ClipartKey_346832.png")).scaled(150,150));
     }
     /*
     int random_number = rand()%700;
@@ -41,6 +42,7 @@ void virus::kill()
 {
     if(this->isSelected())
     {
+        deathsound->play();
         alive = false;
         vdeath *v = new vdeath();
         v->setPos(this->x(),this->y());

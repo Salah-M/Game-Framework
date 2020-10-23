@@ -10,6 +10,7 @@
 #include <QGraphicsView>
 #include "account.h"
 #include "game1scene.h"
+#include <QMediaPlayer>
 #include <QPixmap>
 #include <QCursor>
 
@@ -20,6 +21,7 @@ public:
     explicit game1menu(QWidget *parent = nullptr);
     QLabel *title;
     QPushButton *play;
+    QMediaPlayer *audio;
     game1scene *scene1;
     QVBoxLayout *Vbox;
     QGraphicsView *view;

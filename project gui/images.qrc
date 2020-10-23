@@ -18,5 +18,11 @@
         <file>images/bigb.png</file>
         <file>images/needle.png</file>
         <file>level1.txt</file>
+        <file>images/ClipartKey_346282.png</file>
+        <file>images/ClipartKey_346832.png</file>
+        <file>music/05 Loonboon.mp3</file>
+        <file>music/06 Moongrains.mp3</file>
+        <file>music/10 Ultimate Battle.mp3</file>
+        <file>music/neck_snap-Vladimir-719669812.wav</file>
     </qresource>
 </RCC>
