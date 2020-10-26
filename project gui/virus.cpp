@@ -9,6 +9,7 @@ virus::virus(QObject *parent):QObject(parent)
 void virus::setSize(sizz s)
 {
     alive = true;
+    isChecked = false;
     this->setFlag(QGraphicsItem::ItemIsSelectable,true);
     this->size=s;
     if(s==small){

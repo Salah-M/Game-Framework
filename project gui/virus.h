@@ -16,6 +16,7 @@ public:
     enum sizz{small,medium,big};
     sizz size;
     bool alive;
+    bool isChecked;
     QMediaPlayer *deathsound;
     int speed;
     explicit virus(QObject *parent=nullptr);
