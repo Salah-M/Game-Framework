@@ -7,6 +7,7 @@ game1scene::game1scene()
     speed = 1;
     i = 0;
     lossCount = 0;
+    quit = false;
 
     score = new game1score();
 
@@ -219,7 +220,8 @@ void game1scene::restartGame()
 
 void game1scene::quitGame()     // needs fix
 {
-    game1menu *g = new game1menu();
-    g->show();
-    delete this;
+    quit =true;
+    //game1menu *g = new game1menu();
+    //g->show();
+    //delete this;
 }

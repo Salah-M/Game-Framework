@@ -12,6 +12,7 @@
 #include "game1scene.h"
 #include <QMediaPlayer>
 #include <QPixmap>
+#include <QTimer>
 #include <QCursor>
 
 class game1menu : public QWidget
@@ -25,14 +26,16 @@ public:
     QRadioButton *lvl1;
     QRadioButton *lvl2;
     QRadioButton *lvl3;
-    QMediaPlayer *audio;
+   // QMediaPlayer *audio;
     game1scene *scene1;
     QVBoxLayout *Vbox;
     QGraphicsView *view;
     QCursor *c;
+    QTimer *ti;
 
 public slots:
     void playb();
+    void quit();
 
 
 };

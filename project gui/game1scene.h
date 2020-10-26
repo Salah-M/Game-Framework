@@ -24,6 +24,7 @@ public:
     int speed;
 
     int level;
+    bool quit;
 
     /*int scount;
     int mcount;
@@ -37,6 +38,7 @@ public:
     int scoreToWin;
     int loss;
     QString text;
+
 
     QFile *file;
     QTextStream *in;

@@ -23,6 +23,10 @@ game1menu::game1menu(QWidget *parent) : QWidget(parent)
 
     setLayout(Vbox);
     QObject::connect(play, SIGNAL(clicked(bool)), this, SLOT(playb()));
+    ti = new QTimer;
+    connect(ti,SIGNAL(timeout()),this,SLOT(quit()));
+    ti->start(1);
+
 }
 void game1menu::playb()
 {   scene1 = new game1scene;
@@ -38,8 +42,8 @@ void game1menu::playb()
     {
         scene1->level = 3;
     }
-    audio = new QMediaPlayer;
-    audio->setMedia(QUrl("qrc:/music/05 Loonboon.mp3"));
+    //audio = new QMediaPlayer;
+    //audio->setMedia(QUrl("qrc:/music/05 Loonboon.mp3"));
     QPixmap cpixmap=QPixmap(":/images/needle.png").scaled(30,30);
     QCursor cursor = QCursor(cpixmap,0,0);
     view = new QGraphicsView();
@@ -49,6 +53,13 @@ void game1menu::playb()
     view->setVerticalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
     view->setScene(scene1);
     view->show();
-    audio->play();
+
+    //audio->play();
     this->close();
+}
+void game1menu::quit(){
+    if(scene1->quit==true){
+        view->close();
+        this->show();
+    }
 }
