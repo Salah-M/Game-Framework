@@ -1,9 +1,9 @@
 #include "game1menu.h"
-
+#include "game1scene.h"
+#include "globalvar.h"
 game1menu::game1menu(QWidget *parent) : QWidget(parent)
 {
     title = new QLabel;
-
     l = new QLabel("Select Level:");
     lvl1 = new QRadioButton("Level 1 (Easy)");
     lvl2 = new QRadioButton("Level 2 (medium)");
@@ -23,43 +23,37 @@ game1menu::game1menu(QWidget *parent) : QWidget(parent)
 
     setLayout(Vbox);
     QObject::connect(play, SIGNAL(clicked(bool)), this, SLOT(playb()));
-    ti = new QTimer;
+    //QObject::connect(scene1, SIGNAL(quit_g()), this, SLOT(quit()));
+
+   /* ti = new QTimer;
     connect(ti,SIGNAL(timeout()),this,SLOT(quit()));
-    ti->start(1);
+    ti->start(1); */
 
 }
 void game1menu::playb()
-{   scene1 = new game1scene;
+{
     if (lvl1->isChecked())
     {
-        scene1->level = 1;
+        aud="qrc:/music/06 Moongrains.mp3";
+        //textf="level1.txt";
     }
     else if (lvl2->isChecked())
     {
-        scene1->level = 2;
+        aud="qrc:/music/05 Loonboon.mp3";
     }
     else if (lvl3->isChecked())
     {
-        scene1->level = 3;
+        aud="qrc:/music/10 Ultimate Battle.mp3";
     }
-    //audio = new QMediaPlayer;
-    //audio->setMedia(QUrl("qrc:/music/05 Loonboon.mp3"));
-    QPixmap cpixmap=QPixmap(":/images/needle.png").scaled(30,30);
-    QCursor cursor = QCursor(cpixmap,0,0);
-    view = new QGraphicsView();
-    view->setCursor(cursor);
-    view->setFixedSize(988,412);
-    view->setHorizontalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
-    view->setVerticalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
-    view->setScene(scene1);
-    view->show();
 
-    //audio->play();
+    game1scene *scene1;
+    scene1= new game1scene;
+
     this->close();
 }
 void game1menu::quit(){
-    if(scene1->quit==true){
-        view->close();
-        this->show();
-    }
+
+
+        //this->show();
+
 }

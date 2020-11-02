@@ -1,24 +1,36 @@
 #include "game1scene.h"
 #include "game1menu.h"
-
+#include  "globalvar.h"
 
 game1scene::game1scene()
 {
+    qDebug()<<"lvl is:"<<level;
+    g= new game1menu;
+    QPixmap cpixmap=QPixmap(":/images/needle.png").scaled(30,30);
+    QCursor cursor = QCursor(cpixmap,0,0);
+    view = new QGraphicsView();
+    view->setCursor(cursor);
+    view->setFixedSize(988,412);
+    view->setHorizontalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
+    view->setVerticalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
+    view->setScene(this);
+    view->show();
     speed = 1;
     i = 0;
     lossCount = 0;
     quit = false;
 
     score = new game1score();
-
+    qDebug()<<"lvl is:"<<level;
     audio = new QMediaPlayer;
-    audio->setMedia(QUrl("qrc:/music/05 Loonboon.mp3"));
+
+    audio->setMedia(QUrl(aud));
     audio->play();
 
     this->addItem(score);
     score->setPos(0,0);
 
-    file = new QFile(":/level1.txt");
+    file = new QFile(textf);
     file->open(QIODevice::ReadOnly);
     in = new QTextStream(file);
     *in >> scoreToWin;
@@ -26,7 +38,7 @@ game1scene::game1scene()
     *in >> loss;
     qDebug() << loss << endl;
 
-
+    //QObject::connect(this, SIGNAL(quit_g()),&game1m, SLOT(quit()));
 
     setBackgroundBrush(QBrush(QImage(":/images/istockphoto-636339532-612x612.jpg").scaledToHeight(412).scaledToWidth(988)));
     setSceneRect(0,0,988,412);
@@ -220,8 +232,8 @@ void game1scene::restartGame()
 
 void game1scene::quitGame()     // needs fix
 {
-    quit =true;
-    //game1menu *g = new game1menu();
-    //g->show();
-    //delete this;
+    view->close();
+    g->show();
+
+
 }

@@ -4,6 +4,7 @@
 #include "game1score.h"
 #include "virus.h"
 #include "button.h"
+#include "game1menu.h"
 #include <QObject>
 #include <QWidget>
 #include <QGraphicsScene>
@@ -25,6 +26,7 @@ public:
 
     int level;
     bool quit;
+     QGraphicsView *view;
 
     /*int scount;
     int mcount;
@@ -39,7 +41,7 @@ public:
     int loss;
     QString text;
 
-
+    game1menu *g;
     QFile *file;
     QTextStream *in;
 
@@ -52,6 +54,7 @@ public:
     QTimer *count;
 
     QGraphicsRectItem *panel;
+    //game1menu game1m;
 
     //QGraphicsTextItem * io;
 
@@ -60,7 +63,8 @@ public:
     void win();
 
     void drawPanel(int x, int y, int width, int height, QColor color, double opacity);
-
+signals:
+    void quit_g();
 public slots:
     void create_instance();
     void update_counters();

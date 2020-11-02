@@ -9,7 +9,7 @@
 #include <QRegExp>
 #include <QGraphicsView>
 #include "account.h"
-#include "game1scene.h"
+//#include "game1scene.h"
 #include <QMediaPlayer>
 #include <QPixmap>
 #include <QTimer>
@@ -27,9 +27,9 @@ public:
     QRadioButton *lvl2;
     QRadioButton *lvl3;
    // QMediaPlayer *audio;
-    game1scene *scene1;
+    //game1scene *scene1;
     QVBoxLayout *Vbox;
-    QGraphicsView *view;
+
     QCursor *c;
     QTimer *ti;
 
