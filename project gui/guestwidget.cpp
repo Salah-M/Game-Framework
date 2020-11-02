@@ -25,5 +25,6 @@ guestwidget::guestwidget(QWidget *parent) : QWidget(parent)
 void guestwidget::playGame()
 {
     this->close();
+    game->user="guest";
     game->show();
 }

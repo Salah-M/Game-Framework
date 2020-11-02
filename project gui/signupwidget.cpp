@@ -151,6 +151,20 @@ void signupwidget::signup()
             return;
         }
 
+        QString pathhh = QDir::currentPath();
+        pathhh.append("/userHistory");
+        if (!QDir(pathhh).exists())
+        {
+            QDir().mkdir(pathhh);
+        }
+        pathhh.append("/" + username_line->text() +".txt");
+        if (QFile::exists(pathhh))
+        {
+            QFile::remove(pathhh);
+        }
+        QFile fileee(pathhh);
+        fileee.open(QIODevice::WriteOnly);
+        fileee.close();
         QString gender;
         QString dob;
         dob = C->selectedDate().toString();
@@ -176,6 +190,7 @@ void signupwidget::signup()
         sw->a->firstName=firstname_line->text();
         sw->a->lastName=lastname_line->text();
         sw->a->imageloc=imageName;
+        sw->a->username=username_line->text();
         sw->getName();
         sw->show();
 

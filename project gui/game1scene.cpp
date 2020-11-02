@@ -4,7 +4,7 @@
 
 game1scene::game1scene()
 {
-    qDebug()<<"lvl is:"<<level;
+
     g= new game1menu;
     QPixmap cpixmap=QPixmap(":/images/needle.png").scaled(30,30);
     QCursor cursor = QCursor(cpixmap,0,0);
@@ -48,6 +48,7 @@ game1scene::game1scene()
     connect(count,SIGNAL(timeout()),this,SLOT(update_counters()));
     count->start(100);
     inst->start(1000);
+
 }
 
 void game1scene::create_instance()
@@ -166,7 +167,22 @@ void game1scene::lose()
     quitButton->setPos(400,350);
     connect(quitButton,SIGNAL(clicked()),this,SLOT(quitGame()));
     this->addItem(quitButton);
+    qDebug()<<"username in lose"<<this->userscene;
     file->close();
+    QString path = "./userHistory";
+      QString date = QDate::currentDate().toString();
+      QString time = QTime::currentTime().toString();
+      path.append("/" + this->userscene + ".txt");
+      QFile filee(path);
+      qDebug()<<"username in lose before printing"<<this->userscene;
+      if (filee.open(QIODevice::ReadWrite | QIODevice::Append))
+      {     qDebug()<<"username in lose printing"<<this->userscene;
+          QTextStream stream(&filee);
+          stream << "game1 " << date << " " << time  << " lost " << QString::number(score->score) << endl;
+          qDebug()<<"printing to file"<<endl;
+          stream.flush();
+      }
+      filee.close();
 }
 
 void game1scene::win()
@@ -190,7 +206,22 @@ void game1scene::win()
     quitButton->setPos(400,350);
     connect(quitButton,SIGNAL(clicked()),this,SLOT(quitGame()));
     this->addItem(quitButton);
+    qDebug()<<"username in win"<<this->userscene;
     file->close();
+    QString path = "./userHistory";
+      QString date = QDate::currentDate().toString();
+      QString time = QTime::currentTime().toString();
+      qDebug()<<"username in win printed"<<this->userscene;
+      path.append("/" + this->userscene + ".txt");
+      QFile filee(path);
+      if (filee.open(QIODevice::ReadWrite | QIODevice::Append))
+      {
+          QTextStream stream(&filee);
+          stream << "game1 " << date << " " << time  << " won " << QString::number(score->score) << endl;
+          qDebug()<<"printing to file"<<endl;
+          stream.flush();
+      }
+      filee.close();
 }
 
 void game1scene::restartGame()
@@ -212,7 +243,7 @@ void game1scene::restartGame()
     this->addItem(score);
 
     audio = new QMediaPlayer;
-    audio->setMedia(QUrl("qrc:/music/05 Loonboon.mp3"));
+    audio->setMedia(QUrl(aud));
     audio->play();
 
     this->addItem(score);
@@ -230,9 +261,11 @@ void game1scene::restartGame()
     inst->start(1000);
 }
 
-void game1scene::quitGame()     // needs fix
+void game1scene::quitGame()
 {
     view->close();
+    qDebug()<<"username in quiting"<<this->userscene;
+    g->user=this->userscene;
     g->show();
 
 

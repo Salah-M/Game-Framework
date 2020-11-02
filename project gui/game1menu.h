@@ -26,10 +26,8 @@ public:
     QRadioButton *lvl1;
     QRadioButton *lvl2;
     QRadioButton *lvl3;
-   // QMediaPlayer *audio;
-    //game1scene *scene1;
     QVBoxLayout *Vbox;
-
+    QString user;
     QCursor *c;
     QTimer *ti;
 

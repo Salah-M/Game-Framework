@@ -32,6 +32,7 @@ game1menu::game1menu(QWidget *parent) : QWidget(parent)
 }
 void game1menu::playb()
 {
+    qDebug()<<"in playb"<<this->user;
     if (lvl1->isChecked())
     {
         aud="qrc:/music/06 Moongrains.mp3";
@@ -48,7 +49,7 @@ void game1menu::playb()
 
     game1scene *scene1;
     scene1= new game1scene;
-
+    scene1->userscene=this->user;
     this->close();
 }
 void game1menu::quit(){

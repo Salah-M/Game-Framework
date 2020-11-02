@@ -25,6 +25,7 @@ public:
     QImage *image;
 public slots:
     void playGame();
+    //void history_G();
 };
 
 #endif // GUESTWIDGET_H

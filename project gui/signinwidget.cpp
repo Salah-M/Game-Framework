@@ -22,8 +22,8 @@ void signinwidget::getName()
     QString fullname = a->firstName + " " + a->lastName;
     name = new QLabel(fullname);
     image = new QImage();
-
-
+    qDebug()<<"username is in sign in"<<a->username;
+    game->user=a->username;
 
     bool valid = image->load(a->imageloc);
     if (valid)
@@ -56,5 +56,7 @@ void signinwidget::checkBirthday()
 void signinwidget::playGame()
 {
     this->close();
+
+
     game->show();
 }
