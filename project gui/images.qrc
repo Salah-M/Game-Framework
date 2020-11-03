@@ -26,5 +26,7 @@
         <file>music/neck_snap-Vladimir-719669812.wav</file>
         <file>level2.txt</file>
         <file>level3.txt</file>
+        <file>music/lose.mp3</file>
+        <file>music/win.mp3</file>
     </qresource>
 </RCC>

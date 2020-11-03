@@ -8,6 +8,7 @@
 #include <QCalendarWidget>
 #include <QRegExp>
 #include "account.h"
+#include "historywidget.h"
 #include "game1menu.h"
 #include <QPixmap>
 
@@ -20,11 +21,13 @@ public:
     QLabel *name;
     game1menu *game;
     QPushButton *history;
+    historywidget *hw;
     QPushButton *play;
     QVBoxLayout *VBox;
     QImage *image;
 public slots:
     void playGame();
+    void History();
     //void history_G();
 };
 

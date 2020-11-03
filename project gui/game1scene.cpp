@@ -151,6 +151,9 @@ void game1scene::lose()
     inst->stop();
     count->stop();
     audio->stop();
+    audio = new QMediaPlayer;
+    audio->setMedia(QUrl("qrc:/music/lose.mp3"));
+    audio->play();
     drawPanel(0,0,1000,450,Qt::black,0.65);
     io = new QGraphicsTextItem();
     io->setPos(300,100);
@@ -191,6 +194,9 @@ void game1scene::win()
     inst->stop();
     count->stop();
     audio->stop();
+    audio = new QMediaPlayer;
+    audio->setMedia(QUrl("qrc:/music/win.mp3"));
+    audio->play();
     drawPanel(0,0,1000,450,Qt::black,0.65);
     io = new QGraphicsTextItem();
     io->setPos(300,100);

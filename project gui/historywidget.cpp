@@ -1,11 +1,12 @@
 #include "historywidget.h"
 #include "signinwidget.h"
+#include "guestwidget.h"
 
 historywidget::historywidget(QWidget *parent) : QWidget(parent)
 {
     back = new QPushButton("back");
     VBox = new QVBoxLayout();
-    QObject::connect(back, SIGNAL(clicked(bool)), this, SLOT(Back()));
+    QObject::connect(back,SIGNAL(clicked(bool)),this,SLOT(Back1()));
 }
 
 void historywidget::getHistory()
@@ -29,7 +30,23 @@ void historywidget::getHistory()
     setLayout(VBox);
 }
 
-void historywidget::Back()
+void historywidget::Back1()
 {
+    if(username==""){
+        this->close();
+        guestwidget *g= new guestwidget;
+        g->show();
+    }
+   else{//this doesn't work well since we need to know account to find the sign in
+        signinwidget *s= new signinwidget;
+        s->a=AH;
+        AH->print();
+        qDebug()<<"seperator between AH and a";
+        s->a->print();
+
+        this->close();
+        s->getName();
+        s->show();
+    }
 
 }

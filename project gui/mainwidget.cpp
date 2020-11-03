@@ -114,6 +114,7 @@ void mainWidget::signin()
     {
         messageBox->critical(0,"Error","Incorrect Username!");
         messageBox->setFixedSize(500,200);
+        return;
     }
     file.close();
     this->close();

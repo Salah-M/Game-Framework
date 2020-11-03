@@ -3,6 +3,6 @@
 #include <QString>
 extern QString textf;
 extern QString aud;
-
+extern int speedowagon;
 
 #endif // GLOBALVAR_H

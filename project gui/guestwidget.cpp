@@ -5,6 +5,7 @@ guestwidget::guestwidget(QWidget *parent) : QWidget(parent)
     pic = new QLabel();
     name = new QLabel("Hello Traveler!! Welcome to.... umm ... s-something");
     history = new QPushButton("Score History");
+    hw = new historywidget();
     image = new QImage();
     play = new QPushButton("Play");
     VBox = new QVBoxLayout();
@@ -21,10 +22,17 @@ guestwidget::guestwidget(QWidget *parent) : QWidget(parent)
 
     setLayout(VBox);
     QObject::connect(play, SIGNAL(clicked(bool)), this, SLOT(playGame()));
+    QObject::connect(history, SIGNAL(clicked(bool)), this, SLOT(History()));
 }
 void guestwidget::playGame()
 {
     this->close();
     game->user="guest";
     game->show();
+}
+void guestwidget::History()
+{
+    this->close();
+    hw->show();
+    hw->getHistory();
 }

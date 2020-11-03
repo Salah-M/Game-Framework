@@ -67,6 +67,12 @@ void signinwidget::playGame()
 
 void signinwidget::History()
 {
+    a->print();
+    qDebug()<<"this was a in signinwid";
+    hw->AH=a;
+    hw->AH->print();
+    qDebug()<<"this was AH in signinwid";
+
     this->close();
     hw->show();
     hw->getHistory();
