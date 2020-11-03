@@ -36,15 +36,18 @@ void game1menu::playb()
     if (lvl1->isChecked())
     {
         aud="qrc:/music/06 Moongrains.mp3";
-        //textf="level1.txt";
+        textf=":/level1.txt";
     }
     else if (lvl2->isChecked())
     {
         aud="qrc:/music/05 Loonboon.mp3";
+        textf=":/level2.txt";
+
     }
     else if (lvl3->isChecked())
     {
         aud="qrc:/music/10 Ultimate Battle.mp3";
+        textf=":/level3.txt";
     }
 
     game1scene *scene1;

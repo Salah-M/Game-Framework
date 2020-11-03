@@ -9,6 +9,7 @@ SOURCES += \
     game1score.cpp \
     globalvar.cpp \
     guestwidget.cpp \
+    historywidget.cpp \
     main.cpp \
     mainwidget.cpp \
     signinwidget.cpp \
@@ -24,6 +25,7 @@ HEADERS += \
     game1score.h \
     globalvar.h \
     guestwidget.h \
+    historywidget.h \
     mainwidget.h \
     signinwidget.h \
     signupwidget.h \
@@ -31,7 +33,9 @@ HEADERS += \
     virus.h
 
 DISTFILES += \
-    level1.txt
+    level1.txt \
+    level2.txt \
+    level3.txt
 
 RESOURCES += \
     images.qrc

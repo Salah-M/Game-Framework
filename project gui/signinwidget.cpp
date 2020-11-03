@@ -4,6 +4,7 @@ signinwidget::signinwidget(QWidget *parent) : QWidget(parent)
 {
     a = new account();
     game = new game1menu();
+    hw = new historywidget();
     pic = new QLabel();
     messageBox = new QMessageBox();
     history = new QPushButton("Score History");
@@ -13,6 +14,8 @@ signinwidget::signinwidget(QWidget *parent) : QWidget(parent)
     play->setStyleSheet("background-color:black; color:white;");
 
     QObject::connect(play, SIGNAL(clicked(bool)), this, SLOT(playGame()));
+    QObject::connect(history, SIGNAL(clicked(bool)), this, SLOT(History()));
+
 
 
 }
@@ -24,6 +27,7 @@ void signinwidget::getName()
     image = new QImage();
     qDebug()<<"username is in sign in"<<a->username;
     game->user=a->username;
+    hw->username = a->username;
 
     bool valid = image->load(a->imageloc);
     if (valid)
@@ -59,4 +63,11 @@ void signinwidget::playGame()
 
 
     game->show();
+}
+
+void signinwidget::History()
+{
+    this->close();
+    hw->show();
+    hw->getHistory();
 }

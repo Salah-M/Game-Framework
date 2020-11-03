@@ -102,7 +102,7 @@ void game1scene::update_counters()
         }
         if (v[j]->y() >= 400 && v[j]->isChecked == false)
         {
-            v[j]->isChecked = true;
+            v[j]->setY(-200);
             lossCount = lossCount + 1;
             qDebug() << lossCount << endl;
             if (lossCount == loss)
@@ -169,6 +169,7 @@ void game1scene::lose()
     this->addItem(quitButton);
     qDebug()<<"username in lose"<<this->userscene;
     file->close();
+
     QString path = "./userHistory";
       QString date = QDate::currentDate().toString();
       QString time = QTime::currentTime().toString();
@@ -207,6 +208,7 @@ void game1scene::win()
     connect(quitButton,SIGNAL(clicked()),this,SLOT(quitGame()));
     this->addItem(quitButton);
     qDebug()<<"username in win"<<this->userscene;
+
     file->close();
     QString path = "./userHistory";
       QString date = QDate::currentDate().toString();
@@ -249,7 +251,7 @@ void game1scene::restartGame()
     this->addItem(score);
     score->setPos(0,0);
 
-    file = new QFile(":/level1.txt");
+    file = new QFile(textf);
     file->open(QIODevice::ReadOnly);
     in = new QTextStream(file);
     *in >> scoreToWin;

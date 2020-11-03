@@ -9,6 +9,7 @@
 #include <QRegExp>
 #include "account.h"
 #include "game1menu.h"
+#include "historywidget.h"
 #include <QPixmap>
 
 
@@ -19,6 +20,7 @@ public:
     explicit signinwidget(QWidget *parent = nullptr);
     account *a;
     game1menu *game;
+    historywidget *hw;
     QLabel *pic;
     QLabel *name;
     QMessageBox *messageBox;
@@ -31,6 +33,7 @@ public:
     void checkBirthday();
 
     public slots:
+    void History();
     void playGame();
 
 

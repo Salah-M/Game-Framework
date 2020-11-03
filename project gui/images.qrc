@@ -24,5 +24,7 @@
         <file>music/06 Moongrains.mp3</file>
         <file>music/10 Ultimate Battle.mp3</file>
         <file>music/neck_snap-Vladimir-719669812.wav</file>
+        <file>level2.txt</file>
+        <file>level3.txt</file>
     </qresource>
 </RCC>

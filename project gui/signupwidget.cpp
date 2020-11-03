@@ -151,6 +151,7 @@ void signupwidget::signup()
             return;
         }
 
+
         QString pathhh = QDir::currentPath();
         pathhh.append("/userHistory");
         if (!QDir(pathhh).exists())
@@ -165,6 +166,8 @@ void signupwidget::signup()
         QFile fileee(pathhh);
         fileee.open(QIODevice::WriteOnly);
         fileee.close();
+
+
         QString gender;
         QString dob;
         dob = C->selectedDate().toString();

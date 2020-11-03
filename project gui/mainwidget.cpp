@@ -94,6 +94,7 @@ void mainWidget::signin()
                 akal = true;
                 sin->show();
                 sin->checkBirthday();
+                break;
 
                 // we show the widget
                 //create account to store the info from text file and then display on signinwidget
