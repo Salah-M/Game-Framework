@@ -6,6 +6,7 @@ historywidget::historywidget(QWidget *parent) : QWidget(parent)
 {
     back = new QPushButton("back");
     VBox = new QVBoxLayout();
+    this->setStyleSheet("background-color:cyan;");
     QObject::connect(back,SIGNAL(clicked(bool)),this,SLOT(Back1()));
 }
 
