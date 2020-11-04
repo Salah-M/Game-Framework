@@ -1,4 +1,5 @@
 #include "signinwidget.h"
+#include "mainwidget.h"
 
 signinwidget::signinwidget(QWidget *parent) : QWidget(parent)
 {
@@ -9,12 +10,15 @@ signinwidget::signinwidget(QWidget *parent) : QWidget(parent)
     messageBox = new QMessageBox();
     history = new QPushButton("Score History");
     play = new QPushButton("Play");
+    logout = new QPushButton("Logout");
     this->setStyleSheet("background-color:grey;");
     history->setStyleSheet("background-color:black; color:white;");
     play->setStyleSheet("background-color:black; color:white;");
 
     QObject::connect(play, SIGNAL(clicked(bool)), this, SLOT(playGame()));
     QObject::connect(history, SIGNAL(clicked(bool)), this, SLOT(History()));
+    QObject::connect(logout, SIGNAL(clicked(bool)), this, SLOT(quit()));
+
 
 
 
@@ -26,7 +30,7 @@ void signinwidget::getName()
     name = new QLabel(fullname);
     image = new QImage();
     qDebug()<<"username is in sign in"<<a->username;
-    game->user=a->username;
+    game->user = a;
     hw->username = a->username;
 
     bool valid = image->load(a->imageloc);
@@ -40,6 +44,7 @@ void signinwidget::getName()
     VBox->addWidget(name);
     VBox->addWidget(history);
     VBox->addWidget(play);
+    VBox->addWidget(logout);
     setLayout(VBox);
 }
 
@@ -76,4 +81,11 @@ void signinwidget::History()
     this->close();
     hw->show();
     hw->getHistory();
+}
+
+void signinwidget::quit()
+{
+    mainWidget *m = new mainWidget();
+    this->close();
+    m->show();
 }

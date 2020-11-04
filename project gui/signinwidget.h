@@ -26,6 +26,7 @@ public:
     QMessageBox *messageBox;
     QPushButton *history;
     QPushButton *play;
+    QPushButton *logout;
     QVBoxLayout *VBox;
     QImage *image;
 
@@ -35,6 +36,7 @@ public:
     public slots:
     void History();
     void playGame();
+    void quit();
 
 
 };

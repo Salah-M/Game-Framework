@@ -1,4 +1,5 @@
 #include "guestwidget.h"
+#include "mainwidget.h"
 
 guestwidget::guestwidget(QWidget *parent) : QWidget(parent)
 {
@@ -8,6 +9,7 @@ guestwidget::guestwidget(QWidget *parent) : QWidget(parent)
     hw = new historywidget();
     image = new QImage();
     play = new QPushButton("Play");
+    logout = new QPushButton("Logout");
     VBox = new QVBoxLayout();
     game = new game1menu;
     history->setStyleSheet("background-color:black; color:white;");
@@ -19,15 +21,18 @@ guestwidget::guestwidget(QWidget *parent) : QWidget(parent)
    VBox->addWidget(name);
    VBox->addWidget(history);
    VBox->addWidget(play);
+   VBox->addWidget(logout);
 
     setLayout(VBox);
     QObject::connect(play, SIGNAL(clicked(bool)), this, SLOT(playGame()));
     QObject::connect(history, SIGNAL(clicked(bool)), this, SLOT(History()));
+    QObject::connect(logout, SIGNAL(clicked(bool)), this, SLOT(quit()));
+
 }
 void guestwidget::playGame()
 {
     this->close();
-    game->user="guest";
+    game->user->username="guest";
     game->show();
 }
 void guestwidget::History()
@@ -36,3 +41,11 @@ void guestwidget::History()
     hw->show();
     hw->getHistory();
 }
+
+void guestwidget::quit()
+{
+    mainWidget *m = new mainWidget();
+    this->close();
+    m->show();
+}
+

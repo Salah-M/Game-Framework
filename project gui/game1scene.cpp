@@ -47,7 +47,7 @@ game1scene::game1scene()
     connect(inst,SIGNAL(timeout()),this,SLOT(create_instance()));
     connect(count,SIGNAL(timeout()),this,SLOT(update_counters()));
     count->start(100);
-    inst->start(1000);
+    inst->start(1000/speedowagon);
 
 }
 
@@ -170,17 +170,17 @@ void game1scene::lose()
     quitButton->setPos(400,350);
     connect(quitButton,SIGNAL(clicked()),this,SLOT(quitGame()));
     this->addItem(quitButton);
-    qDebug()<<"username in lose"<<this->userscene;
+    qDebug()<<"username in lose"<<this->userscene->username;
     file->close();
 
     QString path = "./userHistory";
       QString date = QDate::currentDate().toString();
       QString time = QTime::currentTime().toString();
-      path.append("/" + this->userscene + ".txt");
+      path.append("/" + this->userscene->username + ".txt");
       QFile filee(path);
-      qDebug()<<"username in lose before printing"<<this->userscene;
+      qDebug()<<"username in lose before printing"<<this->userscene->username;
       if (filee.open(QIODevice::ReadWrite | QIODevice::Append))
-      {     qDebug()<<"username in lose printing"<<this->userscene;
+      {
           QTextStream stream(&filee);
           stream << "game1 " << date << " " << time  << " lost " << QString::number(score->score) << endl;
           qDebug()<<"printing to file"<<endl;
@@ -213,14 +213,14 @@ void game1scene::win()
     quitButton->setPos(400,350);
     connect(quitButton,SIGNAL(clicked()),this,SLOT(quitGame()));
     this->addItem(quitButton);
-    qDebug()<<"username in win"<<this->userscene;
+    qDebug()<<"username in win"<<this->userscene->username;
 
     file->close();
     QString path = "./userHistory";
       QString date = QDate::currentDate().toString();
       QString time = QTime::currentTime().toString();
-      qDebug()<<"username in win printed"<<this->userscene;
-      path.append("/" + this->userscene + ".txt");
+      qDebug()<<"username in win printed"<<this->userscene->username;
+      path.append("/" + this->userscene->username + ".txt");
       QFile filee(path);
       if (filee.open(QIODevice::ReadWrite | QIODevice::Append))
       {

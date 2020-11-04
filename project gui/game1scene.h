@@ -21,7 +21,7 @@ class game1scene : public QGraphicsScene
 public:
     game1scene();
     int i;
-    QString userscene;
+    account *userscene;
     int speed;
 
     int level;

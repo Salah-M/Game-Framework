@@ -36,6 +36,7 @@ public:
     QCalendarWidget *C;
     QPushButton *PB0;   //SIGN UP
     QPushButton *PB1;
+    QPushButton *back;
     QGridLayout *grid;
     QVBoxLayout *VBox;
     QHBoxLayout *HBox;
@@ -49,6 +50,7 @@ public:
     public slots:
     void signup();
     void image();
+    void quit();
 
 
 

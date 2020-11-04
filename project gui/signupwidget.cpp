@@ -1,4 +1,5 @@
 #include "signupwidget.h"
+#include "mainwidget.h"
 
 
 signupwidget::signupwidget(QWidget *parent) : QWidget(parent)
@@ -33,6 +34,7 @@ signupwidget::signupwidget(QWidget *parent) : QWidget(parent)
 
     PB0 = new QPushButton("Sign up");
     PB1 = new QPushButton("Upload Picture");
+    back = new QPushButton("Back");
 
     HBox = new QHBoxLayout();
     HBox->addWidget(RB0);
@@ -60,12 +62,15 @@ signupwidget::signupwidget(QWidget *parent) : QWidget(parent)
     //VBox->addItem(grid);
     VBox->addWidget(C);
     VBox->addWidget(PB0);
+    VBox->addWidget(back);
     setLayout(VBox);
 
 
 
     QObject::connect(PB0, SIGNAL(clicked(bool)), this, SLOT(signup()));
     QObject::connect(PB1, SIGNAL(clicked(bool)), this, SLOT(image()));
+    QObject::connect(back, SIGNAL(clicked(bool)), this, SLOT(quit()));
+
 
 }
 
@@ -221,4 +226,11 @@ void signupwidget::image()
 
         }
     }
+}
+
+void signupwidget::quit()
+{
+    mainWidget *m = new mainWidget();
+    this->close();
+    m->show();
 }

@@ -21,6 +21,7 @@ public:
     QLabel *name;
     game1menu *game;
     QPushButton *history;
+    QPushButton *logout;
     historywidget *hw;
     QPushButton *play;
     QVBoxLayout *VBox;
@@ -28,6 +29,8 @@ public:
 public slots:
     void playGame();
     void History();
+    void quit();
+
     //void history_G();
 };
 

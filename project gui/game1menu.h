@@ -22,18 +22,19 @@ public:
     explicit game1menu(QWidget *parent = nullptr);
     QLabel *title;
     QPushButton *play;
+    QPushButton *back;
     QLabel *l;
     QRadioButton *lvl1;
     QRadioButton *lvl2;
     QRadioButton *lvl3;
     QVBoxLayout *Vbox;
-    QString user;
+    account *user;
     QCursor *c;
     QTimer *ti;
 
 public slots:
     void playb();
-    void quit();
+    void Backk();
 
 
 };
