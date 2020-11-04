@@ -91,6 +91,11 @@ void signupwidget::signup()
         messageBox->critical(0,"Error","One of the fields is missing!");
         messageBox->setFixedSize(500,200);
     }
+    else if (username_line->text() == "guest")
+    {
+        messageBox->critical(0,"Error","guest is an invalid username!");
+        messageBox->setFixedSize(500,200);
+    }
     else if (username_line == NULL)
     {
         messageBox->critical(0,"Error","One of the fields is missing!");

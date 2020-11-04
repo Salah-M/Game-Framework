@@ -1,5 +1,6 @@
 #include "mainwidget.h"
 #include "signupwidget.h"
+#include "globalvar.h"
 
 
 mainWidget::mainWidget(QWidget *parent) : QWidget(parent)
@@ -14,7 +15,6 @@ mainWidget::mainWidget(QWidget *parent) : QWidget(parent)
     PB1 = new QPushButton("Sign up");
     PB2 = new QPushButton("Play as guest");
     sup = new signupwidget();
-    guest = new guestwidget();
     a = new account();
     messageBox = new QMessageBox();
     PB0->setStyleSheet("background-color:orange;");
@@ -129,7 +129,29 @@ void mainWidget::signup()
 
 void mainWidget::playAsGuest()
 {
-    guest->show();
+
+    QString pathhh = QDir::currentPath();
+    pathhh.append("/userHistory");
+    if (!QDir(pathhh).exists())
+    {
+        QDir().mkdir(pathhh);
+    }
+    pathhh.append("/" + guest->username +".txt");
+    if (QFile::exists(pathhh))
+    {
+        QFile::remove(pathhh);
+    }
+    QFile fileee(pathhh);
+    fileee.open(QIODevice::WriteOnly);
+    fileee.close();
+    sin = new signinwidget();
+    sin->a = guest;
+    guest->print();
+    qDebug()<<"seperator between AH and a";
+    sin->a->print();
+
     this->close();
+    sin->getName();
+    sin->show();
 }
 

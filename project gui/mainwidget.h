@@ -7,7 +7,6 @@
 #include <QString>
 #include "signupwidget.h"
 #include "signinwidget.h"
-#include "guestwidget.h"
 #include "account.h"
 #include <QCryptographicHash>
 
@@ -26,9 +25,7 @@ public:
     QVBoxLayout *VBox;
     signupwidget *sup;
     account *a;
-    signinwidget *sin;
-    guestwidget *guest;
-    QMessageBox *messageBox;
+    signinwidget *sin;    QMessageBox *messageBox;
 
     public slots:
     void signin();
