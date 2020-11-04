@@ -266,7 +266,7 @@ void game1scene::restartGame()
     qDebug() << loss << endl;
 
     count->start(100);
-    inst->start(1000);
+    inst->start(1000/speedowagon);
 }
 
 void game1scene::quitGame()
