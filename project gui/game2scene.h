@@ -1,8 +1,6 @@
 #ifndef GAME2SCENE_H
 #define GAME2SCENE_H
 
-
-#include "virus.h"
 #include "button.h"
 #include "game1menu.h"
 #include <QObject>
