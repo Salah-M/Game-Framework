@@ -4,18 +4,22 @@
 signinwidget::signinwidget(QWidget *parent) : QWidget(parent)
 {
     a = new account();
-    game = new game1menu();
+    game1 = new game1menu();
+    game2 = new game2menu();
     hw = new historywidget();
     pic = new QLabel();
     messageBox = new QMessageBox();
     history = new QPushButton("Score History");
-    play = new QPushButton("Play");
+    play1 = new QPushButton("Play Game 1");
+    play2 = new QPushButton("Play Game 2");
     logout = new QPushButton("Logout");
     this->setStyleSheet("background-color:grey;");
     history->setStyleSheet("background-color:black; color:white;");
-    play->setStyleSheet("background-color:black; color:white;");
+    play1->setStyleSheet("background-color:black; color:white;");
+    play2->setStyleSheet("background-color:black; color:white;");
 
-    QObject::connect(play, SIGNAL(clicked(bool)), this, SLOT(playGame()));
+    QObject::connect(play1, SIGNAL(clicked(bool)), this, SLOT(playGame1()));
+    QObject::connect(play2, SIGNAL(clicked(bool)), this, SLOT(playGame2()));
     QObject::connect(history, SIGNAL(clicked(bool)), this, SLOT(History()));
     QObject::connect(logout, SIGNAL(clicked(bool)), this, SLOT(quit()));
 
@@ -30,7 +34,8 @@ void signinwidget::getName()
     name = new QLabel(fullname);
     image = new QImage();
     qDebug()<<"username is in sign in"<<a->username;
-    game->user = a;
+    game1->user = a;
+    game2->user = a;
     hw->username = a->username;
 
     bool valid = image->load(a->imageloc);
@@ -43,7 +48,8 @@ void signinwidget::getName()
     VBox->addWidget(pic);
     VBox->addWidget(name);
     VBox->addWidget(history);
-    VBox->addWidget(play);
+    VBox->addWidget(play1);
+    VBox->addWidget(play2);
     VBox->addWidget(logout);
     setLayout(VBox);
 }
@@ -62,13 +68,20 @@ void signinwidget::checkBirthday()
     }
 }
 
-void signinwidget::playGame()
+void signinwidget::playGame1()
 {
     this->close();
 
-
-    game->show();
+    game1->show();
 }
+
+void signinwidget::playGame2()
+{
+    this->close();
+
+    game2->show();
+}
+
 
 void signinwidget::History()
 {

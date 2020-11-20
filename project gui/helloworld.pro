@@ -7,11 +7,14 @@ SOURCES += \
     game1menu.cpp \
     game1scene.cpp \
     game1score.cpp \
+    game2menu.cpp \
+    game2scene.cpp \
     globalvar.cpp \
     guestwidget.cpp \
     historywidget.cpp \
     main.cpp \
     mainwidget.cpp \
+    piece.cpp \
     signinwidget.cpp \
     signupwidget.cpp \
     vdeath.cpp \
@@ -23,10 +26,13 @@ HEADERS += \
     game1menu.h \
     game1scene.h \
     game1score.h \
+    game2menu.h \
+    game2scene.h \
     globalvar.h \
     guestwidget.h \
     historywidget.h \
     mainwidget.h \
+    piece.h \
     signinwidget.h \
     signupwidget.h \
     vdeath.h \

@@ -4,7 +4,6 @@ virus::virus(QObject *parent):QObject(parent)
 {
     deathsound = new QMediaPlayer;
     deathsound->setMedia(QUrl("qrc:/music/neck_snap-Vladimir-719669812.wav"));
-
 }
 void virus::setSize(sizz s)
 {
@@ -36,7 +35,6 @@ void virus::setSize(sizz s)
 void virus ::update()
 {
     this->setPos(x(),y()+(0.1*speed));
-
 }
 
 void virus::kill()

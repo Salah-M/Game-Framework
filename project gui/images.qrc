@@ -28,5 +28,10 @@
         <file>level3.txt</file>
         <file>music/lose.mp3</file>
         <file>music/win.mp3</file>
+        <file>images/Othello.jpeg</file>
+        <file>images/blackp.png</file>
+        <file>images/Whitep.png</file>
+        <file>images/board.jpg</file>
+        <file>images/invalid.png</file>
     </qresource>
 </RCC>

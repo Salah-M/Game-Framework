@@ -26,7 +26,7 @@ public:
 
     int level;
     bool quit;
-     QGraphicsView *view;
+    QGraphicsView *view;
 
     /*int scount;
     int mcount;
