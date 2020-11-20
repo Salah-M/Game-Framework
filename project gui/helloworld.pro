@@ -14,6 +14,7 @@ SOURCES += \
     historywidget.cpp \
     main.cpp \
     mainwidget.cpp \
+    piece.cpp \
     signinwidget.cpp \
     signupwidget.cpp \
     vdeath.cpp \
@@ -31,6 +32,7 @@ HEADERS += \
     guestwidget.h \
     historywidget.h \
     mainwidget.h \
+    piece.h \
     signinwidget.h \
     signupwidget.h \
     vdeath.h \
