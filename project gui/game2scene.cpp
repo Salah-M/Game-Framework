@@ -3,6 +3,7 @@
 game2scene::game2scene()
 {
     turnmasta=true;
+    g= new game2menu;
     view = new QGraphicsView();
     view->setFixedSize(520,520);
     view->setHorizontalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
@@ -317,6 +318,7 @@ void game2scene::end()
 {
     int wcount = 0;
     int bcount = 0;
+
     int x;
     int y;
     x = 0;
@@ -338,6 +340,8 @@ void game2scene::end()
         }
         x++;
     }
+
+
     drawPanel(0,0,520,520,Qt::black,0.65);
     io = new QGraphicsTextItem();
     io->setPos(150,100);
@@ -355,6 +359,10 @@ void game2scene::end()
     {
         losttxt = "Draw \nWhite Count:" + QString::number(wcount)+"\nBlack Count:" + QString::number(bcount);
     }
+
+    au = new QMediaPlayer;
+    au->setMedia(QUrl("qrc:/music/win.mp3"));
+    au->play();
     io->setPlainText(losttxt);
     io->setFont(QFont("times",32));
     this->addItem(io);
@@ -372,11 +380,13 @@ void game2scene::end()
 void game2scene::restartGame()
 {
 
+
 }
 
 void game2scene::quitGame()
 {
-
+    view->close();
+    g->show();
 }
 
 

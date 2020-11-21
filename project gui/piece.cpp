@@ -6,6 +6,8 @@ piece::piece(QObject *parent):QObject(parent)
     QTimer *timer2 = new QTimer();
     connect(timer2,SIGNAL(timeout()), this,SLOT(place()));
     timer2->start(1);
+    placep = new QMediaPlayer;
+    placep->setMedia(QUrl("qrc:/music/place.wav"));
 }
 
 void piece::setState(state s)
@@ -48,6 +50,7 @@ void piece::place()
         {
             this->setState(black);
             this->fresh = true;
+            placep->play();
 
 
         }
@@ -55,6 +58,7 @@ void piece::place()
         {
             this->setState(white);
             this->fresh = true;
+            placep->play();
 
         }
      emit(placed());

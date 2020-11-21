@@ -34,5 +34,6 @@
         <file>images/board.jpg</file>
         <file>images/invalid.png</file>
         <file>images/valid.png</file>
+        <file>music/place.wav</file>
     </qresource>
 </RCC>

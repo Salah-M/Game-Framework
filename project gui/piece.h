@@ -15,6 +15,7 @@ public:
     enum state{invalid, valid ,white,black};
     state s;
     bool fresh;
+    QMediaPlayer *placep;
     explicit piece(QObject *parent=nullptr);
     void setState(state s);
 
