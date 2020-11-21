@@ -7,5 +7,5 @@ extern QString textf;
 extern QString aud;
 extern int speedowagon;
 extern account *guest;
-
+extern bool turnmasta;
 #endif // GLOBALVAR_H

@@ -1,5 +1,5 @@
 #include "piece.h"
-
+#include "globalvar.h"
 piece::piece(QObject *parent):QObject(parent)
 {
     fresh = false;
@@ -41,8 +41,18 @@ void piece::place()
 {
     if(this->isSelected())
     {
-        this->setState(white);
-        this->fresh = true;
+        if(turnmasta==true)
+        {
+            this->setState(black);
+            this->fresh = true;
+
+        }
+        else
+        {
+            this->setState(white);
+            this->fresh = true;
+
+        }
     }
 }
 

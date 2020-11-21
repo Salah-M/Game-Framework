@@ -26,6 +26,7 @@ public:
     //void win();
     //void drawPanel(int x, int y, int width, int height, QColor color, double opacity);
     void outflank(int i, int j);
+    bool checklegal();
 
 signals:
     //void quit_g();
