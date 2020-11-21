@@ -78,9 +78,14 @@ game2scene::game2scene()
 */
 
 
-    QTimer *t1 = new QTimer();
-    connect(t1,SIGNAL(timeout()), this,SLOT(checkFresh()));
-    t1->start(1000);
+
+
+for(int i=0;i<8;i++){
+    for(int j=0;j<8;j++){
+        QObject::connect(v[i][j],SIGNAL(placed()),this,SLOT(checkFresh()));
+    }
+}
+
 }
 
 void game2scene::checkFresh()

@@ -46,6 +46,7 @@ void piece::place()
             this->setState(black);
             this->fresh = true;
 
+
         }
         else
         {
@@ -53,6 +54,7 @@ void piece::place()
             this->fresh = true;
 
         }
+     emit(placed());
     }
 }
 

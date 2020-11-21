@@ -20,6 +20,9 @@ public:
 
 public slots:
     void place();
+
+signals:
+    void placed();
 };
 
 #endif // PIECE_H
