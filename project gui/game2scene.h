@@ -24,9 +24,14 @@ public:
     piece *v[8][8];
 
     //void win();
-    //void drawPanel(int x, int y, int width, int height, QColor color, double opacity);
+    QGraphicsRectItem *panel;
+    QGraphicsTextItem *io;
+    Button *playAgain;
+    Button *quitButton;
+    void drawPanel(int x, int y, int width, int height, QColor color, double opacity);
     void outflank(int i, int j);
     bool checklegal();
+    void end();
 
 signals:
     //void quit_g();
@@ -34,8 +39,8 @@ signals:
 public slots:
     void checkFresh();
     //void update_counters();
-    //void restartGame();
-    //void quitGame();
+    void restartGame();
+    void quitGame();
 };
 
 #endif // GAME2SCENE_H

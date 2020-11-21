@@ -295,19 +295,111 @@ void game2scene::outflank(int i, int j)
     else
     {
        turnmasta=!turnmasta;
-       if(!checklegal()){
-           //call end function
+       if(!checklegal())
+       {
+           end();
        }
     }
 }
 
+void game2scene::drawPanel(int x, int y, int width, int height, QColor color, double opacity)
+{
+    panel = new QGraphicsRectItem(x,y,width,height);
+    QBrush brush;
+    brush.setStyle(Qt::SolidPattern);
+    brush.setColor(color);
+    panel->setBrush(brush);
+    panel->setOpacity(opacity);
+    this->addItem(panel);
+}
 
+void game2scene::end()
+{
+    int wcount = 0;
+    int bcount = 0;
+    int x;
+    int y;
+    x = 0;
+    y = 0;
+    while (x <8)
+    {
+        y = 0;
+        while(y < 8)
+        {
+            if(v[x][y]->s == piece::white)
+            {
+                wcount++;
+            }
+            else if(v[x][y]->s == piece::black)
+            {
+                bcount++;
+            }
+            y++;
+        }
+        x++;
+    }
+    drawPanel(0,0,520,520,Qt::black,0.65);
+    io = new QGraphicsTextItem();
+    io->setPos(150,100);
+    io->setDefaultTextColor(Qt::white);
+    QString losttxt;
+    if (wcount > bcount)
+    {
+        losttxt = "White Won \nWhite Count:" + QString::number(wcount)+"\nBlack Count:" + QString::number(bcount);
+    }
+    else if (wcount < bcount)
+    {
+        losttxt = "Black Won \nWhite Count:" + QString::number(wcount)+"\nBlack Count:" + QString::number(bcount);
+    }
+    else if (wcount == bcount)
+    {
+        losttxt = "Draw \nWhite Count:" + QString::number(wcount)+"\nBlack Count:" + QString::number(bcount);
+    }
+    io->setPlainText(losttxt);
+    io->setFont(QFont("times",32));
+    this->addItem(io);
+    playAgain = new Button(QString("Play Again"));
+    playAgain->setPos(175,300);
+    this->addItem(playAgain);
+    connect(playAgain,SIGNAL(clicked()),this,SLOT(restartGame()));
+    quitButton = new Button(QString("Quit"));
+    quitButton->setPos(175,350);
+    connect(quitButton,SIGNAL(clicked()),this,SLOT(quitGame()));
+    this->addItem(quitButton);
+
+}
+
+void game2scene::restartGame()
+{
+
+}
+
+void game2scene::quitGame()
+{
+
+}
 
 
 bool game2scene::checklegal()
 {
     int x;
     int y;
+    x = 0;
+    y = 0;
+    while (x <8)
+    {
+        y = 0;
+        while(y < 8)
+        {
+            if(v[x][y]->s == piece::valid)
+            {
+                v[x][y]->setState(piece::white);
+                v[x][y]->setState(piece::invalid);
+            }
+            y++;
+        }
+        x++;
+    }
     piece::state turn;
     if(turnmasta)
     {
@@ -319,205 +411,209 @@ bool game2scene::checklegal()
     }
 
     bool check=false;
-for(int i=0;i<8;i++){
-    for(int j=0;j<8;j++){
-    x = i - 1;
-    while (x >= 0)
+    for(int i=0;i<8;i++)
     {
-        if(v[i-1][j]->s==turn){//if 1st one is same color then dont do checks it is invalid
-            break;
-        }
-
-        if (v[x][j]->s == piece::valid || v[x][j]->s == piece::invalid)
+        for(int j=0;j<8;j++)
         {
-            break;
-        }
-
-        if (v[x][j]->s == turn)
-        {
-
-            if(x < i)
+            if(v[i][j]->s == piece::invalid)
             {
-                v[i][j]->setState(piece::valid);
-                check=true;
+                x = i - 1;
+                while (x >= 0)
+                {
+                    if(v[i-1][j]->s==turn)  //if 1st one is same color then dont do checks it is invalid
+                    {
+                        break;
+                    }
+                    if (v[x][j]->s == piece::valid || v[x][j]->s == piece::invalid)
+                    {
+                        break;
+                    }
+
+                    if (v[x][j]->s == turn)
+                    {
+                        if(x < i)
+                        {
+                            v[i][j]->setState(piece::valid);
+                            check=true;
+                        }
+                        break;
+                    }
+                    x--;
+                }
+
+                x = i + 1;
+                while (x < 8)
+                {
+                    if(v[i+1][j]->s==turn){//if 1st one is same color then dont do checks it is invalid
+                        break;
+                    }
+                    if (v[x][j]->s == piece::valid || v[x][j]->s == piece::invalid)
+                    {
+                        break;
+                    }
+                    if (v[x][j]->s == turn)
+                    {
+                        if(x > i)
+                        {
+                            v[i][j]->setState(piece::valid);
+                            check=true;
+
+                        }
+                        break;
+                    }
+                    x++;
+                }
+
+
+                x = j - 1;
+                while (x >= 0)
+                {
+                    if(v[i][j-1]->s==turn){//if 1st one is same color then dont do checks it is invalid
+                        break;
+                    }
+                    if (v[i][x]->s == piece::valid || v[i][x]->s == piece::invalid)
+                    {
+                        break;
+                    }
+                    if (v[i][x]->s == turn)
+                    {
+                        if(x < j)
+                        {
+                            v[i][j]->setState(piece::valid);
+                            check=true;
+
+                        }
+                        break;
+                    }
+                    x--;
+                }
+
+                x = j+1;
+                while (x < 8)
+                {
+                    if(v[i][j+1]->s==turn){//if 1st one is same color then dont do checks it is invalid
+                        break;
+                    }
+                    if (v[i][x]->s == piece::valid || v[i][x]->s == piece::invalid)
+                    {
+                        break;
+                    }
+                    if (v[i][x]->s == turn)
+                    {
+                        if(x > j)
+                        {
+                            v[i][j]->setState(piece::valid);
+                            check=true;
+
+                        }
+                        break;
+                    }
+                    x++;
+                }
+
+
+                x = i - 1;
+                y = j - 1;
+                while (x >= 0 && y>=0)
+                {
+                    if(v[i-1][j-1]->s==turn){//if 1st one is same color then dont do checks it is invalid
+                        break;
+                    }
+                    if (v[x][y]->s == piece::valid || v[x][y]->s == piece::invalid)
+                    {
+                        break;
+                    }
+                    if (v[x][y]->s == turn)
+                    {
+                        if(x < i)
+                        {
+                            v[i][j]->setState(piece::valid);
+                            check=true;
+
+                        }
+                        break;
+                    }
+                    x--;
+                    y--;
+                }
+
+                x = i + 1;
+                y = j + 1;
+                while (x < 8 && y < 8)
+                {
+                    if(v[i+1][j+1]->s==turn){//if 1st one is same color then dont do checks it is invalid
+                        break;
+                    }
+                    if (v[x][y]->s == piece::valid || v[x][y]->s == piece::invalid)
+                    {
+                        break;
+                    }
+                    if (v[x][y]->s == turn)
+                    {
+                        if(x > i)
+                        {
+                            v[i][j]->setState(piece::valid);
+                            check=true;
+
+                        }
+                        break;
+                    }
+                    x++;
+                    y++;
+                }
+
+                x = i + 1;
+                y = j - 1;
+                while (x < 8 && y >= 0)
+                {
+                    if(v[i+1][j-1]->s==turn){//if 1st one is same color then dont do checks it is invalid
+                        break;
+                    }
+                    if (v[x][y]->s == piece::valid || v[x][y]->s == piece::invalid)
+                    {
+                        break;
+                    }
+                    if (v[x][y]->s == turn)
+                    {
+                        if(x > i)
+                        {
+                            v[i][j]->setState(piece::valid);
+                            check=true;
+
+                        }
+                        break;
+                    }
+                    x++;
+                    y--;
+                }
+
+                x = i - 1;
+                y = j + 1;
+                while (x >=0  && y < 8)
+                {
+                    if(v[i-1][j+1]->s==turn){//if 1st one is same color then dont do checks it is invalid
+                        break;
+                    }
+                    if (v[x][y]->s == piece::valid || v[x][y]->s == piece::invalid)
+                    {
+                        break;
+                    }
+                    if (v[x][y]->s == turn)
+                    {
+                        if(x < i)
+                        {
+                            v[i][j]->setState(piece::valid);
+                            check=true;
+
+                        }
+                        break;
+                    }
+                    x--;
+                    y++;
+                }
             }
-            break;
         }
-        x--;
     }
-
-    x = i + 1;
-    while (x < 8)
-    {
-        if(v[i+1][j]->s==turn){//if 1st one is same color then dont do checks it is invalid
-            break;
-        }
-        if (v[x][j]->s == piece::valid || v[x][j]->s == piece::invalid)
-        {
-            break;
-        }
-        if (v[x][j]->s == turn)
-        {
-            if(x > i)
-            {
-                v[i][j]->setState(piece::valid);
-                check=true;
-
-            }
-            break;
-        }
-        x++;
-    }
-
-
-    x = j - 1;
-    while (x >= 0)
-    {
-        if(v[i][j-1]->s==turn){//if 1st one is same color then dont do checks it is invalid
-            break;
-        }
-        if (v[i][x]->s == piece::valid || v[i][x]->s == piece::invalid)
-        {
-            break;
-        }
-        if (v[i][x]->s == turn)
-        {
-            if(x < j)
-            {
-                v[i][j]->setState(piece::valid);
-                check=true;
-
-            }
-            break;
-        }
-        x--;
-    }
-
-    x = j+1;
-    while (x < 8)
-    {
-        if(v[i][j+1]->s==turn){//if 1st one is same color then dont do checks it is invalid
-            break;
-        }
-        if (v[i][x]->s == piece::valid || v[i][x]->s == piece::invalid)
-        {
-            break;
-        }
-        if (v[i][x]->s == turn)
-        {
-            if(x > j)
-            {
-                v[i][j]->setState(piece::valid);
-                check=true;
-
-            }
-            break;
-        }
-        x++;
-    }
-
-
-    x = i - 1;
-    y = j - 1;
-    while (x >= 0 && y>=0)
-    {
-        if(v[i-1][j-1]->s==turn){//if 1st one is same color then dont do checks it is invalid
-            break;
-        }
-        if (v[x][y]->s == piece::valid || v[x][y]->s == piece::invalid)
-        {
-            break;
-        }
-        if (v[x][y]->s == turn)
-        {
-            if(x < i)
-            {
-                v[i][j]->setState(piece::valid);
-                check=true;
-
-            }
-            break;
-        }
-        x--;
-        y--;
-    }
-
-    x = i + 1;
-    y = j + 1;
-    while (x < 8 && y < 8)
-    {
-        if(v[i+1][j+1]->s==turn){//if 1st one is same color then dont do checks it is invalid
-            break;
-        }
-        if (v[x][y]->s == piece::valid || v[x][y]->s == piece::invalid)
-        {
-            break;
-        }
-        if (v[x][y]->s == turn)
-        {
-            if(x > i)
-            {
-                v[i][j]->setState(piece::valid);
-                check=true;
-
-            }
-            break;
-        }
-        x++;
-        y++;
-    }
-
-    x = i + 1;
-    y = j - 1;
-    while (x < 8 && y >= 0)
-    {
-        if(v[i+1][j-1]->s==turn){//if 1st one is same color then dont do checks it is invalid
-            break;
-        }
-        if (v[x][y]->s == piece::valid || v[x][y]->s == piece::invalid)
-        {
-            break;
-        }
-        if (v[x][y]->s == turn)
-        {
-            if(x > i)
-            {
-                v[i][j]->setState(piece::valid);
-                check=true;
-
-            }
-            break;
-        }
-        x++;
-        y--;
-    }
-
-    x = i - 1;
-    y = j + 1;
-    while (x >=0  && y < 8)
-    {
-        if(v[i-1][j+1]->s==turn){//if 1st one is same color then dont do checks it is invalid
-            break;
-        }
-        if (v[x][y]->s == piece::valid || v[x][y]->s == piece::invalid)
-        {
-            break;
-        }
-        if (v[x][y]->s == turn)
-        {
-            if(x < i)
-            {
-                v[i][j]->setState(piece::valid);
-                check=true;
-
-            }
-            break;
-        }
-        x--;
-        y++;
-    }
-}
-}
     if(check)
     {
      return true;

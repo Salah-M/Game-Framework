@@ -33,5 +33,6 @@
         <file>images/Whitep.png</file>
         <file>images/board.jpg</file>
         <file>images/invalid.png</file>
+        <file>images/valid.png</file>
     </qresource>
 </RCC>

@@ -16,24 +16,27 @@ void piece::setState(state s)
         this->setFlag(QGraphicsItem::ItemIsSelectable,false);
         this->setPixmap((QPixmap(":/images/invalid.png")).scaled(60,60));
         this->setPos(x()-5,y()-5);
+        this->setOpacity(1);
     }
     if(s==valid)
     {
         this->setFlag(QGraphicsItem::ItemIsSelectable,true);
-        this->setPixmap((QPixmap(":/images/invalid.png")).scaled(60,60));
+        this->setPixmap((QPixmap(":/images/valid.png")).scaled(60,60));
+        this->setOpacity(0.5);
     }
     if(s==white)
     {
         this->setFlag(QGraphicsItem::ItemIsSelectable,false);
         this->setPixmap((QPixmap(":/images/Whitep.png")).scaled(50,50));
         this->setPos(x()+5,y()+5);
-
+        this->setOpacity(1);
     }
     if(s==black)
     {
-       this->setFlag(QGraphicsItem::ItemIsSelectable,false);
-       this->setPixmap((QPixmap(":/images/blackp.png")).scaled(50,50));
-       this->setPos(x()+5,y()+5);
+        this->setFlag(QGraphicsItem::ItemIsSelectable,false);
+        this->setPixmap((QPixmap(":/images/blackp.png")).scaled(50,50));
+        this->setPos(x()+5,y()+5);
+        this->setOpacity(1);
     }
 }
 
