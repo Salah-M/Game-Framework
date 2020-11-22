@@ -4,7 +4,12 @@ game2scene::game2scene()
 {
     turnmasta=true;
     g= new game2menu;
+    QPixmap blackc = QPixmap(":/images/blackp.png").scaled(30,30);
+    QPixmap whitec = QPixmap(":/images/Whitep.png").scaled(30,30);
+    QCursor cursorb = QCursor(blackc,0,0);
+    QCursor cursorw = QCursor(whitec,0,0);
     view = new QGraphicsView();
+    view->setCursor(cursorb);
     view->setFixedSize(520,520);
     view->setHorizontalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
     view->setVerticalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
@@ -33,7 +38,8 @@ game2scene::game2scene()
         j = 0;
         while(j <8)
         {
-            v[i][j]->setPos(25+i*60,25+j*60);
+            v[i][j]->se    view->setCursor(cursorb);
+tPos(25+i*60,25+j*60);
             j++;
         }
         i++;
@@ -81,11 +87,11 @@ game2scene::game2scene()
 
 
 
-for(int i=0;i<8;i++){
-    for(int j=0;j<8;j++){
-        QObject::connect(v[i][j],SIGNAL(placed()),this,SLOT(checkFresh()));
+    for(int i=0;i<8;i++){
+        for(int j=0;j<8;j++){
+            QObject::connect(v[i][j],SIGNAL(placed()),this,SLOT(checkFresh()));
+        }
     }
-}
 
 }
 
@@ -112,6 +118,10 @@ void game2scene::checkFresh()
 
 void game2scene::outflank(int i, int j)
 {
+    QPixmap blackc = QPixmap(":/images/blackp.png").scaled(30,30);
+    QPixmap whitec = QPixmap(":/images/Whitep.png").scaled(30,30);
+    QCursor cursorb = QCursor(blackc,0,0);
+    QCursor cursorw = QCursor(whitec,0,0);
     int x;
     int y;
 
@@ -189,7 +199,10 @@ void game2scene::outflank(int i, int j)
             {
                 v[i][x]->setState(piece::invalid);
                 v[i][x]->setState(v[i][j]->s);
-                x--;
+                x--;QPixmap blackc = QPixmap(":/images/blackp.png").scaled(30,30);
+                QPixmap whitec = QPixmap(":/images/Whitep.png").scaled(30,30);
+                QCursor cursorb = QCursor(blackc,0,0);
+                QCursor cursorw = QCursor(whitec,0,0);
             }
             break;
         }
@@ -291,15 +304,31 @@ void game2scene::outflank(int i, int j)
     turnmasta=!turnmasta;
     if(checklegal())
     {
-       return;
+        if (turnmasta == true)
+        {
+            view->setCursor(cursorb);
+        }
+        else if (turnmasta == false)
+        {
+            view->setCursor(cursorw);
+        }
+        return;
     }
     else
     {
-       turnmasta=!turnmasta;
-       if(!checklegal())
-       {
-           end();
-       }
+        turnmasta=!turnmasta;
+        if(!checklegal())
+        {
+            end();
+        }
+    }
+    if (turnmasta == true)
+    {
+        view->setCursor(cursorb);
+    }
+    else if (turnmasta == false)
+    {
+        view->setCursor(cursorw);
     }
 }
 
@@ -347,17 +376,21 @@ void game2scene::end()
     io->setPos(150,100);
     io->setDefaultTextColor(Qt::white);
     QString losttxt;
+    QString endtxt;
     if (wcount > bcount)
     {
         losttxt = "White Won \nWhite Count:" + QString::number(wcount)+"\nBlack Count:" + QString::number(bcount);
+        endtxt = " White won ";
     }
     else if (wcount < bcount)
     {
         losttxt = "Black Won \nWhite Count:" + QString::number(wcount)+"\nBlack Count:" + QString::number(bcount);
+        endtxt = " Black won ";
     }
     else if (wcount == bcount)
     {
         losttxt = "Draw \nWhite Count:" + QString::number(wcount)+"\nBlack Count:" + QString::number(bcount);
+        endtxt = " Draw ";
     }
 
     au = new QMediaPlayer;
@@ -375,17 +408,71 @@ void game2scene::end()
     connect(quitButton,SIGNAL(clicked()),this,SLOT(quitGame()));
     this->addItem(quitButton);
 
+    QString path = "./userHistory";
+    QString date = QDate::currentDate().toString();
+    QString time = QTime::currentTime().toString();
+    qDebug()<<"username in win printed"<<this->userscene->username;
+    path.append("/" + this->userscene->username + ".txt");
+    QFile filee(path);
+    if (filee.open(QIODevice::ReadWrite | QIODevice::Append))
+    {
+        QTextStream stream(&filee);
+        stream << "game2 " << date << " " << time  << endtxt << "White count: " << QString::number(wcount)<< " Black count: " << QString::number(bcount)<<endl;;
+        qDebug()<<"printing to file"<<endl;
+        stream.flush();
+    }
+    filee.close();
 }
 
 void game2scene::restartGame()
 {
+    QPixmap blackc = QPixmap(":/images/blackp.png").scaled(30,30);
+    QPixmap whitec = QPixmap(":/images/Whitep.png").scaled(30,30);
+    QCursor cursorb = QCursor(blackc,0,0);
+    QCursor cursorw = QCursor(whitec,0,0);
+    this->removeItem(panel);
+    this->removeItem(io);
+    this->removeItem(playAgain);
+    this->removeItem(quitButton);
+    view->setCursor(cursorb);
+    int i = 0;
+    int j = 0;
+    while(i <8)
+    {
+        j = 0;
+        while(j <8)
+        {
+            //this->removeItem(v[i][j]);
+            //v[i][j] = new piece();
+            v[i][j]->setPos(25+i*60,25+j*60);
+            v[i][j]->setState(piece::invalid);
+            //this->addItem(v[i][j]);
+            j++;
+        }
+        i++;
+    }
+    i = 0;
+    v[3][3]->setState(piece::white);
+    v[3][4]->setState(piece::black);
+    v[4][3]->setState(piece::black);
+    v[4][4]->setState(piece::white);
+    v[5][4]->setState(piece::valid);
+    v[4][5]->setState(piece::valid);
+    v[3][2]->setState(piece::valid);
+    v[2][3]->setState(piece::valid);
+    turnmasta = true;
 
-
+    for(int i=0;i<8;i++){
+        for(int j=0;j<8;j++){
+            QObject::connect(v[i][j],SIGNAL(placed()),this,SLOT(checkFresh()));
+        }
+    }
 }
 
 void game2scene::quitGame()
 {
     view->close();
+    g->user=this->userscene;
     g->show();
 }
 
