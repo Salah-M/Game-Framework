@@ -25,9 +25,6 @@ public:
     QLabel *title;
     QPushButton *play;
     QPushButton *back;
-    QLabel *l;
-    QRadioButton *colorw;
-    QRadioButton *colorb;
     QVBoxLayout *Vbox;
     account *user;
     QCursor *c;

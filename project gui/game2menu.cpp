@@ -6,10 +6,6 @@
 game2menu::game2menu(QWidget *parent) : QWidget(parent)
 {
     title = new QLabel;
-    l = new QLabel("Play as:");
-    colorw = new QRadioButton("white");
-    colorb = new QRadioButton("black");
-
     title->setPixmap((QPixmap(":/images/Othello.jpeg")));
     play = new QPushButton("play!");
     back = new QPushButton("exit");
@@ -17,9 +13,6 @@ game2menu::game2menu(QWidget *parent) : QWidget(parent)
     this->setStyleSheet("background-color:darkgreen;");
     Vbox = new QVBoxLayout();
     Vbox->addWidget(title);
-    Vbox->addWidget(l);
-    Vbox->addWidget(colorw);
-    Vbox->addWidget(colorb);
     Vbox->addWidget(play);
     Vbox->addWidget(back);
     setLayout(Vbox);

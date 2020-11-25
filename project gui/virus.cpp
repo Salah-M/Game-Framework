@@ -20,10 +20,7 @@ void virus::setSize(sizz s)
     if(s==big){
        this->setPixmap((QPixmap(":/images/ClipartKey_346832.png")).scaled(150,150));
     }
-    /*
-    int random_number = rand()%700;
-    setPos(random_number,-50);
-    */
+
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this,SLOT(update()));
     timer->start(5);
