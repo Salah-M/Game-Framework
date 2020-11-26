@@ -10,7 +10,6 @@ SOURCES += \
     game2menu.cpp \
     game2scene.cpp \
     globalvar.cpp \
-    guestwidget.cpp \
     historywidget.cpp \
     main.cpp \
     mainwidget.cpp \
@@ -29,7 +28,6 @@ HEADERS += \
     game2menu.h \
     game2scene.h \
     globalvar.h \
-    guestwidget.h \
     historywidget.h \
     mainwidget.h \
     piece.h \

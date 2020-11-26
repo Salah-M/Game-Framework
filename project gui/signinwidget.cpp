@@ -36,7 +36,6 @@ void signinwidget::getName()
     qDebug()<<"username is in sign in"<<a->username;
     game1->user = a;
     game2->user = a;
-    hw->username = a->username;
 
     bool valid = image->load(a->imageloc);
     if (valid)

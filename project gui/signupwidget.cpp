@@ -59,7 +59,6 @@ signupwidget::signupwidget(QWidget *parent) : QWidget(parent)
     VBox->addWidget(gender_label);
     VBox->addWidget(G);
     VBox->addWidget(DateOfBirth_label);
-    //VBox->addItem(grid);
     VBox->addWidget(C);
     VBox->addWidget(PB0);
     VBox->addWidget(back);

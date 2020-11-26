@@ -27,8 +27,6 @@ public:
     QPushButton *back;
     QVBoxLayout *Vbox;
     account *user;
-    QCursor *c;
-    QTimer *ti;
 
 public slots:
     void playb();

@@ -93,7 +93,6 @@ void mainWidget::signin()
                 sin->getName();
                 akal = true;
                 sin->show();
-                sin->checkBirthday();
                 break;
 
                 // we show the widget
@@ -118,6 +117,7 @@ void mainWidget::signin()
     }
     file.close();
     this->close();
+    sin->checkBirthday();
 }
 
 void mainWidget::signup()

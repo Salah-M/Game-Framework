@@ -29,8 +29,6 @@ public:
     QRadioButton *lvl3;
     QVBoxLayout *Vbox;
     account *user;
-    QCursor *c;
-    QTimer *ti;
 
 public slots:
     void playb();

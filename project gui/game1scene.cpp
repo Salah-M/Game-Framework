@@ -18,10 +18,8 @@ game1scene::game1scene()
     speed = 1;
     i = 0;
     lossCount = 0;
-    quit = false;
 
     score = new game1score();
-    qDebug()<<"lvl is:"<<level;
     audio = new QMediaPlayer;
 
     audio->setMedia(QUrl(aud));
@@ -37,8 +35,6 @@ game1scene::game1scene()
     qDebug() << scoreToWin << endl;
     *in >> loss;
     qDebug() << loss << endl;
-
-    //QObject::connect(this, SIGNAL(quit_g()),&game1m, SLOT(quit()));
 
     setBackgroundBrush(QBrush(QImage(":/images/istockphoto-636339532-612x612.jpg").scaledToHeight(412).scaledToWidth(988)));
     setSceneRect(0,0,988,412);
@@ -113,7 +109,7 @@ void game1scene::update_counters()
         }
         j = j + 1;
     }
-    if (score->score >= 150)
+    if (score->score >= scoreToWin)
     {
         win();
         return;

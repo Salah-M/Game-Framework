@@ -1,6 +1,5 @@
 #include "historywidget.h"
 #include "signinwidget.h"
-#include "guestwidget.h"
 
 historywidget::historywidget(QWidget *parent) : QWidget(parent)
 {
@@ -12,9 +11,9 @@ historywidget::historywidget(QWidget *parent) : QWidget(parent)
 
 void historywidget::getHistory()
 {
-    qDebug() << username << endl;
+    qDebug() << AH->username << endl;
     QString path = "./userHistory";
-    path.append("/" + username + ".txt");
+    path.append("/" + AH->username + ".txt");
     QFile file(path);
     file.open(QIODevice::ReadOnly);
     QTextStream in(&file);
@@ -33,12 +32,6 @@ void historywidget::getHistory()
 
 void historywidget::Back1()
 {
-    if(username==""){
-        this->close();
-        guestwidget *g= new guestwidget;
-        g->show();
-    }
-   else{//this doesn't work well since we need to know account to find the sign in
         signinwidget *s= new signinwidget;
         s->a=AH;
         AH->print();
@@ -48,6 +41,4 @@ void historywidget::Back1()
         this->close();
         s->getName();
         s->show();
-    }
-
 }

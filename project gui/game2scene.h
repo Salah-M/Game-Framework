@@ -25,7 +25,6 @@ public:
     QGraphicsView *view;
     piece *v[8][8];
     QMediaPlayer *au;
-    //void win();
     QGraphicsRectItem *panel;
     QGraphicsTextItem *io;
     game2menu *g;
@@ -37,11 +36,9 @@ public:
     void end();
 
 signals:
-    //void quit_g();
 
 public slots:
     void checkFresh();
-    //void update_counters();
     void restartGame();
     void quitGame();
 };

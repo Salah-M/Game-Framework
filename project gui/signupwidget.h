@@ -52,9 +52,8 @@ public:
     QRadioButton *RB1;  //!<female RB
     QCalendarWidget *C;//!<calender widget
     QPushButton *PB0;   //!<sign up
-    QPushButton *PB1;//!<sign up
+    QPushButton *PB1;//!<upload pic button
     QPushButton *back;//!<back button
-    QGridLayout *grid;//!<gridlayout
     QVBoxLayout *VBox;//!<vertical box layout
     QHBoxLayout *HBox;//!<horizontal box layout
     QGroupBox *G;//!<group box

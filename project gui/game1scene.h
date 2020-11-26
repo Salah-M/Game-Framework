@@ -24,22 +24,14 @@ public:
     account *userscene;
     int speed;
 
-    int level;
-    bool quit;
     QGraphicsView *view;
-
-    /*int scount;
-    int mcount;
-    int bcount;*/
 
     QMediaPlayer *audio;
 
     int lossCount;
 
-    //int score;
     int scoreToWin;
     int loss;
-    QString text;
 
     game1menu *g;
     QFile *file;
@@ -54,17 +46,12 @@ public:
     QTimer *count;
 
     QGraphicsRectItem *panel;
-    //game1menu game1m;
-
-    //QGraphicsTextItem * io;
 
     virus *v[40];
     void lose();
     void win();
-
     void drawPanel(int x, int y, int width, int height, QColor color, double opacity);
-signals:
-    void quit_g();
+
 public slots:
     void create_instance();
     void update_counters();

@@ -35,7 +35,6 @@ public:
     *  responsible for setting up the gui for history widget and linking the button to its slot
     */
     explicit historywidget(QWidget *parent = nullptr);
-    QString username;//!<user name string
     account *AH;//!<account
     QPushButton *back;//!<back button
     QVBoxLayout *VBox;//!<vertical box layout
