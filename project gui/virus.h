@@ -17,8 +17,7 @@ definition
 * This class is responsible for creating the viruses for the game along with destroying them on click
 */
 /**
-* \brief contains virus class
-definition
+* \brief contains virus class definition
 *
 *
 * This class is responsible for creating the viruses for the game along with destroying them on click

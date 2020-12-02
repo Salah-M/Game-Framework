@@ -17,19 +17,40 @@
 #include <QTimer>
 #include <QCursor>
 
+/**
+* \brief contains game 2 menu class definition
+*
+*
+*  This class is responsible for creating the main menu of game 2
+*/
 class game2menu : public QWidget
 {
     Q_OBJECT
 public:
+    /**
+    * \brief game 1 menu constructor.
+    *
+    * constructs the class and sets up the layout. also links signals to slots.
+    */
     explicit game2menu(QWidget *parent = nullptr);
-    QLabel *title;
-    QPushButton *play;
-    QPushButton *back;
-    QVBoxLayout *Vbox;
-    account *user;
+    QLabel *title;//!< Othello title image
+    QPushButton *play;//!< Play button
+    QPushButton *back;//!< Back button
+    QVBoxLayout *Vbox;//!< Vertical box used for layout
+    account *user;//!< passed down user from sign in widget
 
 public slots:
+    /**
+    * \brief function to be called when play is pressed.
+    *
+    * checks goes to game 2 scene.
+    */
     void playb();
+    /**
+    * \brief function to be called when back is pressed.
+    *
+    * exits the game menu and goes back to sign in widget
+    */
     void Backk();
 
 

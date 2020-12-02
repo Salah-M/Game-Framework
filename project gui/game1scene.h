@@ -15,6 +15,12 @@
 #include <QTimer>
 #include <qdebug.h>
 
+/**
+* \brief contains game 1 scene class definition
+*
+*
+*  This class is responsible for creating and playing game 1 (Kill Covid-19)
+*/
 class game1scene : public QGraphicsScene
 {
     Q_OBJECT
@@ -47,54 +53,54 @@ public:
     Button *playAgain;//!< button used for Play again when the game is over
     Button *quitButton;//!< button used to quit the game when the game is over
 
-    QTimer *inst;//!<
-    QTimer *count;
+    QTimer *inst;//!< Timer used to call create instancce
+    QTimer *count;//!< Timer used to call update counter
 
-    QGraphicsRectItem *panel;
+    QGraphicsRectItem *panel;//!< panel used to darken the screen for endgame
 
-    virus *v[40];
+    virus *v[40];//!< array of viruses to be created
     /**
-    * \brief updates score when small virus is killed.
+    * \brief lose function to call when you lose.
     *
-    * updates score when small virus is killed by incrementing small count by 1 and score by 3.
+    * ends the game with a loss screen and plays a loss audio. Also writes to the account's history the results of the game.
     */
     void lose();
     /**
-    * \brief updates score when small virus is killed.
+    * \brief win function to call when you win.
     *
-    * updates score when small virus is killed by incrementing small count by 1 and score by 3.
+    * ends the game with a win screen and plays a victory sound. Also writes to the account's history the results of the game.
     */
     void win();
     /**
-    * \brief updates score when small virus is killed.
+    * \brief function that draws a panel.
     *
-    * updates score when small virus is killed by incrementing small count by 1 and score by 3.
+    * function that draws pannels used to create a dark panel for the end game.
     */
     void drawPanel(int x, int y, int width, int height, QColor color, double opacity);
 
 public slots:
     /**
-    * \brief updates score when small virus is killed.
+    * \brief creates a virus.
     *
-    * updates score when small virus is killed by incrementing small count by 1 and score by 3.
+    * function that creates a virus called by the timer. It checks the game level to see the size and place at which the virus should be spawned.
     */
     void create_instance();
     /**
-    * \brief updates score when small virus is killed.
+    * \brief updates the current state of the game.
     *
-    * updates score when small virus is killed by incrementing small count by 1 and score by 3.
+    * updates the current state of the game by updating the score, counts and checks for win/loss conditions.
     */
     void update_counters();
     /**
-    * \brief updates score when small virus is killed.
+    * \brief Function that restarts the game.
     *
-    * updates score when small virus is killed by incrementing small count by 1 and score by 3.
+    * Function that restart the game when the Restart button is pressed.
     */
     void restartGame();
     /**
-    * \brief updates score when small virus is killed.
+    * \brief Function that quits the game.
     *
-    * updates score when small virus is killed by incrementing small count by 1 and score by 3.
+    * Function that quits the game when the Quit game button is pressed. goes back to game 1 menu
     */
     void quitGame();
 

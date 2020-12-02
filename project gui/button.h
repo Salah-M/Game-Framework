@@ -4,6 +4,12 @@
 #include <QGraphicsRectItem>
 #include <QGraphicsSceneMouseEvent>
 
+/**
+* \brief contains button class definition
+*
+*
+*  This class is responsible for creating a button inside a game (QT scene)
+*/
 class Button:public QObject, public QGraphicsRectItem{
     Q_OBJECT
 public:

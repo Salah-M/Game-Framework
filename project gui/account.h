@@ -12,6 +12,12 @@
 #include <QTextStream>
 #include <QCryptographicHash>
 
+/**
+* \brief contains account class definition
+*
+*
+*  This class is responsible for storing user information.
+*/
 class account
 {
 public:

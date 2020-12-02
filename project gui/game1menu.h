@@ -15,6 +15,12 @@
 #include <QTimer>
 #include <QCursor>
 
+/**
+* \brief contains game 1 menu class definition
+*
+*
+*  This class is responsible for creating the main menu of game 1
+*/
 class game1menu : public QWidget
 {
     Q_OBJECT

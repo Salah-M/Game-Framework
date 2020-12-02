@@ -14,8 +14,7 @@
 * This class is responsible for setting the death animation and removing it from the scene
 */
 /**
-* \brief contains virus death class
-definition
+* \brief contains virus death class definition
 *
 *
 *  This class is responsible for setting the death animation and removing it from the scene

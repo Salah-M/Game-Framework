@@ -8,6 +8,12 @@
 #include <QGraphicsSceneMouseEvent>
 #include <QMediaPlayer>
 
+/**
+* \brief contains piece class definition
+*
+*
+*  This class is responsible for placing a piece in game 2 and displaying it on the screen
+*/
 class piece : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT

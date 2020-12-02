@@ -12,6 +12,12 @@
 #include <QPixmap>
 #include <QCursor>
 
+/**
+* \brief contains game 1 score class definition
+*
+*
+*  This class is responsible for keeping track of the score and displaying it in game 1
+*/
 class game1score : public QGraphicsTextItem
 {
     Q_OBJECT
