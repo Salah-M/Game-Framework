@@ -1,0 +1,112 @@
+\hypertarget{classButton}{}\section{Button Class Reference}
+\label{classButton}\index{Button@{Button}}
+
+
+contains button class definition  
+
+
+
+
+{\ttfamily \#include $<$button.\+h$>$}
+
+
+
+Inheritance diagram for Button\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classButton__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Button\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classButton__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classButton_a9e7ab4152cb1e7e3beb7f2842f32670c}{clicked} ()
+\begin{DoxyCompactList}\small\item\em signal to be emitted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classButton_a69976e5c00874a3807b642f249c1c776}{Button} (Q\+String name, Q\+Graphics\+Item $\ast$parent=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classButton}{Button} constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classButton_a17d8eb0c904605b223bbc00c75655315}{mouse\+Press\+Event} (Q\+Graphics\+Scene\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em mouse press event function. \end{DoxyCompactList}\item 
+void \hyperlink{classButton_a633a9684818bc5d300a622a00064f09c}{hover\+Enter\+Event} (Q\+Graphics\+Scene\+Hover\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em mouse hover event function. \end{DoxyCompactList}\item 
+void \hyperlink{classButton_a1689a97690d9469ce8350d24db0d7485}{hover\+Leave\+Event} (Q\+Graphics\+Scene\+Hover\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em mouse leave event function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains button class definition 
+
+This class is responsible for creating a button inside a game (QT scene) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classButton_a69976e5c00874a3807b642f249c1c776}\label{classButton_a69976e5c00874a3807b642f249c1c776}} 
+\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\subsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}\item[{Q\+String}]{name,  }\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classButton}{Button} constructor. 
+
+\hyperlink{classButton}{Button} constructor that takes button name as parameter. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classButton_a9e7ab4152cb1e7e3beb7f2842f32670c}\label{classButton_a9e7ab4152cb1e7e3beb7f2842f32670c}} 
+\index{Button@{Button}!clicked@{clicked}}
+\index{clicked@{clicked}!Button@{Button}}
+\subsubsection{\texorpdfstring{clicked}{clicked}}
+{\footnotesize\ttfamily void Button\+::clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal to be emitted. 
+
+signal that is emitted when the button is pressed. \mbox{\Hypertarget{classButton_a633a9684818bc5d300a622a00064f09c}\label{classButton_a633a9684818bc5d300a622a00064f09c}} 
+\index{Button@{Button}!hover\+Enter\+Event@{hover\+Enter\+Event}}
+\index{hover\+Enter\+Event@{hover\+Enter\+Event}!Button@{Button}}
+\subsubsection{\texorpdfstring{hover\+Enter\+Event()}{hoverEnterEvent()}}
+{\footnotesize\ttfamily void Button\+::hover\+Enter\+Event (\begin{DoxyParamCaption}\item[{Q\+Graphics\+Scene\+Hover\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+mouse hover event function. 
+
+function that lightens up the button when the mouse is hovering over it \mbox{\Hypertarget{classButton_a1689a97690d9469ce8350d24db0d7485}\label{classButton_a1689a97690d9469ce8350d24db0d7485}} 
+\index{Button@{Button}!hover\+Leave\+Event@{hover\+Leave\+Event}}
+\index{hover\+Leave\+Event@{hover\+Leave\+Event}!Button@{Button}}
+\subsubsection{\texorpdfstring{hover\+Leave\+Event()}{hoverLeaveEvent()}}
+{\footnotesize\ttfamily void Button\+::hover\+Leave\+Event (\begin{DoxyParamCaption}\item[{Q\+Graphics\+Scene\+Hover\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+mouse leave event function. 
+
+function that dims back the button when the mouse is no longer hovering over it \mbox{\Hypertarget{classButton_a17d8eb0c904605b223bbc00c75655315}\label{classButton_a17d8eb0c904605b223bbc00c75655315}} 
+\index{Button@{Button}!mouse\+Press\+Event@{mouse\+Press\+Event}}
+\index{mouse\+Press\+Event@{mouse\+Press\+Event}!Button@{Button}}
+\subsubsection{\texorpdfstring{mouse\+Press\+Event()}{mousePressEvent()}}
+{\footnotesize\ttfamily void Button\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{Q\+Graphics\+Scene\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+mouse press event function. 
+
+function that sends a signal whenever the button is pressed 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+button.\+h\item 
+button.\+cpp\end{DoxyCompactItemize}

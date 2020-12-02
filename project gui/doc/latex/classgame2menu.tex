@@ -1,0 +1,106 @@
+\hypertarget{classgame2menu}{}\section{game2menu Class Reference}
+\label{classgame2menu}\index{game2menu@{game2menu}}
+
+
+contains game 2 menu class definition  
+
+
+
+
+{\ttfamily \#include $<$game2menu.\+h$>$}
+
+
+
+Inheritance diagram for game2menu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classgame2menu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for game2menu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classgame2menu__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classgame2menu_a329e5585c0d5c6af4c4f4011efa6878f}{playb} ()
+\begin{DoxyCompactList}\small\item\em function to be called when play is pressed. \end{DoxyCompactList}\item 
+void \hyperlink{classgame2menu_a095e776799d92c9d6cb05aa49b63472a}{Backk} ()
+\begin{DoxyCompactList}\small\item\em function to be called when back is pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgame2menu_adbca99dd8b328bab30bb1a5f198cb849}{game2menu} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em game 1 menu constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame2menu_ad425f6fa5fc38be976fde532f173b202}\label{classgame2menu_ad425f6fa5fc38be976fde532f173b202}} 
+Q\+Label $\ast$ \hyperlink{classgame2menu_ad425f6fa5fc38be976fde532f173b202}{title}
+\begin{DoxyCompactList}\small\item\em Othello title image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame2menu_a3d3484e23586e4219eeefabbc0203afb}\label{classgame2menu_a3d3484e23586e4219eeefabbc0203afb}} 
+Q\+Push\+Button $\ast$ \hyperlink{classgame2menu_a3d3484e23586e4219eeefabbc0203afb}{play}
+\begin{DoxyCompactList}\small\item\em Play button. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame2menu_a6015c161e82f886cc9193f397b03a24d}\label{classgame2menu_a6015c161e82f886cc9193f397b03a24d}} 
+Q\+Push\+Button $\ast$ \hyperlink{classgame2menu_a6015c161e82f886cc9193f397b03a24d}{back}
+\begin{DoxyCompactList}\small\item\em Back button. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame2menu_a2f79ea6f000654ef0092f4d4b9364382}\label{classgame2menu_a2f79ea6f000654ef0092f4d4b9364382}} 
+Q\+V\+Box\+Layout $\ast$ \hyperlink{classgame2menu_a2f79ea6f000654ef0092f4d4b9364382}{Vbox}
+\begin{DoxyCompactList}\small\item\em Vertical box used for layout. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame2menu_a081baa426df4a4a194314316e1451dc3}\label{classgame2menu_a081baa426df4a4a194314316e1451dc3}} 
+\hyperlink{classaccount}{account} $\ast$ \hyperlink{classgame2menu_a081baa426df4a4a194314316e1451dc3}{user}
+\begin{DoxyCompactList}\small\item\em passed down user from sign in widget \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains game 2 menu class definition 
+
+This class is responsible for creating the main menu of game 2 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame2menu_adbca99dd8b328bab30bb1a5f198cb849}\label{classgame2menu_adbca99dd8b328bab30bb1a5f198cb849}} 
+\index{game2menu@{game2menu}!game2menu@{game2menu}}
+\index{game2menu@{game2menu}!game2menu@{game2menu}}
+\subsubsection{\texorpdfstring{game2menu()}{game2menu()}}
+{\footnotesize\ttfamily game2menu\+::game2menu (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+game 1 menu constructor. 
+
+constructs the class and sets up the layout. also links signals to slots. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame2menu_a095e776799d92c9d6cb05aa49b63472a}\label{classgame2menu_a095e776799d92c9d6cb05aa49b63472a}} 
+\index{game2menu@{game2menu}!Backk@{Backk}}
+\index{Backk@{Backk}!game2menu@{game2menu}}
+\subsubsection{\texorpdfstring{Backk}{Backk}}
+{\footnotesize\ttfamily void game2menu\+::\+Backk (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+function to be called when back is pressed. 
+
+exits the game menu and goes back to sign in widget \mbox{\Hypertarget{classgame2menu_a329e5585c0d5c6af4c4f4011efa6878f}\label{classgame2menu_a329e5585c0d5c6af4c4f4011efa6878f}} 
+\index{game2menu@{game2menu}!playb@{playb}}
+\index{playb@{playb}!game2menu@{game2menu}}
+\subsubsection{\texorpdfstring{playb}{playb}}
+{\footnotesize\ttfamily void game2menu\+::playb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+function to be called when play is pressed. 
+
+checks goes to game 2 scene. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game2menu.\+h\item 
+game2menu.\+cpp\end{DoxyCompactItemize}

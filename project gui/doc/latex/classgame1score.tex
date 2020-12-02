@@ -1,0 +1,118 @@
+\hypertarget{classgame1score}{}\section{game1score Class Reference}
+\label{classgame1score}\index{game1score@{game1score}}
+
+
+contains game 1 score class definition  
+
+
+
+
+{\ttfamily \#include $<$game1score.\+h$>$}
+
+
+
+Inheritance diagram for game1score\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classgame1score__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for game1score\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classgame1score__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgame1score_ab80521983d8a77a466dd7d7253fcd647}{game1score} (Q\+Graphics\+Item $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em game 1 score constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classgame1score_a8e7db583a40c885711eae334d4c695cd}{si} ()
+\begin{DoxyCompactList}\small\item\em updates score when small virus is killed. \end{DoxyCompactList}\item 
+void \hyperlink{classgame1score_a7b29421704c3766a8535fa878b3036d9}{mi} ()
+\begin{DoxyCompactList}\small\item\em updates score when medium virus is killed. \end{DoxyCompactList}\item 
+void \hyperlink{classgame1score_aa2aecd005fd86671e508a3b91f4251b6}{bi} ()
+\begin{DoxyCompactList}\small\item\em updates score when big virus is killed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame1score_a5cdaac95a04c8036bf56c01f8fa3099e}\label{classgame1score_a5cdaac95a04c8036bf56c01f8fa3099e}} 
+int \hyperlink{classgame1score_a5cdaac95a04c8036bf56c01f8fa3099e}{scount}
+\begin{DoxyCompactList}\small\item\em stores small count \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1score_ab4ad7f19068b4719593cc7b4ee7dbd06}\label{classgame1score_ab4ad7f19068b4719593cc7b4ee7dbd06}} 
+int \hyperlink{classgame1score_ab4ad7f19068b4719593cc7b4ee7dbd06}{mcount}
+\begin{DoxyCompactList}\small\item\em stores medium count \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1score_a1396fb2d6d045ca1726b9b34e130ec8f}\label{classgame1score_a1396fb2d6d045ca1726b9b34e130ec8f}} 
+int \hyperlink{classgame1score_a1396fb2d6d045ca1726b9b34e130ec8f}{bcount}
+\begin{DoxyCompactList}\small\item\em stores big count \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1score_af8f924e5fbe567b2583583d2d95550d7}\label{classgame1score_af8f924e5fbe567b2583583d2d95550d7}} 
+int \hyperlink{classgame1score_af8f924e5fbe567b2583583d2d95550d7}{score}
+\begin{DoxyCompactList}\small\item\em stores total game score \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1score_a2fdce0ba179a04bfbbd5f296040bb2f7}\label{classgame1score_a2fdce0ba179a04bfbbd5f296040bb2f7}} 
+int \hyperlink{classgame1score_a2fdce0ba179a04bfbbd5f296040bb2f7}{sum}
+\begin{DoxyCompactList}\small\item\em stores the sum of scount, mcount and bcount \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1score_aee8bbcda0471c31f20a0beea6d7c0c17}\label{classgame1score_aee8bbcda0471c31f20a0beea6d7c0c17}} 
+Q\+String \hyperlink{classgame1score_aee8bbcda0471c31f20a0beea6d7c0c17}{text}
+\begin{DoxyCompactList}\small\item\em text to be displayed on screen as score \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains game 1 score class definition 
+
+This class is responsible for keeping track of the score and displaying it in game 1 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame1score_ab80521983d8a77a466dd7d7253fcd647}\label{classgame1score_ab80521983d8a77a466dd7d7253fcd647}} 
+\index{game1score@{game1score}!game1score@{game1score}}
+\index{game1score@{game1score}!game1score@{game1score}}
+\subsubsection{\texorpdfstring{game1score()}{game1score()}}
+{\footnotesize\ttfamily game1score\+::game1score (\begin{DoxyParamCaption}\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+game 1 score constructor. 
+
+constructs the class and sets all scores to 0. additionally sets the base text to be displayed in game 1 scene. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame1score_aa2aecd005fd86671e508a3b91f4251b6}\label{classgame1score_aa2aecd005fd86671e508a3b91f4251b6}} 
+\index{game1score@{game1score}!bi@{bi}}
+\index{bi@{bi}!game1score@{game1score}}
+\subsubsection{\texorpdfstring{bi()}{bi()}}
+{\footnotesize\ttfamily void game1score\+::bi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+updates score when big virus is killed. 
+
+updates score when big virus is killed by incrementing big count by 1 and score by 7. \mbox{\Hypertarget{classgame1score_a7b29421704c3766a8535fa878b3036d9}\label{classgame1score_a7b29421704c3766a8535fa878b3036d9}} 
+\index{game1score@{game1score}!mi@{mi}}
+\index{mi@{mi}!game1score@{game1score}}
+\subsubsection{\texorpdfstring{mi()}{mi()}}
+{\footnotesize\ttfamily void game1score\+::mi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+updates score when medium virus is killed. 
+
+updates score when medium virus is killed by incrementing medium count by 1 and score by 5. \mbox{\Hypertarget{classgame1score_a8e7db583a40c885711eae334d4c695cd}\label{classgame1score_a8e7db583a40c885711eae334d4c695cd}} 
+\index{game1score@{game1score}!si@{si}}
+\index{si@{si}!game1score@{game1score}}
+\subsubsection{\texorpdfstring{si()}{si()}}
+{\footnotesize\ttfamily void game1score\+::si (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+updates score when small virus is killed. 
+
+updates score when small virus is killed by incrementing small count by 1 and score by 3. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game1score.\+h\item 
+game1score.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,100 @@
+\hypertarget{classhistorywidget}{}\section{historywidget Class Reference}
+\label{classhistorywidget}\index{historywidget@{historywidget}}
+
+
+contains history widget class defintion  
+
+
+
+
+{\ttfamily \#include $<$historywidget.\+h$>$}
+
+
+
+Inheritance diagram for historywidget\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classhistorywidget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for historywidget\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classhistorywidget__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classhistorywidget_a19aa3f9d16ac28a32b31b340623b0611}{Back1} ()
+\begin{DoxyCompactList}\small\item\em back slot \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhistorywidget_ac21cb2c9cdecd91ac572d8fc8ba50708}{historywidget} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em history widget constructor \end{DoxyCompactList}\item 
+void \hyperlink{classhistorywidget_aa2edafd200341f9273bc3c8c4930902e}{get\+History} ()
+\begin{DoxyCompactList}\small\item\em Get history function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhistorywidget_a9d630c4651725438d7161588bd084248}\label{classhistorywidget_a9d630c4651725438d7161588bd084248}} 
+\hyperlink{classaccount}{account} $\ast$ \hyperlink{classhistorywidget_a9d630c4651725438d7161588bd084248}{AH}
+\begin{DoxyCompactList}\small\item\em account \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhistorywidget_aa03cf30ef4ba1cf78f4e903d981d9783}\label{classhistorywidget_aa03cf30ef4ba1cf78f4e903d981d9783}} 
+Q\+Push\+Button $\ast$ \hyperlink{classhistorywidget_aa03cf30ef4ba1cf78f4e903d981d9783}{back}
+\begin{DoxyCompactList}\small\item\em back button \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhistorywidget_a2f81897b41709e0218730acb285e60ea}\label{classhistorywidget_a2f81897b41709e0218730acb285e60ea}} 
+Q\+V\+Box\+Layout $\ast$ \hyperlink{classhistorywidget_a2f81897b41709e0218730acb285e60ea}{V\+Box}
+\begin{DoxyCompactList}\small\item\em vertical box layout \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains history widget class defintion 
+
+This class is responsible for constructing the history widget 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhistorywidget_ac21cb2c9cdecd91ac572d8fc8ba50708}\label{classhistorywidget_ac21cb2c9cdecd91ac572d8fc8ba50708}} 
+\index{historywidget@{historywidget}!historywidget@{historywidget}}
+\index{historywidget@{historywidget}!historywidget@{historywidget}}
+\subsubsection{\texorpdfstring{historywidget()}{historywidget()}}
+{\footnotesize\ttfamily historywidget\+::historywidget (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+history widget constructor 
+
+responsible for setting up the gui for history widget and linking the button to its slot 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhistorywidget_a19aa3f9d16ac28a32b31b340623b0611}\label{classhistorywidget_a19aa3f9d16ac28a32b31b340623b0611}} 
+\index{historywidget@{historywidget}!Back1@{Back1}}
+\index{Back1@{Back1}!historywidget@{historywidget}}
+\subsubsection{\texorpdfstring{Back1}{Back1}}
+{\footnotesize\ttfamily void historywidget\+::\+Back1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+back slot 
+
+if user is guest goes back to sign in widget as guest but if user has a username goes back to sign in widget \mbox{\Hypertarget{classhistorywidget_aa2edafd200341f9273bc3c8c4930902e}\label{classhistorywidget_aa2edafd200341f9273bc3c8c4930902e}} 
+\index{historywidget@{historywidget}!get\+History@{get\+History}}
+\index{get\+History@{get\+History}!historywidget@{historywidget}}
+\subsubsection{\texorpdfstring{get\+History()}{getHistory()}}
+{\footnotesize\ttfamily void historywidget\+::get\+History (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get history function. 
+
+gets the history of the user by checking the database text file of that user under /userhistory path and displays that information 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{historywidget_8h}{historywidget.\+h}\item 
+historywidget.\+cpp\end{DoxyCompactItemize}

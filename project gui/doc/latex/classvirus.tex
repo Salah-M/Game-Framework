@@ -1,0 +1,133 @@
+\hypertarget{classvirus}{}\section{virus Class Reference}
+\label{classvirus}\index{virus@{virus}}
+
+
+contains virus class definition  
+
+
+
+
+{\ttfamily \#include $<$virus.\+h$>$}
+
+
+
+Inheritance diagram for virus\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classvirus__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for virus\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classvirus__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classvirus_a6bd2aa8d6e7d98fab2229f660853fb19}\label{classvirus_a6bd2aa8d6e7d98fab2229f660853fb19}} 
+enum {\bfseries sizz} \{ {\bfseries small}, 
+{\bfseries medium}, 
+{\bfseries big}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classvirus_a8b036fc788433ad3a705e9de6de41ee2}{update} ()
+\begin{DoxyCompactList}\small\item\em Updates position of the virus. \end{DoxyCompactList}\item 
+void \hyperlink{classvirus_a456b60cbaeed1b370a7f668111e34401}{kill} ()
+\begin{DoxyCompactList}\small\item\em Check if virus is selected then kill it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvirus_aec80936bff04cb885c64075219835d45}{virus} (Q\+Object $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em sets the death sound mediaplayer \end{DoxyCompactList}\item 
+void \hyperlink{classvirus_a7e52ed4f11deb1997a7fdbc07c7b038a}{set\+Size} (sizz s)
+\begin{DoxyCompactList}\small\item\em sets the size and image to viruses \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classvirus_a469edc5ead8feec20ffa4416b17120de}\label{classvirus_a469edc5ead8feec20ffa4416b17120de}} 
+sizz \hyperlink{classvirus_a469edc5ead8feec20ffa4416b17120de}{size}
+\begin{DoxyCompactList}\small\item\em instance of enum type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classvirus_a730412dbb1c4ff0cda46f7ed46c211cd}\label{classvirus_a730412dbb1c4ff0cda46f7ed46c211cd}} 
+bool \hyperlink{classvirus_a730412dbb1c4ff0cda46f7ed46c211cd}{alive}
+\begin{DoxyCompactList}\small\item\em boolean to verify if virus is alive \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classvirus_a26cc1e0617d779ab9cecea2ccb3833e3}\label{classvirus_a26cc1e0617d779ab9cecea2ccb3833e3}} 
+bool \hyperlink{classvirus_a26cc1e0617d779ab9cecea2ccb3833e3}{is\+Checked}
+\begin{DoxyCompactList}\small\item\em used to keep track for score \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classvirus_af3db844b2d5e6c48f6810c5783c140ed}\label{classvirus_af3db844b2d5e6c48f6810c5783c140ed}} 
+Q\+Media\+Player $\ast$ \hyperlink{classvirus_af3db844b2d5e6c48f6810c5783c140ed}{deathsound}
+\begin{DoxyCompactList}\small\item\em mediaplayer to play death sound \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classvirus_af952b682874f8080fea53718dc136874}\label{classvirus_af952b682874f8080fea53718dc136874}} 
+int \hyperlink{classvirus_af952b682874f8080fea53718dc136874}{speed}
+\begin{DoxyCompactList}\small\item\em speed of viruses falling \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classvirus_ab7a1a248f91d2826090771212b62681f}\label{classvirus_ab7a1a248f91d2826090771212b62681f}} 
+Q\+Timer $\ast$ \hyperlink{classvirus_ab7a1a248f91d2826090771212b62681f}{timer}
+\begin{DoxyCompactList}\small\item\em first timer responsible for calling update position of virus \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classvirus_a7fee7454da0a4960783f23fbfa42e1c7}\label{classvirus_a7fee7454da0a4960783f23fbfa42e1c7}} 
+Q\+Timer $\ast$ \hyperlink{classvirus_a7fee7454da0a4960783f23fbfa42e1c7}{timer2}
+\begin{DoxyCompactList}\small\item\em second timer responsible for calling kill to check for killed viruses \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains virus class definition 
+
+This class is responsible for creating the viruses for the game along with destroying them on click 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classvirus_aec80936bff04cb885c64075219835d45}\label{classvirus_aec80936bff04cb885c64075219835d45}} 
+\index{virus@{virus}!virus@{virus}}
+\index{virus@{virus}!virus@{virus}}
+\subsubsection{\texorpdfstring{virus()}{virus()}}
+{\footnotesize\ttfamily virus\+::virus (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+sets the death sound mediaplayer 
+
+constructor was only used to set the media player other functionalities were delegated to \hyperlink{classvirus_a7e52ed4f11deb1997a7fdbc07c7b038a}{set\+Size()} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classvirus_a456b60cbaeed1b370a7f668111e34401}\label{classvirus_a456b60cbaeed1b370a7f668111e34401}} 
+\index{virus@{virus}!kill@{kill}}
+\index{kill@{kill}!virus@{virus}}
+\subsubsection{\texorpdfstring{kill}{kill}}
+{\footnotesize\ttfamily void virus\+::kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Check if virus is selected then kill it. 
+
+checks if a virus was selected then it kills it and plays the deathsound and displays death animation \mbox{\Hypertarget{classvirus_a7e52ed4f11deb1997a7fdbc07c7b038a}\label{classvirus_a7e52ed4f11deb1997a7fdbc07c7b038a}} 
+\index{virus@{virus}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!virus@{virus}}
+\subsubsection{\texorpdfstring{set\+Size()}{setSize()}}
+{\footnotesize\ttfamily void virus\+::set\+Size (\begin{DoxyParamCaption}\item[{sizz}]{s }\end{DoxyParamCaption})}
+
+
+
+sets the size and image to viruses 
+
+sets the size of the virus along with a respective image and connects the timers to their respective slots. to be called everytime you need to create a virus. \mbox{\Hypertarget{classvirus_a8b036fc788433ad3a705e9de6de41ee2}\label{classvirus_a8b036fc788433ad3a705e9de6de41ee2}} 
+\index{virus@{virus}!update@{update}}
+\index{update@{update}!virus@{virus}}
+\subsubsection{\texorpdfstring{update}{update}}
+{\footnotesize\ttfamily void virus\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Updates position of the virus. 
+
+make the virus fall down with varrying speeds. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{virus_8h}{virus.\+h}\item 
+virus.\+cpp\end{DoxyCompactItemize}

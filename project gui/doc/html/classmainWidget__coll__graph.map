@@ -1,0 +1,8 @@
+<map id="mainWidget" name="mainWidget">
+<area shape="rect" id="node3" href="$classsignupwidget.html" title="contains signup widget class defintion " alt="" coords="124,273,223,300"/>
+<area shape="rect" id="node4" href="$classsigninwidget.html" title="contains signin widget class defintion " alt="" coords="223,184,318,211"/>
+<area shape="rect" id="node5" href="$classhistorywidget.html" title="contains history widget class defintion " alt="" coords="379,95,477,121"/>
+<area shape="rect" id="node7" href="$classgame1menu.html" title="contains game 1 menu class definition " alt="" coords="144,95,237,121"/>
+<area shape="rect" id="node8" href="$classgame2menu.html" title="contains game 2 menu class definition " alt="" coords="261,95,355,121"/>
+<area shape="rect" id="node6" href="$classaccount.html" title="contains account class definition " alt="" coords="394,5,462,32"/>
+</map>

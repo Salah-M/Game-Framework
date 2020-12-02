@@ -1,0 +1,125 @@
+\hypertarget{classpiece}{}\section{piece Class Reference}
+\label{classpiece}\index{piece@{piece}}
+
+
+contains piece class definition  
+
+
+
+
+{\ttfamily \#include $<$piece.\+h$>$}
+
+
+
+Inheritance diagram for piece\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classpiece__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for piece\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classpiece__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpiece_a73c0d56d279ed4910cfc0e95ca40be6e}\label{classpiece_a73c0d56d279ed4910cfc0e95ca40be6e}} 
+enum {\bfseries state} \{ {\bfseries invalid}, 
+{\bfseries valid}, 
+{\bfseries white}, 
+{\bfseries black}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpiece_a8db42fa9c9e1b03f3a68f238546ab239}{place} ()
+\begin{DoxyCompactList}\small\item\em places a piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpiece_a57ea505efe23d31353611198296a5a5a}{placed} ()
+\begin{DoxyCompactList}\small\item\em signal to be emitted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpiece_a65fb95a430bc20242a04556dc1d8bd65}{piece} (Q\+Object $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em piece constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classpiece_a899f04d950ea038a6784cba40a1e4289}{set\+State} (state \hyperlink{classpiece_abefadbf9b67a599b3aef7c6fcb731365}{s})
+\begin{DoxyCompactList}\small\item\em sets the state of a piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpiece_abefadbf9b67a599b3aef7c6fcb731365}\label{classpiece_abefadbf9b67a599b3aef7c6fcb731365}} 
+state \hyperlink{classpiece_abefadbf9b67a599b3aef7c6fcb731365}{s}
+\begin{DoxyCompactList}\small\item\em indicates the state of a piece \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpiece_a6bb48a39b35cc414ac7f8e3dc175558f}\label{classpiece_a6bb48a39b35cc414ac7f8e3dc175558f}} 
+bool \hyperlink{classpiece_a6bb48a39b35cc414ac7f8e3dc175558f}{fresh}
+\begin{DoxyCompactList}\small\item\em bool value to store if the piece is the newest piece on the board \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpiece_a070e7829edca743adda436de84161999}\label{classpiece_a070e7829edca743adda436de84161999}} 
+Q\+Media\+Player $\ast$ \hyperlink{classpiece_a070e7829edca743adda436de84161999}{placep}
+\begin{DoxyCompactList}\small\item\em audio to be played when a piece is placed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains piece class definition 
+
+This class is responsible for placing a piece in game 2 and displaying it on the screen 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpiece_a65fb95a430bc20242a04556dc1d8bd65}\label{classpiece_a65fb95a430bc20242a04556dc1d8bd65}} 
+\index{piece@{piece}!piece@{piece}}
+\index{piece@{piece}!piece@{piece}}
+\subsubsection{\texorpdfstring{piece()}{piece()}}
+{\footnotesize\ttfamily piece\+::piece (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+piece constructor. 
+
+constructor was only used to set the media player and timers. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpiece_a8db42fa9c9e1b03f3a68f238546ab239}\label{classpiece_a8db42fa9c9e1b03f3a68f238546ab239}} 
+\index{piece@{piece}!place@{place}}
+\index{place@{place}!piece@{piece}}
+\subsubsection{\texorpdfstring{place}{place}}
+{\footnotesize\ttfamily void piece\+::place (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+places a piece. 
+
+when a valid piece is selected it\textquotesingle{}s state is replaced by eithe white or black depending on the turn. In addition to that, the place audio is played and a signal is emitted to \hyperlink{classgame2scene}{game2scene}. \mbox{\Hypertarget{classpiece_a57ea505efe23d31353611198296a5a5a}\label{classpiece_a57ea505efe23d31353611198296a5a5a}} 
+\index{piece@{piece}!placed@{placed}}
+\index{placed@{placed}!piece@{piece}}
+\subsubsection{\texorpdfstring{placed}{placed}}
+{\footnotesize\ttfamily void piece\+::placed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal to be emitted. 
+
+signal to be emitted to \hyperlink{classgame2scene}{game2scene} to indicate that a piece is placed. \mbox{\Hypertarget{classpiece_a899f04d950ea038a6784cba40a1e4289}\label{classpiece_a899f04d950ea038a6784cba40a1e4289}} 
+\index{piece@{piece}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!piece@{piece}}
+\subsubsection{\texorpdfstring{set\+State()}{setState()}}
+{\footnotesize\ttfamily void piece\+::set\+State (\begin{DoxyParamCaption}\item[{state}]{s }\end{DoxyParamCaption})}
+
+
+
+sets the state of a piece. 
+
+sets the state of a piece and displays the correct image (black circle, white circle, green box, yellow box). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+piece.\+h\item 
+piece.\+cpp\end{DoxyCompactItemize}

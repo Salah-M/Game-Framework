@@ -1,0 +1,178 @@
+\hypertarget{classgame2scene}{}\section{game2scene Class Reference}
+\label{classgame2scene}\index{game2scene@{game2scene}}
+
+
+contains game 2 scene class definition  
+
+
+
+
+{\ttfamily \#include $<$game2scene.\+h$>$}
+
+
+
+Inheritance diagram for game2scene\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classgame2scene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for game2scene\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame2scene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classgame2scene_a9ff06546f203c57909aaeb36063fc206}{check\+Fresh} ()
+\begin{DoxyCompactList}\small\item\em Function that is called when a signal is emitted from any piece. \end{DoxyCompactList}\item 
+void \hyperlink{classgame2scene_a8b3ee51f004d034df994bd602a31ec5b}{restart\+Game} ()
+\begin{DoxyCompactList}\small\item\em Function that restarts the game. \end{DoxyCompactList}\item 
+void \hyperlink{classgame2scene_ab8f07d5d6dacd32de1ff442ee29f45d3}{quit\+Game} ()
+\begin{DoxyCompactList}\small\item\em Function that quits the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgame2scene_aa3642161921dd08a8fa5c83e94c2ffe0}{game2scene} ()
+\begin{DoxyCompactList}\small\item\em game 2 scene constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classgame2scene_a507687b5f74b925022c7a43749cf6607}{draw\+Panel} (int x, int y, int width, int height, Q\+Color color, double opacity)
+\begin{DoxyCompactList}\small\item\em function that draws a panel. \end{DoxyCompactList}\item 
+void \hyperlink{classgame2scene_a62c522d6732ff2a4889ba59ccc74f0dc}{outflank} (int i, int j)
+\begin{DoxyCompactList}\small\item\em Outflank function. \end{DoxyCompactList}\item 
+bool \hyperlink{classgame2scene_ae58d542526a191cf327675b83694f4ec}{checklegal} ()
+\begin{DoxyCompactList}\small\item\em function that checks which pieces should be valid. \end{DoxyCompactList}\item 
+void \hyperlink{classgame2scene_a6ce6a4eaa445f93d88e48d2bf06b0a13}{end} ()
+\begin{DoxyCompactList}\small\item\em end game function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame2scene_a63a51aeeb0e5d6afcc135d6e6b3673ed}\label{classgame2scene_a63a51aeeb0e5d6afcc135d6e6b3673ed}} 
+\hyperlink{classaccount}{account} $\ast$ \hyperlink{classgame2scene_a63a51aeeb0e5d6afcc135d6e6b3673ed}{userscene}
+\begin{DoxyCompactList}\small\item\em user account passed down from game 1 menu \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame2scene_aa97a0971c7aa75079ec09827ffde1d25}\label{classgame2scene_aa97a0971c7aa75079ec09827ffde1d25}} 
+Q\+Graphics\+View $\ast$ \hyperlink{classgame2scene_aa97a0971c7aa75079ec09827ffde1d25}{view}
+\begin{DoxyCompactList}\small\item\em view used to create the scene \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame2scene_a9e5eb644437aa33b94e9aadd0364aad7}\label{classgame2scene_a9e5eb644437aa33b94e9aadd0364aad7}} 
+\hyperlink{classpiece}{piece} $\ast$ \hyperlink{classgame2scene_a9e5eb644437aa33b94e9aadd0364aad7}{v} \mbox{[}8\mbox{]}\mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Double array containing all 64 pieces of the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame2scene_ad931a8f0808eed7e85f974669a303767}\label{classgame2scene_ad931a8f0808eed7e85f974669a303767}} 
+Q\+Media\+Player $\ast$ \hyperlink{classgame2scene_ad931a8f0808eed7e85f974669a303767}{au}
+\begin{DoxyCompactList}\small\item\em adio player used to play different sounds \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame2scene_a1c4812d12e0e31e150d2dc1d6fc8b672}\label{classgame2scene_a1c4812d12e0e31e150d2dc1d6fc8b672}} 
+Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{classgame2scene_a1c4812d12e0e31e150d2dc1d6fc8b672}{panel}
+\begin{DoxyCompactList}\small\item\em panel used to darken the screen for endgame \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame2scene_a99c8aa963d23ccffbcc4f3fca4b2fb2e}\label{classgame2scene_a99c8aa963d23ccffbcc4f3fca4b2fb2e}} 
+Q\+Graphics\+Text\+Item $\ast$ \hyperlink{classgame2scene_a99c8aa963d23ccffbcc4f3fca4b2fb2e}{io}
+\begin{DoxyCompactList}\small\item\em text item to display who won and the score \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame2scene_a791537ed5b1fb8d2a007dee9ba6916d4}\label{classgame2scene_a791537ed5b1fb8d2a007dee9ba6916d4}} 
+\hyperlink{classgame2menu}{game2menu} $\ast$ \hyperlink{classgame2scene_a791537ed5b1fb8d2a007dee9ba6916d4}{g}
+\begin{DoxyCompactList}\small\item\em pointer to game 2 menu to be able to exit the game \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame2scene_ad42a753ce56a92b1963258a64b6a29d3}\label{classgame2scene_ad42a753ce56a92b1963258a64b6a29d3}} 
+\hyperlink{classButton}{Button} $\ast$ \hyperlink{classgame2scene_ad42a753ce56a92b1963258a64b6a29d3}{play\+Again}
+\begin{DoxyCompactList}\small\item\em button used for Play again when the game is over \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame2scene_a87b11f6fc01d8073e9421d4b39aa2ddb}\label{classgame2scene_a87b11f6fc01d8073e9421d4b39aa2ddb}} 
+\hyperlink{classButton}{Button} $\ast$ \hyperlink{classgame2scene_a87b11f6fc01d8073e9421d4b39aa2ddb}{quit\+Button}
+\begin{DoxyCompactList}\small\item\em button used to quit the game when the game is over \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains game 2 scene class definition 
+
+This class is responsible for creating and playing game 2 (othello or reversi) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame2scene_aa3642161921dd08a8fa5c83e94c2ffe0}\label{classgame2scene_aa3642161921dd08a8fa5c83e94c2ffe0}} 
+\index{game2scene@{game2scene}!game2scene@{game2scene}}
+\index{game2scene@{game2scene}!game2scene@{game2scene}}
+\subsubsection{\texorpdfstring{game2scene()}{game2scene()}}
+{\footnotesize\ttfamily game2scene\+::game2scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+game 2 scene constructor. 
+
+constructs game 2 scene and sets background image and initialized all elements inlucding all 64 pieces links their signals to the correct slots. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame2scene_a9ff06546f203c57909aaeb36063fc206}\label{classgame2scene_a9ff06546f203c57909aaeb36063fc206}} 
+\index{game2scene@{game2scene}!check\+Fresh@{check\+Fresh}}
+\index{check\+Fresh@{check\+Fresh}!game2scene@{game2scene}}
+\subsubsection{\texorpdfstring{check\+Fresh}{checkFresh}}
+{\footnotesize\ttfamily void game2scene\+::check\+Fresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Function that is called when a signal is emitted from any piece. 
+
+This function is called whenever a signal is emitted from any piece, It searches for the fresh or newest piece placed on the board and calls the function outflank. \mbox{\Hypertarget{classgame2scene_ae58d542526a191cf327675b83694f4ec}\label{classgame2scene_ae58d542526a191cf327675b83694f4ec}} 
+\index{game2scene@{game2scene}!checklegal@{checklegal}}
+\index{checklegal@{checklegal}!game2scene@{game2scene}}
+\subsubsection{\texorpdfstring{checklegal()}{checklegal()}}
+{\footnotesize\ttfamily bool game2scene\+::checklegal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that checks which pieces should be valid. 
+
+this boolean function checks all pieces on the board from all directions to see if they are outflankable. if a piece is outflankable this piece is set to valid. this function returns false if no valid piece is found and thus does not switch turns else it returns true. \mbox{\Hypertarget{classgame2scene_a507687b5f74b925022c7a43749cf6607}\label{classgame2scene_a507687b5f74b925022c7a43749cf6607}} 
+\index{game2scene@{game2scene}!draw\+Panel@{draw\+Panel}}
+\index{draw\+Panel@{draw\+Panel}!game2scene@{game2scene}}
+\subsubsection{\texorpdfstring{draw\+Panel()}{drawPanel()}}
+{\footnotesize\ttfamily void game2scene\+::draw\+Panel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{Q\+Color}]{color,  }\item[{double}]{opacity }\end{DoxyParamCaption})}
+
+
+
+function that draws a panel. 
+
+function that draws pannels used to create a dark panel for the end game. \mbox{\Hypertarget{classgame2scene_a6ce6a4eaa445f93d88e48d2bf06b0a13}\label{classgame2scene_a6ce6a4eaa445f93d88e48d2bf06b0a13}} 
+\index{game2scene@{game2scene}!end@{end}}
+\index{end@{end}!game2scene@{game2scene}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void game2scene\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+end game function. 
+
+when the game is over, this function checks who won, display the end game scene on the view and plays a victory sound. \mbox{\Hypertarget{classgame2scene_a62c522d6732ff2a4889ba59ccc74f0dc}\label{classgame2scene_a62c522d6732ff2a4889ba59ccc74f0dc}} 
+\index{game2scene@{game2scene}!outflank@{outflank}}
+\index{outflank@{outflank}!game2scene@{game2scene}}
+\subsubsection{\texorpdfstring{outflank()}{outflank()}}
+{\footnotesize\ttfamily void game2scene\+::outflank (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+Outflank function. 
+
+this function takes the location of a piece and checks all 8 directions around it if it can outflank the enemy pieces and outflanks them. At the end, the function checklegal is called and the turn is changed. \mbox{\Hypertarget{classgame2scene_ab8f07d5d6dacd32de1ff442ee29f45d3}\label{classgame2scene_ab8f07d5d6dacd32de1ff442ee29f45d3}} 
+\index{game2scene@{game2scene}!quit\+Game@{quit\+Game}}
+\index{quit\+Game@{quit\+Game}!game2scene@{game2scene}}
+\subsubsection{\texorpdfstring{quit\+Game}{quitGame}}
+{\footnotesize\ttfamily void game2scene\+::quit\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Function that quits the game. 
+
+Function that quits the game when the Quit game button is pressed. goes back to game 2 menu \mbox{\Hypertarget{classgame2scene_a8b3ee51f004d034df994bd602a31ec5b}\label{classgame2scene_a8b3ee51f004d034df994bd602a31ec5b}} 
+\index{game2scene@{game2scene}!restart\+Game@{restart\+Game}}
+\index{restart\+Game@{restart\+Game}!game2scene@{game2scene}}
+\subsubsection{\texorpdfstring{restart\+Game}{restartGame}}
+{\footnotesize\ttfamily void game2scene\+::restart\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Function that restarts the game. 
+
+Function that restart the game when the Restart button is pressed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game2scene.\+h\item 
+game2scene.\+cpp\end{DoxyCompactItemize}

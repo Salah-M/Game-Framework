@@ -1,0 +1,7 @@
+<map id="game1scene" name="game1scene">
+<area shape="rect" id="node3" href="$classgame1score.html" title="contains game 1 score class definition " alt="" coords="237,95,331,121"/>
+<area shape="rect" id="node5" href="$classvirus.html" title="contains virus class definition " alt="" coords="355,95,405,121"/>
+<area shape="rect" id="node11" href="$classButton.html" title="contains button class definition " alt="" coords="430,95,490,121"/>
+<area shape="rect" id="node8" href="$classgame1menu.html" title="contains game 1 menu class definition " alt="" coords="593,95,687,121"/>
+<area shape="rect" id="node10" href="$classaccount.html" title="contains account class definition " alt="" coords="701,5,769,32"/>
+</map>

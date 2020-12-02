@@ -1,0 +1,209 @@
+\hypertarget{classgame1scene}{}\section{game1scene Class Reference}
+\label{classgame1scene}\index{game1scene@{game1scene}}
+
+
+contains game 1 scene class definition  
+
+
+
+
+{\ttfamily \#include $<$game1scene.\+h$>$}
+
+
+
+Inheritance diagram for game1scene\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classgame1scene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for game1scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame1scene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classgame1scene_ac85bfe270f65bee86ea75f8a0dafcd39}{create\+\_\+instance} ()
+\begin{DoxyCompactList}\small\item\em creates a virus. \end{DoxyCompactList}\item 
+void \hyperlink{classgame1scene_a4e66bd7b75ee140431a9ae8f9fa40000}{update\+\_\+counters} ()
+\begin{DoxyCompactList}\small\item\em updates the current state of the game. \end{DoxyCompactList}\item 
+void \hyperlink{classgame1scene_a62ae0fdc247d9cd0665844710b465c5c}{restart\+Game} ()
+\begin{DoxyCompactList}\small\item\em Function that restarts the game. \end{DoxyCompactList}\item 
+void \hyperlink{classgame1scene_a72b63628ea5dc651654db088830afd87}{quit\+Game} ()
+\begin{DoxyCompactList}\small\item\em Function that quits the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgame1scene_ac540834f7d119c2c89a7e17306e2a1c0}{game1scene} ()
+\begin{DoxyCompactList}\small\item\em game 1 scene constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classgame1scene_a7ea830c4a703722bc5450f29fbfddced}{lose} ()
+\begin{DoxyCompactList}\small\item\em lose function to call when you lose. \end{DoxyCompactList}\item 
+void \hyperlink{classgame1scene_a760917f4ad49e991bba784f16a468f98}{win} ()
+\begin{DoxyCompactList}\small\item\em win function to call when you win. \end{DoxyCompactList}\item 
+void \hyperlink{classgame1scene_a730f4e696efa1ea246678e9d2a59a217}{draw\+Panel} (int x, int y, int width, int height, Q\+Color color, double opacity)
+\begin{DoxyCompactList}\small\item\em function that draws a panel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame1scene_a9bb7b87c40db20bd49eea5a19e94e0f2}\label{classgame1scene_a9bb7b87c40db20bd49eea5a19e94e0f2}} 
+int \hyperlink{classgame1scene_a9bb7b87c40db20bd49eea5a19e94e0f2}{i}
+\begin{DoxyCompactList}\small\item\em itterator that keeps track of viruses \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_aabc6298d95ee1230f29a8985c9a176cd}\label{classgame1scene_aabc6298d95ee1230f29a8985c9a176cd}} 
+\hyperlink{classaccount}{account} $\ast$ \hyperlink{classgame1scene_aabc6298d95ee1230f29a8985c9a176cd}{userscene}
+\begin{DoxyCompactList}\small\item\em user account passed down from game 1 menu \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_aa8889d693d30062bc43c6bfa802c3baa}\label{classgame1scene_aa8889d693d30062bc43c6bfa802c3baa}} 
+int \hyperlink{classgame1scene_aa8889d693d30062bc43c6bfa802c3baa}{speed}
+\begin{DoxyCompactList}\small\item\em speed at which the game is running \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_a15893603342e72e41e5d74751c58b34d}\label{classgame1scene_a15893603342e72e41e5d74751c58b34d}} 
+Q\+Graphics\+View $\ast$ \hyperlink{classgame1scene_a15893603342e72e41e5d74751c58b34d}{view}
+\begin{DoxyCompactList}\small\item\em view used to create the scene \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_a4f82c0adb37a7ab736e765a4d9a87955}\label{classgame1scene_a4f82c0adb37a7ab736e765a4d9a87955}} 
+Q\+Media\+Player $\ast$ \hyperlink{classgame1scene_a4f82c0adb37a7ab736e765a4d9a87955}{audio}
+\begin{DoxyCompactList}\small\item\em music audio that is played during the game \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_ade62ddcdc487fed3172557f475661207}\label{classgame1scene_ade62ddcdc487fed3172557f475661207}} 
+int \hyperlink{classgame1scene_ade62ddcdc487fed3172557f475661207}{loss\+Count}
+\begin{DoxyCompactList}\small\item\em stores the number of missed viruses required to lose the game \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_a2ddd7dd6961d74ed938a9a924bf0063d}\label{classgame1scene_a2ddd7dd6961d74ed938a9a924bf0063d}} 
+int \hyperlink{classgame1scene_a2ddd7dd6961d74ed938a9a924bf0063d}{score\+To\+Win}
+\begin{DoxyCompactList}\small\item\em stores the score needed to win the game \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_aab5556912872e7d31c72a911a7443244}\label{classgame1scene_aab5556912872e7d31c72a911a7443244}} 
+int \hyperlink{classgame1scene_aab5556912872e7d31c72a911a7443244}{loss}
+\begin{DoxyCompactList}\small\item\em keeps count of how many viruses were missed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_ad71ee5af83ebf44269c1985d300aa104}\label{classgame1scene_ad71ee5af83ebf44269c1985d300aa104}} 
+\hyperlink{classgame1menu}{game1menu} $\ast$ \hyperlink{classgame1scene_ad71ee5af83ebf44269c1985d300aa104}{g}
+\begin{DoxyCompactList}\small\item\em pointer to game 1 menu to be able to exit the game \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_a0b20d7d61cf85c7928d181d379744219}\label{classgame1scene_a0b20d7d61cf85c7928d181d379744219}} 
+Q\+File $\ast$ \hyperlink{classgame1scene_a0b20d7d61cf85c7928d181d379744219}{file}
+\begin{DoxyCompactList}\small\item\em files used to read level (the txt databasse) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_ad5e40df47bf0f8559d640167a7137470}\label{classgame1scene_ad5e40df47bf0f8559d640167a7137470}} 
+Q\+Text\+Stream $\ast$ \hyperlink{classgame1scene_ad5e40df47bf0f8559d640167a7137470}{in}
+\begin{DoxyCompactList}\small\item\em Text stream used to read file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_ae3928d49f36c06f044d7394ae2254b16}\label{classgame1scene_ae3928d49f36c06f044d7394ae2254b16}} 
+\hyperlink{classgame1score}{game1score} $\ast$ \hyperlink{classgame1scene_ae3928d49f36c06f044d7394ae2254b16}{score}
+\begin{DoxyCompactList}\small\item\em score class that keeps track of the score and displays it on the scene \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_aceb64fd219582d9c9cfc5395155b10a5}\label{classgame1scene_aceb64fd219582d9c9cfc5395155b10a5}} 
+Q\+Graphics\+Text\+Item $\ast$ \hyperlink{classgame1scene_aceb64fd219582d9c9cfc5395155b10a5}{io}
+\begin{DoxyCompactList}\small\item\em text item to display either a win or a loss \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_a35f11a42c2b6782add5943dc0b471570}\label{classgame1scene_a35f11a42c2b6782add5943dc0b471570}} 
+\hyperlink{classButton}{Button} $\ast$ \hyperlink{classgame1scene_a35f11a42c2b6782add5943dc0b471570}{play\+Again}
+\begin{DoxyCompactList}\small\item\em button used for Play again when the game is over \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_a41f520712ca895f2902b17d1f1667a07}\label{classgame1scene_a41f520712ca895f2902b17d1f1667a07}} 
+\hyperlink{classButton}{Button} $\ast$ \hyperlink{classgame1scene_a41f520712ca895f2902b17d1f1667a07}{quit\+Button}
+\begin{DoxyCompactList}\small\item\em button used to quit the game when the game is over \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_a5b2c75e8d9f7e2ba76089735281d432b}\label{classgame1scene_a5b2c75e8d9f7e2ba76089735281d432b}} 
+Q\+Timer $\ast$ \hyperlink{classgame1scene_a5b2c75e8d9f7e2ba76089735281d432b}{inst}
+\begin{DoxyCompactList}\small\item\em Timer used to call create instancce. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_a72a8f8545ebeb87af34de472448c8ec1}\label{classgame1scene_a72a8f8545ebeb87af34de472448c8ec1}} 
+Q\+Timer $\ast$ \hyperlink{classgame1scene_a72a8f8545ebeb87af34de472448c8ec1}{count}
+\begin{DoxyCompactList}\small\item\em Timer used to call update counter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_a9889692b03cc597f2c5766068e81b16f}\label{classgame1scene_a9889692b03cc597f2c5766068e81b16f}} 
+Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{classgame1scene_a9889692b03cc597f2c5766068e81b16f}{panel}
+\begin{DoxyCompactList}\small\item\em panel used to darken the screen for endgame \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame1scene_af1eb126df2c67773e8d369465ad194ca}\label{classgame1scene_af1eb126df2c67773e8d369465ad194ca}} 
+\hyperlink{classvirus}{virus} $\ast$ \hyperlink{classgame1scene_af1eb126df2c67773e8d369465ad194ca}{v} \mbox{[}40\mbox{]}
+\begin{DoxyCompactList}\small\item\em array of viruses to be created \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains game 1 scene class definition 
+
+This class is responsible for creating and playing game 1 (Kill Covid-\/19) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame1scene_ac540834f7d119c2c89a7e17306e2a1c0}\label{classgame1scene_ac540834f7d119c2c89a7e17306e2a1c0}} 
+\index{game1scene@{game1scene}!game1scene@{game1scene}}
+\index{game1scene@{game1scene}!game1scene@{game1scene}}
+\subsubsection{\texorpdfstring{game1scene()}{game1scene()}}
+{\footnotesize\ttfamily game1scene\+::game1scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+game 1 scene constructor. 
+
+constructs game 1 scene and sets background image and initialized all elements inlucding timers and linking timers to slots. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame1scene_ac85bfe270f65bee86ea75f8a0dafcd39}\label{classgame1scene_ac85bfe270f65bee86ea75f8a0dafcd39}} 
+\index{game1scene@{game1scene}!create\+\_\+instance@{create\+\_\+instance}}
+\index{create\+\_\+instance@{create\+\_\+instance}!game1scene@{game1scene}}
+\subsubsection{\texorpdfstring{create\+\_\+instance}{create\_instance}}
+{\footnotesize\ttfamily void game1scene\+::create\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+creates a virus. 
+
+function that creates a virus called by the timer. It checks the game level to see the size and place at which the virus should be spawned. \mbox{\Hypertarget{classgame1scene_a730f4e696efa1ea246678e9d2a59a217}\label{classgame1scene_a730f4e696efa1ea246678e9d2a59a217}} 
+\index{game1scene@{game1scene}!draw\+Panel@{draw\+Panel}}
+\index{draw\+Panel@{draw\+Panel}!game1scene@{game1scene}}
+\subsubsection{\texorpdfstring{draw\+Panel()}{drawPanel()}}
+{\footnotesize\ttfamily void game1scene\+::draw\+Panel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{Q\+Color}]{color,  }\item[{double}]{opacity }\end{DoxyParamCaption})}
+
+
+
+function that draws a panel. 
+
+function that draws pannels used to create a dark panel for the end game. \mbox{\Hypertarget{classgame1scene_a7ea830c4a703722bc5450f29fbfddced}\label{classgame1scene_a7ea830c4a703722bc5450f29fbfddced}} 
+\index{game1scene@{game1scene}!lose@{lose}}
+\index{lose@{lose}!game1scene@{game1scene}}
+\subsubsection{\texorpdfstring{lose()}{lose()}}
+{\footnotesize\ttfamily void game1scene\+::lose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+lose function to call when you lose. 
+
+ends the game with a loss screen and plays a loss audio. Also writes to the account\textquotesingle{}s history the results of the game. \mbox{\Hypertarget{classgame1scene_a72b63628ea5dc651654db088830afd87}\label{classgame1scene_a72b63628ea5dc651654db088830afd87}} 
+\index{game1scene@{game1scene}!quit\+Game@{quit\+Game}}
+\index{quit\+Game@{quit\+Game}!game1scene@{game1scene}}
+\subsubsection{\texorpdfstring{quit\+Game}{quitGame}}
+{\footnotesize\ttfamily void game1scene\+::quit\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Function that quits the game. 
+
+Function that quits the game when the Quit game button is pressed. goes back to game 1 menu \mbox{\Hypertarget{classgame1scene_a62ae0fdc247d9cd0665844710b465c5c}\label{classgame1scene_a62ae0fdc247d9cd0665844710b465c5c}} 
+\index{game1scene@{game1scene}!restart\+Game@{restart\+Game}}
+\index{restart\+Game@{restart\+Game}!game1scene@{game1scene}}
+\subsubsection{\texorpdfstring{restart\+Game}{restartGame}}
+{\footnotesize\ttfamily void game1scene\+::restart\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Function that restarts the game. 
+
+Function that restart the game when the Restart button is pressed. \mbox{\Hypertarget{classgame1scene_a4e66bd7b75ee140431a9ae8f9fa40000}\label{classgame1scene_a4e66bd7b75ee140431a9ae8f9fa40000}} 
+\index{game1scene@{game1scene}!update\+\_\+counters@{update\+\_\+counters}}
+\index{update\+\_\+counters@{update\+\_\+counters}!game1scene@{game1scene}}
+\subsubsection{\texorpdfstring{update\+\_\+counters}{update\_counters}}
+{\footnotesize\ttfamily void game1scene\+::update\+\_\+counters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+updates the current state of the game. 
+
+updates the current state of the game by updating the score, counts and checks for win/loss conditions. \mbox{\Hypertarget{classgame1scene_a760917f4ad49e991bba784f16a468f98}\label{classgame1scene_a760917f4ad49e991bba784f16a468f98}} 
+\index{game1scene@{game1scene}!win@{win}}
+\index{win@{win}!game1scene@{game1scene}}
+\subsubsection{\texorpdfstring{win()}{win()}}
+{\footnotesize\ttfamily void game1scene\+::win (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+win function to call when you win. 
+
+ends the game with a win screen and plays a victory sound. Also writes to the account\textquotesingle{}s history the results of the game. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game1scene.\+h\item 
+game1scene.\+cpp\end{DoxyCompactItemize}
