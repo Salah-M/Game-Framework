@@ -533,5 +533,6 @@
         <file>doc/latex/refman.pdf</file>
         <file>doc/latex/refman.toc</file>
         <file>doc/refman.pdf</file>
+        <file>config</file>
     </qresource>
 </RCC>
