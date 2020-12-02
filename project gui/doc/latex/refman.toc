@@ -1,0 +1,140 @@
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}% 
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}% 
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}% 
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}account Class Reference}{7}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{8}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}Constructor \& Destructor Documentation}{8}{subsection.4.1.2}% 
+\contentsline {subsubsection}{\numberline {4.1.2.1}account()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{8}{subsubsection.4.1.2.1}% 
+\contentsline {subsubsection}{\numberline {4.1.2.2}account()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{8}{subsubsection.4.1.2.2}% 
+\contentsline {subsection}{\numberline {4.1.3}Member Function Documentation}{8}{subsection.4.1.3}% 
+\contentsline {subsubsection}{\numberline {4.1.3.1}print()}{8}{subsubsection.4.1.3.1}% 
+\contentsline {section}{\numberline {4.2}Button Class Reference}{9}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{10}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Constructor \& Destructor Documentation}{10}{subsection.4.2.2}% 
+\contentsline {subsubsection}{\numberline {4.2.2.1}Button()}{10}{subsubsection.4.2.2.1}% 
+\contentsline {subsection}{\numberline {4.2.3}Member Function Documentation}{10}{subsection.4.2.3}% 
+\contentsline {subsubsection}{\numberline {4.2.3.1}clicked}{10}{subsubsection.4.2.3.1}% 
+\contentsline {subsubsection}{\numberline {4.2.3.2}hover\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Enter\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Event()}{10}{subsubsection.4.2.3.2}% 
+\contentsline {subsubsection}{\numberline {4.2.3.3}hover\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Leave\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Event()}{10}{subsubsection.4.2.3.3}% 
+\contentsline {subsubsection}{\numberline {4.2.3.4}mouse\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Press\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Event()}{11}{subsubsection.4.2.3.4}% 
+\contentsline {section}{\numberline {4.3}game1menu Class Reference}{11}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{12}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Constructor \& Destructor Documentation}{12}{subsection.4.3.2}% 
+\contentsline {subsubsection}{\numberline {4.3.2.1}game1menu()}{13}{subsubsection.4.3.2.1}% 
+\contentsline {subsection}{\numberline {4.3.3}Member Function Documentation}{13}{subsection.4.3.3}% 
+\contentsline {subsubsection}{\numberline {4.3.3.1}Backk}{13}{subsubsection.4.3.3.1}% 
+\contentsline {subsubsection}{\numberline {4.3.3.2}playb}{13}{subsubsection.4.3.3.2}% 
+\contentsline {section}{\numberline {4.4}game1scene Class Reference}{14}{section.4.4}% 
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{16}{subsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.4.2}Constructor \& Destructor Documentation}{16}{subsection.4.4.2}% 
+\contentsline {subsubsection}{\numberline {4.4.2.1}game1scene()}{16}{subsubsection.4.4.2.1}% 
+\contentsline {subsection}{\numberline {4.4.3}Member Function Documentation}{16}{subsection.4.4.3}% 
+\contentsline {subsubsection}{\numberline {4.4.3.1}create\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}instance}{16}{subsubsection.4.4.3.1}% 
+\contentsline {subsubsection}{\numberline {4.4.3.2}draw\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Panel()}{16}{subsubsection.4.4.3.2}% 
+\contentsline {subsubsection}{\numberline {4.4.3.3}lose()}{17}{subsubsection.4.4.3.3}% 
+\contentsline {subsubsection}{\numberline {4.4.3.4}quit\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game}{17}{subsubsection.4.4.3.4}% 
+\contentsline {subsubsection}{\numberline {4.4.3.5}restart\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game}{17}{subsubsection.4.4.3.5}% 
+\contentsline {subsubsection}{\numberline {4.4.3.6}update\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}counters}{17}{subsubsection.4.4.3.6}% 
+\contentsline {subsubsection}{\numberline {4.4.3.7}win()}{17}{subsubsection.4.4.3.7}% 
+\contentsline {section}{\numberline {4.5}game1score Class Reference}{18}{section.4.5}% 
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{19}{subsection.4.5.1}% 
+\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{19}{subsection.4.5.2}% 
+\contentsline {subsubsection}{\numberline {4.5.2.1}game1score()}{19}{subsubsection.4.5.2.1}% 
+\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{19}{subsection.4.5.3}% 
+\contentsline {subsubsection}{\numberline {4.5.3.1}bi()}{19}{subsubsection.4.5.3.1}% 
+\contentsline {subsubsection}{\numberline {4.5.3.2}mi()}{20}{subsubsection.4.5.3.2}% 
+\contentsline {subsubsection}{\numberline {4.5.3.3}si()}{20}{subsubsection.4.5.3.3}% 
+\contentsline {section}{\numberline {4.6}game2menu Class Reference}{20}{section.4.6}% 
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{21}{subsection.4.6.1}% 
+\contentsline {subsection}{\numberline {4.6.2}Constructor \& Destructor Documentation}{21}{subsection.4.6.2}% 
+\contentsline {subsubsection}{\numberline {4.6.2.1}game2menu()}{21}{subsubsection.4.6.2.1}% 
+\contentsline {subsection}{\numberline {4.6.3}Member Function Documentation}{21}{subsection.4.6.3}% 
+\contentsline {subsubsection}{\numberline {4.6.3.1}Backk}{22}{subsubsection.4.6.3.1}% 
+\contentsline {subsubsection}{\numberline {4.6.3.2}playb}{22}{subsubsection.4.6.3.2}% 
+\contentsline {section}{\numberline {4.7}game2scene Class Reference}{22}{section.4.7}% 
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{23}{subsection.4.7.1}% 
+\contentsline {subsection}{\numberline {4.7.2}Constructor \& Destructor Documentation}{24}{subsection.4.7.2}% 
+\contentsline {subsubsection}{\numberline {4.7.2.1}game2scene()}{24}{subsubsection.4.7.2.1}% 
+\contentsline {subsection}{\numberline {4.7.3}Member Function Documentation}{24}{subsection.4.7.3}% 
+\contentsline {subsubsection}{\numberline {4.7.3.1}check\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Fresh}{24}{subsubsection.4.7.3.1}% 
+\contentsline {subsubsection}{\numberline {4.7.3.2}checklegal()}{24}{subsubsection.4.7.3.2}% 
+\contentsline {subsubsection}{\numberline {4.7.3.3}draw\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Panel()}{24}{subsubsection.4.7.3.3}% 
+\contentsline {subsubsection}{\numberline {4.7.3.4}end()}{25}{subsubsection.4.7.3.4}% 
+\contentsline {subsubsection}{\numberline {4.7.3.5}outflank()}{25}{subsubsection.4.7.3.5}% 
+\contentsline {subsubsection}{\numberline {4.7.3.6}quit\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game}{25}{subsubsection.4.7.3.6}% 
+\contentsline {subsubsection}{\numberline {4.7.3.7}restart\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game}{25}{subsubsection.4.7.3.7}% 
+\contentsline {section}{\numberline {4.8}historywidget Class Reference}{26}{section.4.8}% 
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{27}{subsection.4.8.1}% 
+\contentsline {subsection}{\numberline {4.8.2}Constructor \& Destructor Documentation}{27}{subsection.4.8.2}% 
+\contentsline {subsubsection}{\numberline {4.8.2.1}historywidget()}{27}{subsubsection.4.8.2.1}% 
+\contentsline {subsection}{\numberline {4.8.3}Member Function Documentation}{27}{subsection.4.8.3}% 
+\contentsline {subsubsection}{\numberline {4.8.3.1}Back1}{27}{subsubsection.4.8.3.1}% 
+\contentsline {subsubsection}{\numberline {4.8.3.2}get\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}History()}{28}{subsubsection.4.8.3.2}% 
+\contentsline {section}{\numberline {4.9}main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Widget Class Reference}{28}{section.4.9}% 
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{29}{subsection.4.9.1}% 
+\contentsline {subsection}{\numberline {4.9.2}Constructor \& Destructor Documentation}{30}{subsection.4.9.2}% 
+\contentsline {subsubsection}{\numberline {4.9.2.1}main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Widget()}{30}{subsubsection.4.9.2.1}% 
+\contentsline {subsection}{\numberline {4.9.3}Member Function Documentation}{30}{subsection.4.9.3}% 
+\contentsline {subsubsection}{\numberline {4.9.3.1}play\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}As\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Guest}{30}{subsubsection.4.9.3.1}% 
+\contentsline {subsubsection}{\numberline {4.9.3.2}signin}{30}{subsubsection.4.9.3.2}% 
+\contentsline {subsubsection}{\numberline {4.9.3.3}signup}{30}{subsubsection.4.9.3.3}% 
+\contentsline {section}{\numberline {4.10}piece Class Reference}{31}{section.4.10}% 
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{32}{subsection.4.10.1}% 
+\contentsline {subsection}{\numberline {4.10.2}Constructor \& Destructor Documentation}{32}{subsection.4.10.2}% 
+\contentsline {subsubsection}{\numberline {4.10.2.1}piece()}{32}{subsubsection.4.10.2.1}% 
+\contentsline {subsection}{\numberline {4.10.3}Member Function Documentation}{32}{subsection.4.10.3}% 
+\contentsline {subsubsection}{\numberline {4.10.3.1}place}{32}{subsubsection.4.10.3.1}% 
+\contentsline {subsubsection}{\numberline {4.10.3.2}placed}{33}{subsubsection.4.10.3.2}% 
+\contentsline {subsubsection}{\numberline {4.10.3.3}set\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}State()}{33}{subsubsection.4.10.3.3}% 
+\contentsline {section}{\numberline {4.11}signinwidget Class Reference}{33}{section.4.11}% 
+\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{35}{subsection.4.11.1}% 
+\contentsline {subsection}{\numberline {4.11.2}Constructor \& Destructor Documentation}{35}{subsection.4.11.2}% 
+\contentsline {subsubsection}{\numberline {4.11.2.1}signinwidget()}{35}{subsubsection.4.11.2.1}% 
+\contentsline {subsection}{\numberline {4.11.3}Member Function Documentation}{35}{subsection.4.11.3}% 
+\contentsline {subsubsection}{\numberline {4.11.3.1}check\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Birthday()}{36}{subsubsection.4.11.3.1}% 
+\contentsline {subsubsection}{\numberline {4.11.3.2}get\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Name()}{36}{subsubsection.4.11.3.2}% 
+\contentsline {subsubsection}{\numberline {4.11.3.3}History}{36}{subsubsection.4.11.3.3}% 
+\contentsline {subsubsection}{\numberline {4.11.3.4}play\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game1}{36}{subsubsection.4.11.3.4}% 
+\contentsline {subsubsection}{\numberline {4.11.3.5}play\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game2}{36}{subsubsection.4.11.3.5}% 
+\contentsline {subsubsection}{\numberline {4.11.3.6}quit}{36}{subsubsection.4.11.3.6}% 
+\contentsline {section}{\numberline {4.12}signupwidget Class Reference}{37}{section.4.12}% 
+\contentsline {subsection}{\numberline {4.12.1}Detailed Description}{39}{subsection.4.12.1}% 
+\contentsline {subsection}{\numberline {4.12.2}Constructor \& Destructor Documentation}{39}{subsection.4.12.2}% 
+\contentsline {subsubsection}{\numberline {4.12.2.1}signupwidget()}{39}{subsubsection.4.12.2.1}% 
+\contentsline {subsection}{\numberline {4.12.3}Member Function Documentation}{39}{subsection.4.12.3}% 
+\contentsline {subsubsection}{\numberline {4.12.3.1}image}{39}{subsubsection.4.12.3.1}% 
+\contentsline {subsubsection}{\numberline {4.12.3.2}quit}{39}{subsubsection.4.12.3.2}% 
+\contentsline {subsubsection}{\numberline {4.12.3.3}signup}{40}{subsubsection.4.12.3.3}% 
+\contentsline {section}{\numberline {4.13}vdeath Class Reference}{40}{section.4.13}% 
+\contentsline {subsection}{\numberline {4.13.1}Detailed Description}{41}{subsection.4.13.1}% 
+\contentsline {subsection}{\numberline {4.13.2}Constructor \& Destructor Documentation}{41}{subsection.4.13.2}% 
+\contentsline {subsubsection}{\numberline {4.13.2.1}vdeath()}{41}{subsubsection.4.13.2.1}% 
+\contentsline {subsection}{\numberline {4.13.3}Member Function Documentation}{41}{subsection.4.13.3}% 
+\contentsline {subsubsection}{\numberline {4.13.3.1}die}{41}{subsubsection.4.13.3.1}% 
+\contentsline {section}{\numberline {4.14}virus Class Reference}{42}{section.4.14}% 
+\contentsline {subsection}{\numberline {4.14.1}Detailed Description}{43}{subsection.4.14.1}% 
+\contentsline {subsection}{\numberline {4.14.2}Constructor \& Destructor Documentation}{43}{subsection.4.14.2}% 
+\contentsline {subsubsection}{\numberline {4.14.2.1}virus()}{43}{subsubsection.4.14.2.1}% 
+\contentsline {subsection}{\numberline {4.14.3}Member Function Documentation}{43}{subsection.4.14.3}% 
+\contentsline {subsubsection}{\numberline {4.14.3.1}kill}{44}{subsubsection.4.14.3.1}% 
+\contentsline {subsubsection}{\numberline {4.14.3.2}set\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Size()}{44}{subsubsection.4.14.3.2}% 
+\contentsline {subsubsection}{\numberline {4.14.3.3}update}{44}{subsubsection.4.14.3.3}% 
+\contentsline {chapter}{\numberline {5}File Documentation}{45}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}globalvar.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{45}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{45}{subsection.5.1.1}% 
+\contentsline {section}{\numberline {5.2}historywidget.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{46}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{47}{subsection.5.2.1}% 
+\contentsline {section}{\numberline {5.3}mainwidget.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{47}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{47}{subsection.5.3.1}% 
+\contentsline {section}{\numberline {5.4}signinwidget.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{48}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{49}{subsection.5.4.1}% 
+\contentsline {section}{\numberline {5.5}signupwidget.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{49}{section.5.5}% 
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{50}{subsection.5.5.1}% 
+\contentsline {section}{\numberline {5.6}vdeath.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{50}{section.5.6}% 
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{51}{subsection.5.6.1}% 
+\contentsline {section}{\numberline {5.7}virus.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{51}{section.5.7}% 
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{51}{subsection.5.7.1}% 
