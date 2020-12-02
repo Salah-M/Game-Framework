@@ -5,5 +5,6 @@ var searchData=
   ['backk',['Backk',['../classgame1menu.html#aacd43f1621af0ac39370c5f1b16868fa',1,'game1menu::Backk()'],['../classgame2menu.html#a095e776799d92c9d6cb05aa49b63472a',1,'game2menu::Backk()']]],
   ['bcount',['bcount',['../classgame1score.html#a1396fb2d6d045ca1726b9b34e130ec8f',1,'game1score']]],
   ['bi',['bi',['../classgame1score.html#aa2aecd005fd86671e508a3b91f4251b6',1,'game1score']]],
-  ['button',['Button',['../classButton.html',1,'Button'],['../classButton.html#a69976e5c00874a3807b642f249c1c776',1,'Button::Button()']]]
+  ['button',['Button',['../classButton.html',1,'Button'],['../classButton.html#a69976e5c00874a3807b642f249c1c776',1,'Button::Button()']]],
+  ['button_2eh',['button.h',['../button_8h.html',1,'']]]
 ];

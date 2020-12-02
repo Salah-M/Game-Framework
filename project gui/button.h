@@ -5,6 +5,14 @@
 #include <QGraphicsSceneMouseEvent>
 
 /**
+* \file button.h
+* \brief contains button class definition
+*
+*
+*  This class is responsible for creating a button inside a game (QT scene)
+*/
+
+/**
 * \brief contains button class definition
 *
 *

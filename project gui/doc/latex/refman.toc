@@ -124,17 +124,33 @@
 \contentsline {subsubsection}{\numberline {4.14.3.2}set\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Size()}{44}{subsubsection.4.14.3.2}% 
 \contentsline {subsubsection}{\numberline {4.14.3.3}update}{44}{subsubsection.4.14.3.3}% 
 \contentsline {chapter}{\numberline {5}File Documentation}{45}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}globalvar.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{45}{section.5.1}% 
-\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{45}{subsection.5.1.1}% 
-\contentsline {section}{\numberline {5.2}historywidget.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{46}{section.5.2}% 
+\contentsline {section}{\numberline {5.1}account.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{45}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{46}{subsection.5.1.1}% 
+\contentsline {section}{\numberline {5.2}button.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{46}{section.5.2}% 
 \contentsline {subsection}{\numberline {5.2.1}Detailed Description}{47}{subsection.5.2.1}% 
-\contentsline {section}{\numberline {5.3}mainwidget.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{47}{section.5.3}% 
-\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{47}{subsection.5.3.1}% 
-\contentsline {section}{\numberline {5.4}signinwidget.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{48}{section.5.4}% 
+\contentsline {section}{\numberline {5.3}game1menu.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{47}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{49}{subsection.5.3.1}% 
+\contentsline {section}{\numberline {5.4}game1scene.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{49}{section.5.4}% 
 \contentsline {subsection}{\numberline {5.4.1}Detailed Description}{49}{subsection.5.4.1}% 
-\contentsline {section}{\numberline {5.5}signupwidget.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{49}{section.5.5}% 
+\contentsline {section}{\numberline {5.5}game1score.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{50}{section.5.5}% 
 \contentsline {subsection}{\numberline {5.5.1}Detailed Description}{50}{subsection.5.5.1}% 
-\contentsline {section}{\numberline {5.6}vdeath.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{50}{section.5.6}% 
-\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{51}{subsection.5.6.1}% 
-\contentsline {section}{\numberline {5.7}virus.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{51}{section.5.7}% 
-\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{51}{subsection.5.7.1}% 
+\contentsline {section}{\numberline {5.6}game2menu.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{51}{section.5.6}% 
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{52}{subsection.5.6.1}% 
+\contentsline {section}{\numberline {5.7}game2scene.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{52}{section.5.7}% 
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{52}{subsection.5.7.1}% 
+\contentsline {section}{\numberline {5.8}globalvar.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{53}{section.5.8}% 
+\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{53}{subsection.5.8.1}% 
+\contentsline {section}{\numberline {5.9}historywidget.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{53}{section.5.9}% 
+\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{54}{subsection.5.9.1}% 
+\contentsline {section}{\numberline {5.10}mainwidget.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{55}{section.5.10}% 
+\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{55}{subsection.5.10.1}% 
+\contentsline {section}{\numberline {5.11}piece.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{55}{section.5.11}% 
+\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{56}{subsection.5.11.1}% 
+\contentsline {section}{\numberline {5.12}signinwidget.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{56}{section.5.12}% 
+\contentsline {subsection}{\numberline {5.12.1}Detailed Description}{57}{subsection.5.12.1}% 
+\contentsline {section}{\numberline {5.13}signupwidget.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{57}{section.5.13}% 
+\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{58}{subsection.5.13.1}% 
+\contentsline {section}{\numberline {5.14}vdeath.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{58}{section.5.14}% 
+\contentsline {subsection}{\numberline {5.14.1}Detailed Description}{59}{subsection.5.14.1}% 
+\contentsline {section}{\numberline {5.15}virus.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{59}{section.5.15}% 
+\contentsline {subsection}{\numberline {5.15.1}Detailed Description}{60}{subsection.5.15.1}% 

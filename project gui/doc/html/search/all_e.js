@@ -11,6 +11,7 @@ var searchData=
   ['pic',['pic',['../classsigninwidget.html#a0ae5b573072a02890e831d5087377fb7',1,'signinwidget']]],
   ['picture_5flabel',['picture_label',['../classsignupwidget.html#a561521b369bea3068f4f508f9741eb44',1,'signupwidget']]],
   ['piece',['piece',['../classpiece.html',1,'piece'],['../classpiece.html#a65fb95a430bc20242a04556dc1d8bd65',1,'piece::piece()']]],
+  ['piece_2eh',['piece.h',['../piece_8h.html',1,'']]],
   ['place',['place',['../classpiece.html#a8db42fa9c9e1b03f3a68f238546ab239',1,'piece']]],
   ['placed',['placed',['../classpiece.html#a57ea505efe23d31353611198296a5a5a',1,'piece']]],
   ['placep',['placep',['../classpiece.html#a070e7829edca743adda436de84161999',1,'piece']]],

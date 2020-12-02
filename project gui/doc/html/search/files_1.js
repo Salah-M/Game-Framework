@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['historywidget_2eh',['historywidget.h',['../historywidget_8h.html',1,'']]]
+  ['button_2eh',['button.h',['../button_8h.html',1,'']]]
 ];

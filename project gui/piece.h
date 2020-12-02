@@ -9,6 +9,14 @@
 #include <QMediaPlayer>
 
 /**
+* \file piece.h
+* \brief contains piece class definition
+*
+*
+*  This class is responsible for placing a piece in game 2 and displaying it on the screen
+*/
+
+/**
 * \brief contains piece class definition
 *
 *

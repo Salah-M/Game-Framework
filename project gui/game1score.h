@@ -13,6 +13,14 @@
 #include <QCursor>
 
 /**
+* \file game1score.h
+* \brief contains game 1 score class definition
+*
+*
+*  This class is responsible for keeping track of the score and displaying it in game 1
+*/
+
+/**
 * \brief contains game 1 score class definition
 *
 *

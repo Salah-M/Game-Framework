@@ -16,6 +16,14 @@
 #include <QCursor>
 
 /**
+* \file game1menu.h
+* \brief contains game 1 menu class definition
+*
+*
+*  This class is responsible for creating the main menu of game 1
+*/
+
+/**
 * \brief contains game 1 menu class definition
 *
 *

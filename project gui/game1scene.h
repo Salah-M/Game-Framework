@@ -16,6 +16,14 @@
 #include <qdebug.h>
 
 /**
+* \file game1scene.h
+* \brief contains game 1 scene class definition
+*
+*
+*  This class is responsible for creating and playing game 1 (Kill Covid-19)
+*/
+
+/**
 * \brief contains game 1 scene class definition
 *
 *

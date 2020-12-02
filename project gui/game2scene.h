@@ -17,6 +17,14 @@
 #include "game2menu.h"
 
 /**
+* \file game2scene.h
+* \brief contains game 2 scene class definition
+*
+*
+*  This class is responsible for creating and playing game 2 (othello or reversi)
+*/
+
+/**
 * \brief contains game 2 scene class definition
 *
 *

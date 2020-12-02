@@ -13,6 +13,14 @@
 #include <QCryptographicHash>
 
 /**
+* \file account.h
+* \brief contains account class definition
+*
+*
+*  This class is responsible for storing user information.
+*/
+
+/**
 * \brief contains account class definition
 *
 *
