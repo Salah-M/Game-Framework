@@ -6,6 +6,9 @@ game1scene::game1scene()
 {
 
     g= new game1menu;
+    for(int i=0;i<40;i++){
+        v[i] = new virus();
+    }
     QPixmap cpixmap=QPixmap(":/images/needle.png").scaled(30,30);
     QCursor cursor = QCursor(cpixmap,0,0);
     view = new QGraphicsView();
@@ -49,14 +52,13 @@ game1scene::game1scene()
 
 void game1scene::create_instance()
 {
-    v[i] = new virus();
+
     v[i]->speed = speed;
 
     QString temp;
     int pos;
     *in >> temp;
     *in >> pos;
-    //qDebug() << pos << endl;
     v[i]->setPos(pos , -50);
     if(temp == "small")
     {
@@ -78,6 +80,7 @@ void game1scene::create_instance()
 void game1scene::update_counters()
 {
     int j = 0;
+
     while (j < i)
     {
         if (v[j]->alive == false && v[j]->isChecked == false)
@@ -235,6 +238,9 @@ void game1scene::restartGame()
     this->removeItem(playAgain);
     this->removeItem(quitButton);
     this->removeItem(score);
+    for(int i=0;i<40;i++){
+        v[i] = new virus();
+    }
     speed = 1;
     i = 0;
     lossCount = 0;

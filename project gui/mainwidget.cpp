@@ -153,5 +153,6 @@ void mainWidget::playAsGuest()
     this->close();
     sin->getName();
     sin->show();
+
 }
 

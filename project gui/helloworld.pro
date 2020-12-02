@@ -43,3 +43,7 @@ DISTFILES += \
 
 RESOURCES += \
     images.qrc
+
+QMAKE_CXXFLAGS+=-pg
+QMAKE_LFLAGS+=-pg
+CONFIG += debug
